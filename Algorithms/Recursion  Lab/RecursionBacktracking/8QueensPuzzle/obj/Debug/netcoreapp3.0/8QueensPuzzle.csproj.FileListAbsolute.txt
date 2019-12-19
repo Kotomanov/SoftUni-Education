@@ -1,0 +1,11 @@
+C:\Users\Lady Gaba\source\repos\Algorithms\RecursionBacktracking\8QueensPuzzle\bin\Debug\netcoreapp3.0\8QueensPuzzle.exe
+C:\Users\Lady Gaba\source\repos\Algorithms\RecursionBacktracking\8QueensPuzzle\bin\Debug\netcoreapp3.0\8QueensPuzzle.deps.json
+C:\Users\Lady Gaba\source\repos\Algorithms\RecursionBacktracking\8QueensPuzzle\bin\Debug\netcoreapp3.0\8QueensPuzzle.runtimeconfig.json
+C:\Users\Lady Gaba\source\repos\Algorithms\RecursionBacktracking\8QueensPuzzle\bin\Debug\netcoreapp3.0\8QueensPuzzle.runtimeconfig.dev.json
+C:\Users\Lady Gaba\source\repos\Algorithms\RecursionBacktracking\8QueensPuzzle\bin\Debug\netcoreapp3.0\8QueensPuzzle.dll
+C:\Users\Lady Gaba\source\repos\Algorithms\RecursionBacktracking\8QueensPuzzle\bin\Debug\netcoreapp3.0\8QueensPuzzle.pdb
+C:\Users\Lady Gaba\source\repos\Algorithms\RecursionBacktracking\8QueensPuzzle\obj\Debug\netcoreapp3.0\8QueensPuzzle.csprojAssemblyReference.cache
+C:\Users\Lady Gaba\source\repos\Algorithms\RecursionBacktracking\8QueensPuzzle\obj\Debug\netcoreapp3.0\8QueensPuzzle.AssemblyInfoInputs.cache
+C:\Users\Lady Gaba\source\repos\Algorithms\RecursionBacktracking\8QueensPuzzle\obj\Debug\netcoreapp3.0\8QueensPuzzle.AssemblyInfo.cs
+C:\Users\Lady Gaba\source\repos\Algorithms\RecursionBacktracking\8QueensPuzzle\obj\Debug\netcoreapp3.0\8QueensPuzzle.dll
+C:\Users\Lady Gaba\source\repos\Algorithms\RecursionBacktracking\8QueensPuzzle\obj\Debug\netcoreapp3.0\8QueensPuzzle.pdb

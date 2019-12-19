@@ -1,0 +1,10 @@
+C:\Users\Lady Gaba\source\repos\Algorithms\RecursionBacktracking\Vectors\bin\Debug\netcoreapp2.1\Vectors.deps.json
+C:\Users\Lady Gaba\source\repos\Algorithms\RecursionBacktracking\Vectors\bin\Debug\netcoreapp2.1\Vectors.runtimeconfig.json
+C:\Users\Lady Gaba\source\repos\Algorithms\RecursionBacktracking\Vectors\bin\Debug\netcoreapp2.1\Vectors.runtimeconfig.dev.json
+C:\Users\Lady Gaba\source\repos\Algorithms\RecursionBacktracking\Vectors\bin\Debug\netcoreapp2.1\Vectors.dll
+C:\Users\Lady Gaba\source\repos\Algorithms\RecursionBacktracking\Vectors\bin\Debug\netcoreapp2.1\Vectors.pdb
+C:\Users\Lady Gaba\source\repos\Algorithms\RecursionBacktracking\Vectors\obj\Debug\netcoreapp2.1\Vectors.csprojAssemblyReference.cache
+C:\Users\Lady Gaba\source\repos\Algorithms\RecursionBacktracking\Vectors\obj\Debug\netcoreapp2.1\Vectors.AssemblyInfoInputs.cache
+C:\Users\Lady Gaba\source\repos\Algorithms\RecursionBacktracking\Vectors\obj\Debug\netcoreapp2.1\Vectors.AssemblyInfo.cs
+C:\Users\Lady Gaba\source\repos\Algorithms\RecursionBacktracking\Vectors\obj\Debug\netcoreapp2.1\Vectors.dll
+C:\Users\Lady Gaba\source\repos\Algorithms\RecursionBacktracking\Vectors\obj\Debug\netcoreapp2.1\Vectors.pdb

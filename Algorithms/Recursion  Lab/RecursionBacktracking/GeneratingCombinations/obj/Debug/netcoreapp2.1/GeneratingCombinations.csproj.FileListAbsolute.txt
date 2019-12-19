@@ -1,0 +1,10 @@
+C:\Users\Lady Gaba\source\repos\Algorithms\RecursionBacktracking\GeneratingCombinations\bin\Debug\netcoreapp2.1\GeneratingCombinations.deps.json
+C:\Users\Lady Gaba\source\repos\Algorithms\RecursionBacktracking\GeneratingCombinations\bin\Debug\netcoreapp2.1\GeneratingCombinations.runtimeconfig.json
+C:\Users\Lady Gaba\source\repos\Algorithms\RecursionBacktracking\GeneratingCombinations\bin\Debug\netcoreapp2.1\GeneratingCombinations.runtimeconfig.dev.json
+C:\Users\Lady Gaba\source\repos\Algorithms\RecursionBacktracking\GeneratingCombinations\bin\Debug\netcoreapp2.1\GeneratingCombinations.dll
+C:\Users\Lady Gaba\source\repos\Algorithms\RecursionBacktracking\GeneratingCombinations\bin\Debug\netcoreapp2.1\GeneratingCombinations.pdb
+C:\Users\Lady Gaba\source\repos\Algorithms\RecursionBacktracking\GeneratingCombinations\obj\Debug\netcoreapp2.1\GeneratingCombinations.csprojAssemblyReference.cache
+C:\Users\Lady Gaba\source\repos\Algorithms\RecursionBacktracking\GeneratingCombinations\obj\Debug\netcoreapp2.1\GeneratingCombinations.AssemblyInfoInputs.cache
+C:\Users\Lady Gaba\source\repos\Algorithms\RecursionBacktracking\GeneratingCombinations\obj\Debug\netcoreapp2.1\GeneratingCombinations.AssemblyInfo.cs
+C:\Users\Lady Gaba\source\repos\Algorithms\RecursionBacktracking\GeneratingCombinations\obj\Debug\netcoreapp2.1\GeneratingCombinations.dll
+C:\Users\Lady Gaba\source\repos\Algorithms\RecursionBacktracking\GeneratingCombinations\obj\Debug\netcoreapp2.1\GeneratingCombinations.pdb

@@ -1,0 +1,11 @@
+C:\Users\Lady Gaba\source\repos\Algorithms\RecursionBacktracking\PathsinLabyrinth\bin\Debug\netcoreapp3.0\PathsinLabyrinth.exe
+C:\Users\Lady Gaba\source\repos\Algorithms\RecursionBacktracking\PathsinLabyrinth\bin\Debug\netcoreapp3.0\PathsinLabyrinth.deps.json
+C:\Users\Lady Gaba\source\repos\Algorithms\RecursionBacktracking\PathsinLabyrinth\bin\Debug\netcoreapp3.0\PathsinLabyrinth.runtimeconfig.json
+C:\Users\Lady Gaba\source\repos\Algorithms\RecursionBacktracking\PathsinLabyrinth\bin\Debug\netcoreapp3.0\PathsinLabyrinth.runtimeconfig.dev.json
+C:\Users\Lady Gaba\source\repos\Algorithms\RecursionBacktracking\PathsinLabyrinth\bin\Debug\netcoreapp3.0\PathsinLabyrinth.dll
+C:\Users\Lady Gaba\source\repos\Algorithms\RecursionBacktracking\PathsinLabyrinth\bin\Debug\netcoreapp3.0\PathsinLabyrinth.pdb
+C:\Users\Lady Gaba\source\repos\Algorithms\RecursionBacktracking\PathsinLabyrinth\obj\Debug\netcoreapp3.0\PathsinLabyrinth.csprojAssemblyReference.cache
+C:\Users\Lady Gaba\source\repos\Algorithms\RecursionBacktracking\PathsinLabyrinth\obj\Debug\netcoreapp3.0\PathsinLabyrinth.AssemblyInfoInputs.cache
+C:\Users\Lady Gaba\source\repos\Algorithms\RecursionBacktracking\PathsinLabyrinth\obj\Debug\netcoreapp3.0\PathsinLabyrinth.AssemblyInfo.cs
+C:\Users\Lady Gaba\source\repos\Algorithms\RecursionBacktracking\PathsinLabyrinth\obj\Debug\netcoreapp3.0\PathsinLabyrinth.dll
+C:\Users\Lady Gaba\source\repos\Algorithms\RecursionBacktracking\PathsinLabyrinth\obj\Debug\netcoreapp3.0\PathsinLabyrinth.pdb

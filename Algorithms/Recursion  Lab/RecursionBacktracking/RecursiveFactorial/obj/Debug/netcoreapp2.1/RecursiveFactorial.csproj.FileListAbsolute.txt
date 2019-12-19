@@ -1,0 +1,10 @@
+C:\Users\Lady Gaba\source\repos\Algorithms\RecursionBacktracking\RecursiveFactorial\bin\Debug\netcoreapp2.1\RecursiveFactorial.deps.json
+C:\Users\Lady Gaba\source\repos\Algorithms\RecursionBacktracking\RecursiveFactorial\bin\Debug\netcoreapp2.1\RecursiveFactorial.runtimeconfig.json
+C:\Users\Lady Gaba\source\repos\Algorithms\RecursionBacktracking\RecursiveFactorial\bin\Debug\netcoreapp2.1\RecursiveFactorial.runtimeconfig.dev.json
+C:\Users\Lady Gaba\source\repos\Algorithms\RecursionBacktracking\RecursiveFactorial\bin\Debug\netcoreapp2.1\RecursiveFactorial.dll
+C:\Users\Lady Gaba\source\repos\Algorithms\RecursionBacktracking\RecursiveFactorial\bin\Debug\netcoreapp2.1\RecursiveFactorial.pdb
+C:\Users\Lady Gaba\source\repos\Algorithms\RecursionBacktracking\RecursiveFactorial\obj\Debug\netcoreapp2.1\RecursiveFactorial.csprojAssemblyReference.cache
+C:\Users\Lady Gaba\source\repos\Algorithms\RecursionBacktracking\RecursiveFactorial\obj\Debug\netcoreapp2.1\RecursiveFactorial.AssemblyInfoInputs.cache
+C:\Users\Lady Gaba\source\repos\Algorithms\RecursionBacktracking\RecursiveFactorial\obj\Debug\netcoreapp2.1\RecursiveFactorial.AssemblyInfo.cs
+C:\Users\Lady Gaba\source\repos\Algorithms\RecursionBacktracking\RecursiveFactorial\obj\Debug\netcoreapp2.1\RecursiveFactorial.dll
+C:\Users\Lady Gaba\source\repos\Algorithms\RecursionBacktracking\RecursiveFactorial\obj\Debug\netcoreapp2.1\RecursiveFactorial.pdb
