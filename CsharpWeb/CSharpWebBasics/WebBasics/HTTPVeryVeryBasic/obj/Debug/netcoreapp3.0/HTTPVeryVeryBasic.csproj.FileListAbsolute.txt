@@ -1,0 +1,11 @@
+C:\Users\Lady Gaba\source\repos\EducationRepository\CsharpWeb\CSharpWebBasics\WebBasics\HTTPVeryVeryBasic\bin\Debug\netcoreapp3.0\HTTPVeryVeryBasic.exe
+C:\Users\Lady Gaba\source\repos\EducationRepository\CsharpWeb\CSharpWebBasics\WebBasics\HTTPVeryVeryBasic\bin\Debug\netcoreapp3.0\HTTPVeryVeryBasic.deps.json
+C:\Users\Lady Gaba\source\repos\EducationRepository\CsharpWeb\CSharpWebBasics\WebBasics\HTTPVeryVeryBasic\bin\Debug\netcoreapp3.0\HTTPVeryVeryBasic.runtimeconfig.json
+C:\Users\Lady Gaba\source\repos\EducationRepository\CsharpWeb\CSharpWebBasics\WebBasics\HTTPVeryVeryBasic\bin\Debug\netcoreapp3.0\HTTPVeryVeryBasic.runtimeconfig.dev.json
+C:\Users\Lady Gaba\source\repos\EducationRepository\CsharpWeb\CSharpWebBasics\WebBasics\HTTPVeryVeryBasic\bin\Debug\netcoreapp3.0\HTTPVeryVeryBasic.dll
+C:\Users\Lady Gaba\source\repos\EducationRepository\CsharpWeb\CSharpWebBasics\WebBasics\HTTPVeryVeryBasic\bin\Debug\netcoreapp3.0\HTTPVeryVeryBasic.pdb
+C:\Users\Lady Gaba\source\repos\EducationRepository\CsharpWeb\CSharpWebBasics\WebBasics\HTTPVeryVeryBasic\obj\Debug\netcoreapp3.0\HTTPVeryVeryBasic.csprojAssemblyReference.cache
+C:\Users\Lady Gaba\source\repos\EducationRepository\CsharpWeb\CSharpWebBasics\WebBasics\HTTPVeryVeryBasic\obj\Debug\netcoreapp3.0\HTTPVeryVeryBasic.AssemblyInfoInputs.cache
+C:\Users\Lady Gaba\source\repos\EducationRepository\CsharpWeb\CSharpWebBasics\WebBasics\HTTPVeryVeryBasic\obj\Debug\netcoreapp3.0\HTTPVeryVeryBasic.AssemblyInfo.cs
+C:\Users\Lady Gaba\source\repos\EducationRepository\CsharpWeb\CSharpWebBasics\WebBasics\HTTPVeryVeryBasic\obj\Debug\netcoreapp3.0\HTTPVeryVeryBasic.dll
+C:\Users\Lady Gaba\source\repos\EducationRepository\CsharpWeb\CSharpWebBasics\WebBasics\HTTPVeryVeryBasic\obj\Debug\netcoreapp3.0\HTTPVeryVeryBasic.pdb
