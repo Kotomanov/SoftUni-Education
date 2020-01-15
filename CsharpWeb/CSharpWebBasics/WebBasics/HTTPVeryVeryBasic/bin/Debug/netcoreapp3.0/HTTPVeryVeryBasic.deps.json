@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v3.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v3.0": {
+      "HTTPVeryVeryBasic/1.0.0": {
+        "runtime": {
+          "HTTPVeryVeryBasic.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "HTTPVeryVeryBasic/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
