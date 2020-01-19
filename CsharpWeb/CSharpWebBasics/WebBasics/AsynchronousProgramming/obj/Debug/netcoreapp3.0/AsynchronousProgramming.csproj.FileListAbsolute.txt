@@ -1,0 +1,11 @@
+C:\Users\Lady Gaba\source\repos\EducationRepository\CsharpWeb\CSharpWebBasics\WebBasics\AsynchronousProgramming\bin\Debug\netcoreapp3.0\AsynchronousProgramming.exe
+C:\Users\Lady Gaba\source\repos\EducationRepository\CsharpWeb\CSharpWebBasics\WebBasics\AsynchronousProgramming\bin\Debug\netcoreapp3.0\AsynchronousProgramming.deps.json
+C:\Users\Lady Gaba\source\repos\EducationRepository\CsharpWeb\CSharpWebBasics\WebBasics\AsynchronousProgramming\bin\Debug\netcoreapp3.0\AsynchronousProgramming.runtimeconfig.json
+C:\Users\Lady Gaba\source\repos\EducationRepository\CsharpWeb\CSharpWebBasics\WebBasics\AsynchronousProgramming\bin\Debug\netcoreapp3.0\AsynchronousProgramming.runtimeconfig.dev.json
+C:\Users\Lady Gaba\source\repos\EducationRepository\CsharpWeb\CSharpWebBasics\WebBasics\AsynchronousProgramming\bin\Debug\netcoreapp3.0\AsynchronousProgramming.dll
+C:\Users\Lady Gaba\source\repos\EducationRepository\CsharpWeb\CSharpWebBasics\WebBasics\AsynchronousProgramming\bin\Debug\netcoreapp3.0\AsynchronousProgramming.pdb
+C:\Users\Lady Gaba\source\repos\EducationRepository\CsharpWeb\CSharpWebBasics\WebBasics\AsynchronousProgramming\obj\Debug\netcoreapp3.0\AsynchronousProgramming.csprojAssemblyReference.cache
+C:\Users\Lady Gaba\source\repos\EducationRepository\CsharpWeb\CSharpWebBasics\WebBasics\AsynchronousProgramming\obj\Debug\netcoreapp3.0\AsynchronousProgramming.AssemblyInfoInputs.cache
+C:\Users\Lady Gaba\source\repos\EducationRepository\CsharpWeb\CSharpWebBasics\WebBasics\AsynchronousProgramming\obj\Debug\netcoreapp3.0\AsynchronousProgramming.AssemblyInfo.cs
+C:\Users\Lady Gaba\source\repos\EducationRepository\CsharpWeb\CSharpWebBasics\WebBasics\AsynchronousProgramming\obj\Debug\netcoreapp3.0\AsynchronousProgramming.dll
+C:\Users\Lady Gaba\source\repos\EducationRepository\CsharpWeb\CSharpWebBasics\WebBasics\AsynchronousProgramming\obj\Debug\netcoreapp3.0\AsynchronousProgramming.pdb
