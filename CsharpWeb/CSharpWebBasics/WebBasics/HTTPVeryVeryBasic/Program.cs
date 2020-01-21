@@ -55,7 +55,7 @@ namespace HTTPVeryVeryBasic
 
         }
 
-        public static async Task HttpRequest()
+        public static async Task HttpRequestAsync()
         {
             // request -get
             HttpClient client = new HttpClient();

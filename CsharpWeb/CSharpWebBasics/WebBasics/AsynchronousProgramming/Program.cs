@@ -1,6 +1,10 @@
 ﻿using System;
+using System.Collections.Concurrent;
 using System.Diagnostics;
+using System.Linq;
+using System.Net.Http;
 using System.Threading;
+using System.Threading.Tasks;
 
 namespace AsynchronousProgramming
 {
@@ -8,8 +12,26 @@ namespace AsynchronousProgramming
     {
         static int counter;
 
-        static void Main(string[] args)
-        {//can  be done wuth annonimous method
+        static async Task Main(string[] args)
+        {
+            // done the right way :
+
+            try
+            {
+                HttpClient client = new HttpClient();
+                var httpResponse = await client.GetAsync("https://softuni1.bg");
+                var result = await httpResponse.Content.ReadAsStringAsync();
+                Console.WriteLine(result);
+            }
+            catch (Exception ex )
+            {
+                Console.WriteLine(ex.Message);
+            }
+            
+
+
+
+            //can  be done wuth annonimous method
             new Thread(() =>
             {
                 while (true)
@@ -82,7 +104,25 @@ namespace AsynchronousProgramming
             thread3.Join();
 
 
-            Console.WriteLine(amount);
+            //Console.WriteLine(amount);
+
+            // using separate therads with for and ConcurrentQueue
+
+            var numbers = new ConcurrentQueue<int>(Enumerable.Range(0, 10000).ToList());
+
+            for (int i = 0; i < 4; i++)
+            {
+                new Thread(() =>
+                {
+                    while (numbers.Count > 0)
+                    {
+                        numbers.TryDequeue(out _);
+                    }
+                }).Start();
+            }
+
+
+
 
             // can be instantiazed : 
             Thread thread = new Thread(MyThreadMainMethod);
@@ -93,6 +133,8 @@ namespace AsynchronousProgramming
                 string line = Console.ReadLine();
                 //Console.WriteLine(line.ToUpper());
             }
+
+             
 
         }
 
