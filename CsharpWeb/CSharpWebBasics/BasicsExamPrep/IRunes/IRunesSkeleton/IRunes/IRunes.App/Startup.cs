@@ -19,8 +19,6 @@
 
         public void ConfigureServices(IServiceCollection serviceCollection)
         {
-
-            //TODO
         }
     }
 }

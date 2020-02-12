@@ -3,29 +3,29 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Text;
 
-namespace IRunes.App.Models
+namespace IRunes.Models
 {
-    public class Album
+    public class Track
     {
-        public Album()
+        public Track()
         {
             this.Id = Guid.NewGuid().ToString();
-            this.Tracks = new HashSet<Track>();
         }
-        public string Id { get; set; }
 
+        public string Id { get; set; }
 
         [Required]
         [MaxLength(20)]
         public string Name { get; set; }
 
-
         [Required]
-        public string Cover { get; set; }
+        public string Link { get; set; }
 
-        [Required]
+
         public decimal Price { get; set; }
 
-        public virtual ICollection<Track> Tracks { get; set; }
+        public string AbumId { get; set; }
+
+        public Album Album { get; set; }
     }
 }

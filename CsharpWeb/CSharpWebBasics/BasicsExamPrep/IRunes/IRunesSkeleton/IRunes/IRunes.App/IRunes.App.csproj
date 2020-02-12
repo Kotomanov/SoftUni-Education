@@ -27,9 +27,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Update="Resources\css\bootstrap.min.css">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
     <None Update="Views\Albums\All.html">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>

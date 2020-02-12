@@ -1,14 +1,18 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Text;
 
-namespace IRunes.App.Models
+namespace IRunes.Models
 {
-    public class Track
+   public class Album
     {
-        public Track()
+        public Album()
         {
             this.Id = Guid.NewGuid().ToString();
+            this.Tracks = new HashSet<Track>();
         }
+
         public string Id { get; set; }
 
         [Required]
@@ -16,14 +20,10 @@ namespace IRunes.App.Models
         public string Name { get; set; }
 
         [Required]
-        public string Link { get; set; }
+        public string Cover { get; set; }
 
-        [Required]
         public decimal Price { get; set; }
 
-        [Required]
-        public string AlbumId { get; set; }
-
-        public Album Album { get; set; }
+        public ICollection<Track> Tracks { get; set; }
     }
 }
