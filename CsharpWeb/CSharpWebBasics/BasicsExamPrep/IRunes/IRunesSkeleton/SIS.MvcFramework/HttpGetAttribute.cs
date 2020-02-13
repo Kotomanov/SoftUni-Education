@@ -5,6 +5,7 @@ using System.Text;
 
 namespace SIS.MvcFramework
 {
+  
     public class HttpGetAttribute : HttpMethodAttribute
     {
         public HttpGetAttribute()

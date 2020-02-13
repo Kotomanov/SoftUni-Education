@@ -20,7 +20,7 @@ namespace IRunes.Models
         public string Email { get; set; }
 
         [Required]
-        [MaxLength(20)]
+        //[MaxLength(20)] because of the SHA256
         public string Password { get; set; }
     }
 }

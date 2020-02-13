@@ -3,7 +3,7 @@
     using System.Collections.Generic;
 
     using IRunes.Data;
-
+    using Microsoft.EntityFrameworkCore;
     using SIS.HTTP;
     using SIS.MvcFramework;
 
@@ -14,6 +14,7 @@
             using (var db = new RunesDbContext())
             {
                 db.Database.EnsureCreated();
+                //db.Database.Migrate(); 
             }
         }
 
