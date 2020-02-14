@@ -24,7 +24,7 @@ namespace IRunes.Models
 
         public decimal Price { get; set; }
 
-        public string AbumId { get; set; }
+        public string AlbumId { get; set; }
 
         public Album Album { get; set; }
     }
