@@ -14,7 +14,7 @@
             using (var db = new RunesDbContext())
             {
                 db.Database.EnsureCreated();
-                //db.Database.Migrate(); 
+             
             }
         }
 
