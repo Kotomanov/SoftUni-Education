@@ -13,6 +13,8 @@
                     </tr>
                 </thead>
                 <tbody>
+                    @foreach(var trip in Model)
+                    {
                     <tr>
                         <th scope="row">StartPoint</th>
                         <td>EndPoint</td>
@@ -24,6 +26,7 @@
                             </div>
                         </td>
                     </tr>
+                    }
                 </tbody>
             </table>
         </div>

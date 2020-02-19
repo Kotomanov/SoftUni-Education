@@ -2,9 +2,6 @@
 using SharedTrip.ViewModel.TripsViewModels;
 using SIS.HTTP;
 using SIS.MvcFramework;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace SharedTrip.Controllers
 {
@@ -72,7 +69,7 @@ namespace SharedTrip.Controllers
 
             this.service.CreateTrip(inputModel.StartPoint, inputModel.EndPoint, inputModel.DepartureTime, inputModel.ImagePath, inputModel.Seats, inputModel.Description);
 
-            return this.Redirect($"/Trips/Details?tripId={inputModel} ");
+            return this.Redirect("/Trips/All");
 
         }
 
@@ -83,42 +80,43 @@ namespace SharedTrip.Controllers
                 return this.Redirect("/Users/Login");
             }
 
-            //var viewModel = new AllTripViewModel
-            //{
-
-            //    var tripsView = new AllTripViewModel
-            //    { 
-            //     this.service.GetAll(x => new AllTripViewModel
-            //    {
-            //         StartPoint = x.StartPoint,
-            //         EndPoint = x.EndPoint,
-            //         DepartureTime = x.DepartureTime,
-            //         Seats = x.Seats,
-            //         Details = x.Details,
-
-            //    }),
-
-            //    }
-
-            //};
-
-            return this.View();
+            return this.View(this.service.GetAll(), "All");
 
         }
 
-        public HttpResponse Details(string id)
+
+        public HttpResponse TripDetails(string id)
         {
-            if (!this.IsUserLoggedIn())
+            if (!IsUserLoggedIn())
             {
                 return this.Redirect("/Users/Login");
             }
 
             var trip = this.service.TripDetails(id);
 
-            return this.View(trip);
+            return this.View(trip, "Details");
 
         }
 
+        public HttpResponse AddUserToTrip(string tripId)
+        {
+
+            if (!IsUserLoggedIn())
+            {
+                return this.Redirect("/Users/Login");
+            }
+
+            var userId = this.Request.SessionData["UserId"];
+            var addedTrip = this.service.AddUserToTrip(tripId, userId);
+
+            if (addedTrip) // we have the trip 
+            {
+                return this.Redirect("/Trips/All");
+            }
+
+            return this.Redirect($"/Trips/Details?tripId={tripId}");
+
+        }
 
     }
 }

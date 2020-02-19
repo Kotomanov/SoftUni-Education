@@ -17,5 +17,8 @@ namespace SharedTrip.Services.TripsServices
 
         IEnumerable<TripDetailsViewModel> GetAll();
 
+        bool AddUserToTrip(string tripId, string userId);
+        
+
     }
 }

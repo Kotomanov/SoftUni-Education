@@ -2,9 +2,6 @@
 using SharedTrip.ViewModel.UsersViewModels;
 using SIS.HTTP;
 using SIS.MvcFramework;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace SharedTrip.Controllers
 {
@@ -24,7 +21,8 @@ namespace SharedTrip.Controllers
         {
             if (this.IsUserLoggedIn())
             {
-                return this.Redirect("/Trips/All");
+                //If the user is logged in and he tries to go to the home page, the application must redirect him to the / Trips / All
+                return this.Redirect("Trips/All");  
             }
             return this.View();
         }
@@ -48,7 +46,7 @@ namespace SharedTrip.Controllers
         {
             if (this.IsUserLoggedIn())
             {
-                return this.Redirect("/Trips/All");
+                return this.Redirect("/"); 
             }
 
             return this.View();
