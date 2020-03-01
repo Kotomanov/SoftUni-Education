@@ -47,9 +47,11 @@ namespace Andreys.Controllers
         {
             if (!IsUserLoggedIn())
             {
-                return this.Redirect("/Users/Login");
+                return this.View();
             }
-            return this.View();
+            
+
+            return this.Redirect("/");
         }
 
         [HttpPost]
