@@ -12,6 +12,7 @@
         {
             this.productsService = productsService;
         }
+
         [HttpGet("/")]
         public HttpResponse IndexSlash  ()
         { 

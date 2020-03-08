@@ -59,7 +59,7 @@ namespace Andreys.Services.Users
 
         public bool UsernameExists(string username)
         {
-            var user = db.Users
+            var user = this.db.Users
                          .Where(u => u.Username == username)
                          .FirstOrDefault();
             if (user == null)

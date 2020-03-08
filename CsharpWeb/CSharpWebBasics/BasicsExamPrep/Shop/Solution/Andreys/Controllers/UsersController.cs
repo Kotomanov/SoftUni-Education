@@ -60,33 +60,33 @@ namespace Andreys.Controllers
 
             if (string.IsNullOrWhiteSpace(registerModel.Email))
             {
-                return this.Redirect("/Users/Register");
+                return this.View();
             }
 
 
             if (registerModel.Username.Length < 4 || registerModel.Username.Length > 10)
             {
-                return this.Redirect("/Users/Register");
+                return this.View();
             }
 
             if (registerModel.Password.Length < 6 || registerModel.Password.Length > 20)
             {
-                return this.Redirect("/Users/Register");
+                return this.View();
             }
 
             if (registerModel.Password != registerModel.ConfirmPassword)
             {
-                return this.Redirect("/Users/Register");
+                return this.View();
             }
 
             if (this.usersService.EmailExists(registerModel.Email))
             {
-                return this.Redirect("/Users/Register");
+                return this.View();
             }
 
             if (this.usersService.UsernameExists(registerModel.Username))
             {
-                return this.Redirect("/Users/Register");
+                return this.View();
             }
 
             this.usersService.Register(registerModel.Username, registerModel.Email, registerModel.Password);

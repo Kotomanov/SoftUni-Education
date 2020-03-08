@@ -8,7 +8,7 @@ namespace Andreys.Services.Products
     {
         int AddProduct(string name,string description, string url, string category, string gender, decimal price);
 
-        IEnumerable<GetAllProducts> ListAllProducts();
+        IEnumerable<Product> ListAllProducts();
 
         Product ProductDetails(int id); 
 

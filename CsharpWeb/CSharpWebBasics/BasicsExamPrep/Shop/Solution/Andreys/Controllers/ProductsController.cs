@@ -31,27 +31,19 @@ namespace Andreys.Controllers
                 return this.Redirect("/Users/Login");
             }
 
-            if (string.IsNullOrWhiteSpace(product.Name) ||
-                string.IsNullOrWhiteSpace(product.Description) ||
-                string.IsNullOrWhiteSpace(product.Gender) ||
-                string.IsNullOrWhiteSpace(product.Category) ||
-                string.IsNullOrWhiteSpace(product.ImageUrl) ||
+
+            if (
                  product.Price < 0 ||
                  product.Name.Length > 20 ||
                  product.Name.Length < 4 ||
-                 product.Description.Length > 10 ||
-                 product.Category != "Shirt"
-                 && product.Category != "Denim"
-                 && product.Category != "Shorts" &&
-                 product.Category != "Jacket" ||
-                 product.Gender != "Male" && product.Gender != "Female"
+                 product.Description.Length > 10
                 )
             {
-                return this.Redirect("/Products/Add");
+                return this.View();
             }
 
-            service.AddProduct(product.Name, product.Description, product.ImageUrl, product.Category, product.Gender, product.Price);
-            //After deleting or creating a Product, redirect to the Home Page.
+            var productId = service.AddProduct(product.Name, product.Description, product.ImageUrl, product.Category, product.Gender, product.Price);
+
             return this.Redirect("/");
 
         }
@@ -75,13 +67,9 @@ namespace Andreys.Controllers
                 return this.Redirect("/Users/Login");
             }
 
-            if (this.service.ProductDetails(id) != null)
-            {
-                //After deleting or creating a Product, redirect to the Home Page
-                service.DeleteProduct(id);
-                return this.Redirect("/");
 
-            }
+            service.DeleteProduct(id);
+
 
             return this.Redirect("/");
 

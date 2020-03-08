@@ -57,7 +57,7 @@ namespace EGovernment.Web
             services.AddScoped<IDbQueryRunner, DbQueryRunner>();
 
             // Application services
-            services.AddTransient<IEmailSender, NullMessageSender>();
+            services.AddTransient<IEmailSender>(a => new SendGridEmailSender("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"));
             services.AddTransient<ISettingsService, SettingsService>();
         }
 

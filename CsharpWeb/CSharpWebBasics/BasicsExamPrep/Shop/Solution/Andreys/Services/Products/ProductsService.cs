@@ -48,16 +48,16 @@ namespace Andreys.Services.Products
             this.db.SaveChanges();
         }
 
-        public IEnumerable<GetAllProducts> ListAllProducts()
+        public IEnumerable<Product> ListAllProducts()
             => this.db.Products
             .Select(x =>
-            new GetAllProducts
+            new Product
             {
                 Id = x.Id,
                 Name = x.Name,
                 ImageUrl = x.ImageUrl,
                 Price = x.Price,
-            }).ToList();
+            }).ToArray();
 
         public Product ProductDetails(int id)
        => this.db.Products.FirstOrDefault(p => p.Id == id); 
