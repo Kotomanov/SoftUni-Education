@@ -1,9 +1,10 @@
 ﻿// ReSharper disable VirtualMemberCallInConstructor
 namespace EGovernment.Data.Models
 {
+    using System;
+
     using EGovernment.Data.Common.Models;
     using Microsoft.AspNetCore.Identity;
-    using System;
 
     public class ApplicationRole : IdentityRole, IAuditInfo, IDeletableEntity
     {

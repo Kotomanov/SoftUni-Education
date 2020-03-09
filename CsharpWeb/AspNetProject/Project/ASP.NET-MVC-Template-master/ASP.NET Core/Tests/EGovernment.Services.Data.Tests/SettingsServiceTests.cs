@@ -1,15 +1,15 @@
 ﻿namespace EGovernment.Services.Data.Tests
 {
+    using System.Collections.Generic;
+    using System.Linq;
+    using System.Threading.Tasks;
+
     using EGovernment.Data;
     using EGovernment.Data.Common.Repositories;
     using EGovernment.Data.Models;
     using EGovernment.Data.Repositories;
     using Microsoft.EntityFrameworkCore;
     using Moq;
-
-    using System.Collections.Generic;
-    using System.Linq;
-    using System.Threading.Tasks;
     using Xunit;
 
     public class SettingsServiceTests
@@ -42,7 +42,7 @@
 
             var repository = new EfDeletableEntityRepository<Setting>(dbContext);
             var service = new SettingsService(repository);
-            Assert.Equal(3, service.GetCount()); //.GetCount());
+            Assert.Equal(3, service.GetCount());
         }
     }
 }

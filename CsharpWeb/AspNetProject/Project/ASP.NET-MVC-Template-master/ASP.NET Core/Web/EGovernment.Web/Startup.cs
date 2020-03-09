@@ -1,17 +1,17 @@
-﻿using EGovernment.Data;
-using EGovernment.Data.Common;
-using EGovernment.Data.Common.Repositories;
-using EGovernment.Data.Models;
-using EGovernment.Data.Repositories;
-using EGovernment.Data.Seeding;
-using EGovernment.Services.Data;
-using EGovernment.Services.Mapping;
-using EGovernment.Services.Messaging;
-using EGovernment.Web.ViewModels;
-
-
-namespace EGovernment.Web
+﻿namespace EGovernment.Web
 {
+    using System.Reflection;
+
+    using EGovernment.Data;
+    using EGovernment.Data.Common;
+    using EGovernment.Data.Common.Repositories;
+    using EGovernment.Data.Models;
+    using EGovernment.Data.Repositories;
+    using EGovernment.Data.Seeding;
+    using EGovernment.Services.Data;
+    using EGovernment.Services.Mapping;
+    using EGovernment.Services.Messaging;
+    using EGovernment.Web.ViewModels;
     using Microsoft.AspNetCore.Builder;
     using Microsoft.AspNetCore.Hosting;
     using Microsoft.AspNetCore.Http;
@@ -19,7 +19,6 @@ namespace EGovernment.Web
     using Microsoft.Extensions.Configuration;
     using Microsoft.Extensions.DependencyInjection;
     using Microsoft.Extensions.Hosting;
-    using System.Reflection;
 
     public class Startup
     {
@@ -58,6 +57,8 @@ namespace EGovernment.Web
 
             // Application services
             services.AddTransient<IEmailSender>(a => new SendGridEmailSender("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"));
+
+            // services.AddTransient<IEmailSender, NullMessageSender>();
             services.AddTransient<ISettingsService, SettingsService>();
         }
 

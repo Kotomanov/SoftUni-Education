@@ -5,6 +5,7 @@
     using System.Reflection;
     using System.Threading;
     using System.Threading.Tasks;
+
     using EGovernment.Data.Common.Models;
     using EGovernment.Data.Models;
     using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
@@ -24,7 +25,7 @@
 
         public DbSet<Setting> Settings { get; set; }
 
-        // TODO add DBset for each Model 
+        // TODO add DBset for each Model
         public override int SaveChanges() => this.SaveChanges(true);
 
         public override int SaveChanges(bool acceptAllChangesOnSuccess)

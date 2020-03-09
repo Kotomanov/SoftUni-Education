@@ -1,11 +1,11 @@
-﻿using EGovernment.Services.Mapping;
-
-namespace EGovernment.Services.Data
+﻿namespace EGovernment.Services.Data
 {
-    using EGovernment.Data.Common.Repositories;
-    using EGovernment.Data.Models;
     using System.Collections.Generic;
     using System.Linq;
+
+    using EGovernment.Data.Common.Repositories;
+    using EGovernment.Data.Models;
+    using EGovernment.Services.Mapping;
 
     public class SettingsService : ISettingsService
     {

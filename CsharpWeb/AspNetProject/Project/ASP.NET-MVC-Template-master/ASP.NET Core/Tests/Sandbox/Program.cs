@@ -1,5 +1,10 @@
 ﻿namespace Sandbox
 {
+    using System;
+    using System.Diagnostics;
+    using System.IO;
+    using System.Threading.Tasks;
+
     using CommandLine;
     using EGovernment.Data;
     using EGovernment.Data.Common;
@@ -13,10 +18,7 @@
     using Microsoft.Extensions.Configuration;
     using Microsoft.Extensions.DependencyInjection;
     using Microsoft.Extensions.Logging;
-    using System;
-    using System.Diagnostics;
-    using System.IO;
-    using System.Threading.Tasks;
+
     using IEmailSender = EGovernment.Services.Messaging.IEmailSender;
 
     public static class Program

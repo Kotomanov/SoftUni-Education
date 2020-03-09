@@ -1,7 +1,6 @@
-﻿using EGovernment.Web;
-
-namespace EGovernment.Web
+﻿namespace EGovernment.Web
 {
+    using EGovernment.Web;
     using Microsoft.AspNetCore.Hosting;
     using Microsoft.Extensions.Hosting;
 

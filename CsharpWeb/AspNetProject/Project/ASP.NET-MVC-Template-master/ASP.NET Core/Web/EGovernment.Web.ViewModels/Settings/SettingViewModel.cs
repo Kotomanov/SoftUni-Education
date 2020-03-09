@@ -1,8 +1,8 @@
 ﻿namespace EGovernment.Web.ViewModels.Settings
 {
+    using AutoMapper;
     using EGovernment.Data.Models;
     using EGovernment.Services.Mapping;
-    using AutoMapper;
 
     public class SettingViewModel : IMapFrom<Setting>, IHaveCustomMappings
     {
