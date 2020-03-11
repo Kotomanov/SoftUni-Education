@@ -2,6 +2,7 @@
 {
     using System.Reflection;
 
+    using CloudinaryDotNet;
     using EGovernment.Data;
     using EGovernment.Data.Common;
     using EGovernment.Data.Common.Repositories;
@@ -47,6 +48,15 @@
 
             services.AddControllersWithViews();
             services.AddRazorPages();
+
+            Account account = new Account(
+                             this.configuration["Cloudinary:AppName"],
+                             this.configuration["Cloudinary:AppKey"],
+                             this.configuration["Cloudinary:AppSecret"]);
+
+            Cloudinary cloudinary = new Cloudinary(account);
+
+            services.AddSingleton(cloudinary);
 
             services.AddSingleton(this.configuration);
 
