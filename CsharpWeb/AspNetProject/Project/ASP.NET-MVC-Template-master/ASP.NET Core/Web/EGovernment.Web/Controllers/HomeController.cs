@@ -38,6 +38,16 @@
             return this.View();
         }
 
+        public IActionResult Test()
+        {
+            return this.View();
+        }
+
+        public IActionResult UnderConstructionView()
+        {
+            return this.View();
+        }
+
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
