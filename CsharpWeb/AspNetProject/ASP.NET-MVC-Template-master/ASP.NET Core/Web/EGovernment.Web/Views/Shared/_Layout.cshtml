@@ -1,0 +1,100 @@
+﻿@using EGovernment.Common
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <title>@this.ViewData["Title"] - @GlobalConstants.SystemName</title>
+
+    <link href="~/lib/fontawesome/css/all.css" rel="stylesheet" asp-append-version="true" />
+    <environment names="Development">
+        <link href="~/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" asp-append-version="true" />
+        <link href="~/css/site.css" rel="stylesheet" asp-append-version="true" />
+    </environment>
+    <environment names="Staging,Production">
+        <link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" asp-append-version="true" />
+        <link href="~/css/site.min.css" rel="stylesheet" asp-append-version="true" />
+    </environment>
+
+    <link rel="icon" href="~/img/favicon.png">
+    <link rel="stylesheet" href="~/css/bootstrap.min.css">
+    <link rel="stylesheet" href="~/css/animate.css">
+    <link rel="stylesheet" href="~/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="~/css/themify-icons.css">
+    <link rel="stylesheet" href="~/css/flaticon.css">
+    <link rel="stylesheet" href="~/css/magnific-popup.css">
+    <link rel="stylesheet" href="~/css/nice-select.css">
+    <link rel="stylesheet" href="~/css/slick.css">
+    <link rel="stylesheet" href="~/css/style.css">
+</head>
+
+<body>
+
+    <nav class="navbar navbar-light text-bg-light ">
+        <span class="navbar-text">
+            SoftUni Web Project April 2020
+        </span>
+    </nav>
+
+
+    <div class="container">
+        <partial name="_CookieConsentPartial" />
+        <main role="main" class="pb-0">
+            @this.RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer text-bg-light">
+        <div class="container">
+            &copy; @DateTime.Now.Year - @GlobalConstants.SystemName - @if (this.ViewData["Title"].ToString() == "Privacy Policy")
+            {<a asp-area="" asp-controller="Home" asp-action="Index"><i class="fas fa-home"></i></a>}
+            else
+            {
+                if (this.ViewData["Title"].ToString() == "Home Page")
+                {<a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>}
+                else
+                {
+                    <a asp-area="" asp-controller="Home" asp-action="Index"><i class="fas fa-home"></i> - </a>
+                    <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                }
+            }
+            <div>
+                <a class="badge badge-info" href="/Home/LearningAndWorking" role="button" aria-pressed="true">Човек цял живот учи и цял живот бачка!</a>
+            </div>
+            @*<div><a href="https://www.youtube.com/watch?v=leFFjwoIPjk" class="badge badge-info" role="button" aria-pressed="true">Човек цял живот учи и цял живот бачка!</a></div>*@
+        </div>
+    </footer>
+
+    <environment names="Development">
+        <script src="~/lib/jquery/dist/jquery.js" asp-append-version="true"></script>
+        <script src="~/lib/jquery-validation/dist/jquery.validate.js" asp-append-version="true"></script>
+        <script src="~/lib/jquery-validation-unobtrusive/dist/jquery.validate.unobtrusive.js" asp-append-version="true"></script>
+        <script src="~/lib/bootstrap/dist/js/bootstrap.js" asp-append-version="true"></script>
+        <script src="~/js/site.js" asp-append-version="true"></script>
+    </environment>
+
+    <environment names="Staging,Production">
+        <script src="~/lib/jquery/dist/jquery.min.js" asp-append-version="true"></script>
+        <script src="~/lib/jquery-validation/dist/jquery.validate.min.js" asp-append-version="true"></script>
+        <script src="~/lib/jquery-validation-unobtrusive/dist/jquery.validate.unobtrusive.js" asp-append-version="true"></script>
+        <script src="~/lib/bootstrap/dist/js/bootstrap.min.js" asp-append-version="true"></script>
+        <script src="~/js/site.min.js" asp-append-version="true"></script>
+        <script src="~/js/jquery-1.12.1.min.js"></script>
+        <script src="~/js/popper.min.js"></script>
+        <script src="~/js/bootstrap.min.js"></script>
+        <script src="~/js/owl.carousel.min.js"></script>
+        <script src="~/js/jquery.nice-select.min.js"></script>
+        <script src="~/js/jquery.ajaxchimp.min.js"></script>
+        <script src="~/js/jquery.form.js"></script>
+        <script src="~/js/jquery.validate.min.js"></script>
+        <script src="~/js/mail-script.js"></script>
+        <script src="~/js/contact.js"></script>
+        <script src="~/js/custom.js"></script>
+    </environment>
+
+    @this.RenderSection("Scripts", required: false)
+
+</body>
+</html>
