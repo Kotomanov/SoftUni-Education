@@ -13,6 +13,8 @@
             options.Password.RequireUppercase = false;
             options.Password.RequireNonAlphanumeric = false;
             options.Password.RequiredLength = 6;
+            options.Password.RequiredUniqueChars = 0;
+            options.Lockout.MaxFailedAccessAttempts = 5;
             options.User.RequireUniqueEmail = true;
 
             // options.User.AllowedUserNameCharacters = "a,b,c,d,e";
