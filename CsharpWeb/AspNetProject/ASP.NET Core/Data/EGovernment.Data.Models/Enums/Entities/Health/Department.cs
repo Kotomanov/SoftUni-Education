@@ -1,0 +1,37 @@
+﻿namespace EGovernment.Data.Models.Enums.Entities.Health
+{
+    public enum Department
+    {
+        Oncology = 0,
+        Pediatric = 1,
+        Surgery = 2,
+        Traumatology = 3,
+        Emergency = 4,
+        Anesthetics = 5,
+        BurnsCenter = 6,
+        Cardiology = 7,
+        Chaplaincy = 8,
+        IntensiveCare = 9,
+        Radiology = 10,
+        Gastroenterology = 11,
+        Gynecology = 12,
+        Haematology = 13,
+        InfectionControl = 14,
+        MedicalRecords = 15,
+        Maternity = 16,
+        Microbiology = 17,
+        Neonatal = 18,
+        Nephrology = 19,
+        Neurology = 20,
+        Ophthalmology = 21,
+        Otolaryngology = 22,
+        Physiotherapy = 23,
+        Rheumatology = 24,
+        Urology = 25,
+        Finance = 26,
+        HR = 27,
+        IT = 28,
+        PatientsAccounts = 29,
+        PurchasingAndSupplies = 30,
+    }
+}
