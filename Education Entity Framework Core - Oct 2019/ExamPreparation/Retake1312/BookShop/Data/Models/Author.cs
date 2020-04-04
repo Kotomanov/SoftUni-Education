@@ -31,6 +31,6 @@ namespace BookShop.Data.Models
         [RegularExpression(@"^[0-9]{3}-[0-9]{3}-[0-9]{4}$")] //?? three groups (separated by '-'), the first two consist of three digits and the last one - of 4 digits
         public string Phone { get; set; }
 
-        public ICollection<AuthorBook> AuthorsBooks { get; set; }
+        public virtual ICollection<AuthorBook> AuthorsBooks { get; set; }
     }
 }

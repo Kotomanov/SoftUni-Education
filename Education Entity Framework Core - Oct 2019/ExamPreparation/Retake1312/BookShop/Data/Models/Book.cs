@@ -33,7 +33,7 @@ namespace BookShop.Data.Models
         [Required]
         public DateTime PublishedOn { get; set; }
 
-        public ICollection<AuthorBook> AuthorsBooks { get; set; }
+        public virtual ICollection<AuthorBook> AuthorsBooks { get; set; }
 
     }
 }
