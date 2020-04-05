@@ -23,6 +23,7 @@
 
             var logger = serviceProvider.GetService<ILoggerFactory>().CreateLogger(typeof(ApplicationDbContextSeeder));
 
+            // Add here refernce to every seeder class
             var seeders = new List<ISeeder>
                           {
                               new RolesSeeder(),

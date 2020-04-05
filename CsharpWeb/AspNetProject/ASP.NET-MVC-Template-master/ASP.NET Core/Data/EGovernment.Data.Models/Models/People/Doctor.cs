@@ -12,8 +12,8 @@
         public Doctor()
         {
             this.DoctorsEntities = new HashSet<DoctorEntity>();
-            this.Specialties = new HashSet<string>();
-            this.ListOfPatients = new HashSet<Patient>();
+            this.SpecialtiesDoctors = new HashSet<SpecialtyDoctor>();
+            this.PatientsList = new HashSet<Patient>();
         }
 
         [Required]
@@ -31,11 +31,11 @@
 
         public int AddressId { get; set; }
 
-        public virtual ICollection<string> Specialties { get; set; } // maybe will not work ?
+        public virtual ICollection<SpecialtyDoctor> SpecialtiesDoctors { get; set; }
 
         public virtual ICollection<DoctorEntity> DoctorsEntities { get; set; }
 
-        public virtual ICollection<Patient> ListOfPatients { get; set; }
+        public virtual ICollection<Patient> PatientsList { get; set; }
 
         [Range(0, int.MaxValue)]
         public int VisitsCount { get; set; }

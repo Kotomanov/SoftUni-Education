@@ -10,6 +10,8 @@
     using EGovernment.Data.Models;
     using EGovernment.Data.Models.Models.Geographical;
     using EGovernment.Data.Models.Models.Health;
+    using EGovernment.Data.Models.Models.Health.Entities;
+    using EGovernment.Data.Models.Models.MappingTables;
     using EGovernment.Data.Models.Models.People;
     using EGovernment.Data.Models.Models.Vehicles;
     using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
@@ -30,6 +32,36 @@
         public DbSet<Setting> Settings { get; set; }
 
         // TODO add DBset for each Model
+        public DbSet<Address> Addresses { get; set; }
+
+        public DbSet<MedicalRecord> MedicalRecords { get; set; }
+
+        public DbSet<Medicine> Medicines { get; set; }
+
+        public DbSet<Visit> Visits { get; set; }
+
+        public DbSet<Diagnose> Diagnoses { get; set; }
+
+        public DbSet<DoctorEntity> DoctorsEntities { get; set; }
+
+        public DbSet<Entity> Entities { get; set; }
+
+        public DbSet<Doctor> Doctors { get; set; }
+
+        public DbSet<Employee> Employees { get; set; }
+
+        public DbSet<Patient> Patients { get; set; }
+
+        public DbSet<Vehicle> Vehicles { get; set; }
+
+        public DbSet<Department> Departments { get; set; }
+
+        public DbSet<Specialty> Specialties { get; set; }
+
+        public DbSet<SpecialtyDoctor> SpecialtiesDoctors { get; set; }
+
+        public DbSet<DepartmentEntity> DepartmentsEntities { get; set; }
+
         public override int SaveChanges() => this.SaveChanges(true);
 
         public override int SaveChanges(bool acceptAllChangesOnSuccess)
@@ -76,6 +108,28 @@
             {
                 foreignKey.DeleteBehavior = DeleteBehavior.Restrict;
             }
+
+            // Add Mapping tables refernce
+            builder.Entity<DoctorEntity>()
+              .HasKey(k => new
+              {
+                  k.DoctorId,
+                  k.EntityId,
+              });
+
+            builder.Entity<DepartmentEntity>()
+             .HasKey(k => new
+             {
+                 k.DepartmentId,
+                 k.EntityId,
+             });
+
+            builder.Entity<SpecialtyDoctor>()
+             .HasKey(k => new
+             {
+                 k.DoctorId,
+                 k.SpecialtyId,
+             });
         }
 
         private static void ConfigureUserIdentityRelations(ModelBuilder builder)

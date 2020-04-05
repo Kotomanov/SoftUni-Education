@@ -1,6 +1,6 @@
 ﻿namespace EGovernment.Data.Models.Enums.Entities.Health
 {
-    public enum Department
+    public enum DepartmentCode
     {
         Oncology = 0,
         Pediatric = 1,

@@ -10,7 +10,7 @@
     {
         public Employee()
         {
-            this.Positions = new HashSet<string>();
+            this.Positions = new HashSet<ApplicationRole>();
         }
 
         [Required]
@@ -44,6 +44,6 @@
         [Required]
         public decimal Salary { get; set; }
 
-        public virtual ICollection<string> Positions { get; set; }
+        public virtual ICollection<ApplicationRole> Positions { get; set; }
     }
 }

@@ -16,6 +16,7 @@
         }
 
         [Required]
+        [Range(1, 10_000_000)]
         public string PatientId { get; set; }
 
         public virtual Patient Patient { get; set; }

@@ -12,12 +12,12 @@
     {
         public Entity()
         {
-            this.DepartmentsList = new HashSet<string>();
+            this.DepartmentsEntities = new HashSet<DepartmentEntity>();
             this.DoctorsEntities = new HashSet<DoctorEntity>();
         }
 
         [Required]
-        [StringLength(30, MinimumLength = 1)]
+        [StringLength(100, MinimumLength = 3)]
         public string Name { get; set; }
 
         [Required]
@@ -31,7 +31,10 @@
         [Range(0, 1_000)]
         public int BedCount { get; set; }
 
-        public virtual ICollection<string> DepartmentsList { get; set; } // enum in list? or string
+        [Range(0, 1_000)]
+        public int Availabebeds { get; set; }
+
+        public virtual ICollection<DepartmentEntity> DepartmentsEntities { get; set; }
 
         public virtual ICollection<DoctorEntity> DoctorsEntities { get; set; }
     }

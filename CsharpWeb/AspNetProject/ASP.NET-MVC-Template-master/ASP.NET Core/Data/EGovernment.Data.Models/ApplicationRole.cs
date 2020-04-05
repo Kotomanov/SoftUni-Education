@@ -20,7 +20,7 @@ namespace EGovernment.Data.Models
             this.Id = Guid.NewGuid().ToString();
         }
 
-        public Role RoleCode { get; set; } // check if it works on other than Admin?
+        public Role RoleCode { get; set; }
 
         public DateTime CreatedOn { get; set; }
 

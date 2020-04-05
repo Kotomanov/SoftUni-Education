@@ -23,16 +23,19 @@
         public string EGN { get; set; }
 
         [Required]
+        [Range(1, 10_000_000)]
         public int AddressId { get; set; }
 
         public virtual Address Address { get; set; }
 
         [Required]
+        [Range(1, 10_000)]
         public int DoctorId { get; set; } // GP
 
         public virtual Doctor Doctor { get; set; }
 
         [Required]
+        [Range(1, 10_000_000)]
         public int MedicalRecordId { get; set; }
 
         public virtual MedicalRecord MedicalRecord { get; set; }
