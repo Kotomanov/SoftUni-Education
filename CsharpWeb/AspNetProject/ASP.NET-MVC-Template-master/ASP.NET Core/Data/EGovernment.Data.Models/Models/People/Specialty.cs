@@ -17,6 +17,6 @@
 
         public DoctorSpecialty DoctorSpecialty { get; set; }
 
-        public ICollection<SpecialtyDoctor> SpecialtiesDoctors { get; set; }
+        public virtual ICollection<SpecialtyDoctor> SpecialtiesDoctors { get; set; }
     }
 }

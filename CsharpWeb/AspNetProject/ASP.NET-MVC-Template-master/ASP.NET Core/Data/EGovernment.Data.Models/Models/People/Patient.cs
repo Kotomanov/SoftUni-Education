@@ -20,6 +20,8 @@
         public string LastName { get; set; }
 
         [Required]
+        [StringLength(10)]
+        [RegularExpression(@"[0-9]{10}")]
         public string EGN { get; set; }
 
         [Required]

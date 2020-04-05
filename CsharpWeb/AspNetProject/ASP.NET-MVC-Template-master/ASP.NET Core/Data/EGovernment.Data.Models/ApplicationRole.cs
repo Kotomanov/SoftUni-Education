@@ -5,6 +5,7 @@ namespace EGovernment.Data.Models
 
     using EGovernment.Data.Common.Models;
     using EGovernment.Data.Models.Enums.Roles;
+    using EGovernment.Data.Models.Models.People;
     using Microsoft.AspNetCore.Identity;
 
     public class ApplicationRole : IdentityRole, IAuditInfo, IDeletableEntity
@@ -21,6 +22,10 @@ namespace EGovernment.Data.Models
         }
 
         public Role RoleCode { get; set; }
+
+        public int? EmployeeId { get; set; }
+
+        public Employee Employee { get; set; }
 
         public DateTime CreatedOn { get; set; }
 

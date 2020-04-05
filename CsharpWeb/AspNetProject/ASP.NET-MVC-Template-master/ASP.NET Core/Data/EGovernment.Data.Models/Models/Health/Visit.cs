@@ -4,22 +4,16 @@
     using System.ComponentModel.DataAnnotations;
 
     using EGovernment.Data.Common.Models;
-    using EGovernment.Data.Models.Models.Health.Entities;
+    using EGovernment.Data.Models.Models.MappingTables;
     using EGovernment.Data.Models.Models.People;
 
     public class Visit : BaseDeletableModel<int>
     {
         public Visit()
         {
-            this.PillsPerscribed = new HashSet<Medicine>();
-            this.EntitiesVisited = new HashSet<Entity>();
+            this.MedicinesPerscribed = new HashSet<MedicineVisit>();
+            this.EntitiesVisited = new HashSet<EntityVisit>();
         }
-
-        [Required]
-        [Range(1, 10_000_000)]
-        public string PatientId { get; set; }
-
-        public virtual Patient Patient { get; set; }
 
         [Required]
         [Range(1, 10_000)]
@@ -27,8 +21,12 @@
 
         public virtual Doctor Doctor { get; set; }
 
-        public virtual ICollection<Medicine> PillsPerscribed { get; set; }
+        public int MedicalRecordId { get; set; }
 
-        public virtual ICollection<Entity> EntitiesVisited { get; set; }
+        public virtual MedicalRecord MedicalRecord { get; set; }
+
+        public virtual ICollection<MedicineVisit> MedicinesPerscribed { get; set; }
+
+        public virtual ICollection<EntityVisit> EntitiesVisited { get; set; }
     }
 }

@@ -4,14 +4,16 @@ using EGovernment.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
-namespace EGovernment.Data.Migrations
+namespace AspNetCoreTemplate.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20200405182314_UpdatedModelsAndMappingTables")]
+    partial class UpdatedModelsAndMappingTables
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -636,8 +638,6 @@ namespace EGovernment.Data.Migrations
 
                     b.HasIndex("IsDeleted");
 
-                    b.HasIndex("ManagerId");
-
                     b.HasIndex("VehicleId");
 
                     b.ToTable("Employees");
@@ -1072,12 +1072,6 @@ namespace EGovernment.Data.Migrations
                     b.HasOne("EGovernment.Data.Models.Models.Geographical.Address", "Address")
                         .WithMany()
                         .HasForeignKey("AddressId")
-                        .OnDelete(DeleteBehavior.Restrict)
-                        .IsRequired();
-
-                    b.HasOne("EGovernment.Data.Models.Models.People.Employee", "Manager")
-                        .WithMany("Team")
-                        .HasForeignKey("ManagerId")
                         .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 

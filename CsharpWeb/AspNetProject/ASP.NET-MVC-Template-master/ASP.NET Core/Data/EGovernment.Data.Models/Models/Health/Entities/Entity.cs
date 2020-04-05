@@ -14,6 +14,7 @@
         {
             this.DepartmentsEntities = new HashSet<DepartmentEntity>();
             this.DoctorsEntities = new HashSet<DoctorEntity>();
+            this.EntitiesVisited = new HashSet<EntityVisit>();
         }
 
         [Required]
@@ -21,6 +22,8 @@
         public string Name { get; set; }
 
         [Required]
+        public int AddressId { get; set; }
+
         public Address Address { get; set; }
 
         [Required]
@@ -37,5 +40,7 @@
         public virtual ICollection<DepartmentEntity> DepartmentsEntities { get; set; }
 
         public virtual ICollection<DoctorEntity> DoctorsEntities { get; set; }
+
+        public virtual ICollection<EntityVisit> EntitiesVisited { get; set; }
     }
 }

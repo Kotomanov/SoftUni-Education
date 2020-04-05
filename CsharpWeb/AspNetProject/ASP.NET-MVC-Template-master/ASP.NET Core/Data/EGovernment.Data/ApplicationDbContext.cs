@@ -130,6 +130,27 @@
                  k.DoctorId,
                  k.SpecialtyId,
              });
+
+            builder.Entity<EntityVisit>()
+             .HasKey(k => new
+             {
+                 k.VisitId,
+                 k.EntityId,
+             });
+
+            builder.Entity<MedicineVisit>()
+            .HasKey(k => new
+            {
+                k.MedicineId,
+                k.VisitId,
+            });
+
+            builder.Entity<RecordDiagnose>()
+             .HasKey(k => new
+             {
+                 k.MedicalRecordId,
+                 k.DiagnoseId,
+             });
         }
 
         private static void ConfigureUserIdentityRelations(ModelBuilder builder)
