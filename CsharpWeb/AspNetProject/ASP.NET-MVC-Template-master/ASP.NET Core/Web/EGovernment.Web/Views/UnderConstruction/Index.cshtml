@@ -1,4 +1,10 @@
-﻿@{
+﻿@using EGovernment.Data.Models
+@using Microsoft.AspNetCore.Identity
+
+@inject SignInManager<ApplicationUser> SignInManager
+@inject UserManager<ApplicationUser> UserManager
+
+@{
     ViewData["Title"] = "Page under construction";
 }
 
@@ -9,9 +15,8 @@
          style="background-image: url('https://res.cloudinary.com/egov/image/upload/v1582494705/underconstruction_hlhw3w.jpg'); background-repeat: no-repeat;">
     <div style="height: 40vh;"></div>
     <hr />
-    <h2><i class="fas fa-wrench"></i>  ... Working soo hard to get this one done ASAP</h2>
+    <h2><i class="fas fa-wrench"></i>  Yes ... Working soo hard to get this one done ASAP</h2>
     <hr />
     <a button type="button" class="btn btn-primary" href="/"><i class="fas fa-home"></i></a>
 </section>
 
- 

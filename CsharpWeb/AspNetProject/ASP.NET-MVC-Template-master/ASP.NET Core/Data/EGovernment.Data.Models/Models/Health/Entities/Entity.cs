@@ -29,6 +29,7 @@
         [Required]
         public EntityType EntityType { get; set; }
 
+        [Url]
         public string Url { get; set; }
 
         [Range(0, 1_000)]

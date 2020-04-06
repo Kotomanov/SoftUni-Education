@@ -1,8 +1,5 @@
 ﻿namespace EGovernment.Web.ViewModels.AppViewModels.VideoViewModels
 {
-    using System;
-    using System.Collections.Generic;
-    using System.Text;
     using System.Text.RegularExpressions;
 
     public class YouTubeVideoViewModel
