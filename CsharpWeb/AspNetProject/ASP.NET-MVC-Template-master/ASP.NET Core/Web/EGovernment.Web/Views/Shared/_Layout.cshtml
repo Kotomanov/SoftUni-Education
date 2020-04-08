@@ -32,12 +32,60 @@
 
 <body>
 
-    <nav class="navbar navbar-light text-bg-light ">
-        <span class="navbar-text">
-            SoftUni Web Project April 2020
-        </span>
-    </nav>
-    <hr />
+    @*<nav class="navbar navbar-light text-bg-light ">
+            <span class="navbar-text">
+                SoftUni Web Project April 2020
+            </span>
+        </nav>*@
+    <header>
+
+        <nav class="navbar navbar-expand-sm navbar-light bg-white border-bottom box-shadow mb-3">
+
+            <div class="container">
+
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">@GlobalConstants.SystemName   SoftUni Web Project April 2020</a>
+
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+
+                    <span class="navbar-toggler-icon"></span>
+
+                </button>
+
+                <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
+
+                    <partial name="_LoginPartial" />
+
+                    <ul class="navbar-nav flex-grow-1">
+
+                        <li class="nav-item">
+
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index"><i class="fas fa-home"></i></a>
+
+                        </li>
+
+                        <li class="nav-item">
+
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Settings" asp-action="Index"><i class="fas fa-tools"></i></a>
+
+                        </li>
+
+                        <li class="nav-item">
+
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+
+                        </li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+        </nav>
+
+    </header>
+    
 
     <div class="container">
         <partial name="_CookieConsentPartial" />
