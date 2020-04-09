@@ -31,6 +31,7 @@
                               new RoleSeeder(),
                               new DepartmentSeeder(),
                               new SpecialtySeeder(),
+                              new AddressSeeder(),
                           };
 
             foreach (var seeder in seeders)

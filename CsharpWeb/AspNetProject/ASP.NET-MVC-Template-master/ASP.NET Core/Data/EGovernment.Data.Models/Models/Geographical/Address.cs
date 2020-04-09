@@ -19,7 +19,7 @@
         public string City { get; set; }
 
         [Required]
-        [Range(4, 6)]
+        [DataType(DataType.PostalCode)]
         public int PostalCode { get; set; }
 
         [Required]

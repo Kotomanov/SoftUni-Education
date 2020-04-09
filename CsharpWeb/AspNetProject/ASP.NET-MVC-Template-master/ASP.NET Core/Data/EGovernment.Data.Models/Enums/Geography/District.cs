@@ -4,6 +4,7 @@
 
     public enum District
     {
+        Dummy = 0,
         Blagoevgrad = 1,
         Burgas = 2,
         Dobrich = 3,

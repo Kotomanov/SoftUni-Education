@@ -31,6 +31,7 @@ namespace EGovernment.Data.Models
         [StringLength(30, MinimumLength = 1)]
         public string LastName { get; set; }
 
+        [RegularExpression(@"[0-9]{10}")]
         public string EGN { get; set; }
 
         public int AddressId { get; set; }

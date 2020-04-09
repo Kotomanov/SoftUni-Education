@@ -16,7 +16,6 @@
     using Microsoft.AspNetCore.Builder;
     using Microsoft.AspNetCore.Hosting;
     using Microsoft.AspNetCore.Http;
-    using Microsoft.AspNetCore.Identity;
     using Microsoft.AspNetCore.Mvc;
     using Microsoft.EntityFrameworkCore;
     using Microsoft.Extensions.Configuration;
@@ -39,27 +38,22 @@
                 options => options.UseSqlServer(this.configuration.GetConnectionString("DefaultConnection")));
 
             // removed this one to add the one bellow with the RoleManager!
-            // services.AddDefaultIdentity<ApplicationUser>(IdentityOptionsProvider.GetIdentityOptions)
-            //    .AddRoles<ApplicationRole>()
-            //    .AddEntityFrameworkStores<ApplicationDbContext>();
-            services.AddIdentity<ApplicationUser, ApplicationRole>(IdentityOptionsProvider.GetIdentityOptions)
-                .AddRoles<ApplicationRole>()
-                .AddRoleManager<RoleManager<ApplicationRole>>()
-                .AddEntityFrameworkStores<ApplicationDbContext>();
+            services.AddDefaultIdentity<ApplicationUser>(IdentityOptionsProvider.GetIdentityOptions)
+             .AddRoles<ApplicationRole>().AddEntityFrameworkStores<ApplicationDbContext>();
 
             // services.AddAuthentication()
-            //    .AddFacebook(facebookOptions =>
+            //   .AddFacebook(facebookOptions =>
             // {
             //    facebookOptions.AppId = this.configuration["Authentication:Facebook:AppId"];
             //    facebookOptions.AppSecret = this.configuration["Authentication:Facebook:AppSecret"];
             // })
-            //    .AddGoogle(options =>
-            //    {
-            //        IConfigurationSection googleAuthNSection =
-            //            this.configuration.GetSection("Authentication:Google");
+            // .AddGoogle(options =>
+            // {
+            //    IConfigurationSection googleAuthNSection =
+            //        this.configuration.GetSection("Authentication:Google");
 
             // options.ClientId = googleAuthNSection["ClientId"];
-            //        options.ClientSecret = googleAuthNSection["ClientSecret"];
+            // options.ClientSecret = googleAuthNSection["ClientSecret"];
             // });
             services.Configure<CookiePolicyOptions>(
                 options =>
