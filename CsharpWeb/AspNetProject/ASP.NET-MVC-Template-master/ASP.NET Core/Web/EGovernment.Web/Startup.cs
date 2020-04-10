@@ -41,20 +41,20 @@
             services.AddDefaultIdentity<ApplicationUser>(IdentityOptionsProvider.GetIdentityOptions)
              .AddRoles<ApplicationRole>().AddEntityFrameworkStores<ApplicationDbContext>();
 
-            // services.AddAuthentication()
-            //   .AddFacebook(facebookOptions =>
-            // {
-            //    facebookOptions.AppId = this.configuration["Authentication:Facebook:AppId"];
-            //    facebookOptions.AppSecret = this.configuration["Authentication:Facebook:AppSecret"];
-            // })
-            // .AddGoogle(options =>
-            // {
+            //services.AddAuthentication()
+            //  .AddFacebook(facebookOptions =>
+            //{
+            //    facebookOptions.AppId = this.configuration["Facebook:AppId"]; // Authentication:
+            //    facebookOptions.AppSecret = this.configuration["Facebook:AppSecret"]; // Authentication:
+            //})
+            //.AddGoogle(options =>
+            //{
             //    IConfigurationSection googleAuthNSection =
-            //        this.configuration.GetSection("Authentication:Google");
+            //         this.configuration.GetSection("Authentication:Google");
 
-            // options.ClientId = googleAuthNSection["ClientId"];
-            // options.ClientSecret = googleAuthNSection["ClientSecret"];
-            // });
+            //    options.ClientId = googleAuthNSection["ClientId"];
+            //    options.ClientSecret = googleAuthNSection["ClientSecret"];
+            //});
             services.Configure<CookiePolicyOptions>(
                 options =>
                     {
