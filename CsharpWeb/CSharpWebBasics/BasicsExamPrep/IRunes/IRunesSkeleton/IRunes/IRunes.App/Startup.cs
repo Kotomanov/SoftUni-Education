@@ -1,11 +1,10 @@
 ﻿namespace IRunes.App
 {
-    using System.Collections.Generic;
     using IRunes.App.Services;
     using IRunes.Data;
-    using Microsoft.EntityFrameworkCore;
     using SIS.HTTP;
     using SIS.MvcFramework;
+    using System.Collections.Generic;
 
     public class Startup : IMvcApplication
     {

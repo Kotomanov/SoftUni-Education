@@ -16,6 +16,9 @@
 
             if (listOfDepartments.Count > dbContext.Departments.Count())
             {
+                // clear the old information first
+                dbContext.Departments.RemoveRange(dbContext.Departments);
+
                 for (int i = 0; i < listOfDepartments.Count; i++)
                 {
                     Department departmentToAdd = new Department { Name = listOfDepartments[i], DepartmentCode = (DepartmentCode)i };

@@ -32,6 +32,12 @@
         public DbSet<Setting> Settings { get; set; }
 
         // TODO add DBset for each Model
+        public DbSet<District> Districts { get; set; }
+
+        public DbSet<City> Cities { get; set; }
+
+        public DbSet<Country> Countries { get; set; }
+
         public DbSet<Address> Addresses { get; set; }
 
         public DbSet<Ministry> Ministries { get; set; }

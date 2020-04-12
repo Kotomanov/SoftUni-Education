@@ -32,6 +32,8 @@
                               new DepartmentSeeder(),
                               new SpecialtySeeder(),
                               new AddressSeeder(),
+                              new CountrySeeder(),
+                              //new CitySeeder(),
                           };
 
             foreach (var seeder in seeders)

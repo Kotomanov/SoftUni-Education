@@ -16,6 +16,9 @@
 
             if (listOfRoles.Count > dbContext.Roles.Count())
             {
+                // clear the old information first - MAY CONFUSE THE ADMIN ONE!
+                dbContext.Roles.RemoveRange(dbContext.Roles);
+
                 for (int i = 1; i < listOfRoles.Count; i++)
                 {
                     ApplicationRole roleToAdd = new ApplicationRole { Name = listOfRoles[i], RoleCode = (Role)i };

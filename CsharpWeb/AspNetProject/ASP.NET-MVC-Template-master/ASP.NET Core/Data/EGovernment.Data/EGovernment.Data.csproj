@@ -13,6 +13,12 @@
   <ItemGroup>
     <Compile Remove="Migrations\20200405194334_SelfReferencing.cs" />
     <Compile Remove="Migrations\20200405194334_SelfReferencing.Designer.cs" />
+    <Compile Remove="Migrations\20200412000359_AddModelsAddSeedersAddViewsCorrected.cs" />
+    <Compile Remove="Migrations\20200412000359_AddModelsAddSeedersAddViewsCorrected.Designer.cs" />
+    <Compile Remove="Migrations\20200412001136_Correction.cs" />
+    <Compile Remove="Migrations\20200412001136_Correction.Designer.cs" />
+    <Compile Remove="Migrations\20200412002357_Correction.cs" />
+    <Compile Remove="Migrations\20200412002357_Correction.Designer.cs" />
   </ItemGroup>
 
   <ItemGroup>

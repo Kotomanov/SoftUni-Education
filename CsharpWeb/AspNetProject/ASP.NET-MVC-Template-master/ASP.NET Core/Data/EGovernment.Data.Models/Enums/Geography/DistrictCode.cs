@@ -2,7 +2,7 @@
 {
     using System.ComponentModel;
 
-    public enum District
+    public enum DistrictCode
     {
         Dummy = 0,
         Blagoevgrad = 1,

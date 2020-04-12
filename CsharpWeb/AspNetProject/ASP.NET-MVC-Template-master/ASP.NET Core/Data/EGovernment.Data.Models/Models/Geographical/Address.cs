@@ -9,14 +9,13 @@
     public class Address : BaseDeletableModel<int>
     {
         [Required]
-        public Country Country { get; set; }
+        public int CountryId { get; set; }
 
         [Required]
-        public District District { get; set; }
+        public int DistrictId { get; set; }
 
-        // TODO find a way to have the city here - reflection?
         [Required]
-        public string City { get; set; }
+        public int CityId { get; set; }
 
         [Required]
         [DataType(DataType.PostalCode)]

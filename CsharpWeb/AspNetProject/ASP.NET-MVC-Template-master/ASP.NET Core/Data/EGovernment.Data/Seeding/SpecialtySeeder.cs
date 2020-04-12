@@ -16,6 +16,9 @@
 
             if (listOfSpecialties.Count > dbContext.Specialties.Count())
             {
+                // clear the old information first
+                dbContext.Specialties.RemoveRange(dbContext.Specialties);
+
                 for (int i = 0; i < listOfSpecialties.Count; i++)
                 {
                     Specialty specialtyToAdd = new Specialty { Name = listOfSpecialties[i], DoctorSpecialty = (DoctorSpecialty)i };
