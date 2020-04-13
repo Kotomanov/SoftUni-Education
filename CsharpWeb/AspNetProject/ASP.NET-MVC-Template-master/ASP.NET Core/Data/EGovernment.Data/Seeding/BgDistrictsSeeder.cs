@@ -12,18 +12,6 @@
     {
         public async Task SeedAsync(ApplicationDbContext dbContext, IServiceProvider serviceProvider)
         {
-            //if (dbContext.Districts.Count() == 0)
-            //{
-            //District districtToAdd = new District
-            //{
-            //    Name = "Dummy",
-            //    CountryId = 1,
-            //    DistrictCode = 0,
-            //};
-
-            //await dbContext.Districts.AddAsync(districtToAdd);
-            // }
-
             List<string> listOfDistricts = Enum.GetNames(typeof(DistrictCode)).ToList();
 
             var countryId = dbContext.Countries.First().Id;
