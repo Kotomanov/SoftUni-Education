@@ -33,6 +33,7 @@
                               new SpecialtySeeder(),
                               new AddressSeeder(),
                               new CountrySeeder(),
+                              new BgDistrictsSeeder(),
                               //new CitySeeder(),
                           };
 
