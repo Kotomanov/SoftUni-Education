@@ -34,7 +34,7 @@
                               new AddressSeeder(),
                               new CountrySeeder(),
                               new BgDistrictsSeeder(),
-                              //new CitySeeder(),
+                              new CitySeeder(),
                           };
 
             foreach (var seeder in seeders)
