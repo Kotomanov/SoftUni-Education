@@ -38,6 +38,11 @@
             return this.View();
         }
 
+        public IActionResult About()
+        {
+            return this.View();
+        }
+
         public IActionResult LearningAndWorking()
         {
             return this.View();

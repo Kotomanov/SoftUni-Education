@@ -44,8 +44,8 @@
             //services.AddAuthentication()
             //  .AddFacebook(facebookOptions =>
             //{
-            //    facebookOptions.AppId = this.configuration["Facebook:AppId"]; // Authentication:
-            //    facebookOptions.AppSecret = this.configuration["Facebook:AppSecret"]; // Authentication:
+            //    facebookOptions.AppId = this.configuration["Authentication:Facebook:AppId"]; // Authentication:
+            //    facebookOptions.AppSecret = this.configuration["Authentication:Facebook:AppSecret"]; // Authentication:
             //})
             //.AddGoogle(options =>
             //{
