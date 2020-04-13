@@ -28,14 +28,15 @@
                           {
                               new RolesSeeder(),
                               new SettingsSeeder(),
-                              new RoleSeeder(),
-                              new DepartmentSeeder(),
-                              new SpecialtySeeder(),
-                              new AddressSeeder(),
-                              new CountrySeeder(),
-                              new BgDistrictsSeeder(),
-                              new CitySeeder(),
-                              new MinistrySeeder(),
+
+                              // new RoleSeeder(),
+                              // new DepartmentSeeder(),
+                              // new SpecialtySeeder(),
+                              // new AddressSeeder(),
+                              // new CountrySeeder(),
+                              // new BgDistrictsSeeder(),
+                              // new CitySeeder(),
+                              // new MinistrySeeder(),
                           };
 
             foreach (var seeder in seeders)
