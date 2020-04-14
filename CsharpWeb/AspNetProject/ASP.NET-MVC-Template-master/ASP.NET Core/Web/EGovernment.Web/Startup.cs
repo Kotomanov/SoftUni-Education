@@ -11,6 +11,7 @@
     using EGovernment.Data.Seeding;
     using EGovernment.Services.Data;
     using EGovernment.Services.Data.AddressServices;
+    using EGovernment.Services.Data.MinistryService;
     using EGovernment.Services.Mapping;
     using EGovernment.Services.Messaging;
     using EGovernment.Web.ViewModels;
@@ -92,7 +93,7 @@
 
             // services.AddTransient<IEmailSender, NullMessageSender>();
             services.AddTransient<ISettingsService, SettingsService>();
-            services.AddTransient<IAddressService, AddressService>();
+            services.AddTransient<IMinistryService, MinistryService>();
             services.AddTransient<IAddressService, AddressService>();
         }
 

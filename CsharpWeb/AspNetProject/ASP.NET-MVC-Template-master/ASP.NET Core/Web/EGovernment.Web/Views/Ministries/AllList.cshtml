@@ -1,4 +1,5 @@
-﻿<h5>inject the ministries list</h5>
+﻿@model  EGovernment.Web.ViewModels.AppViewModels.MinistriesViewModels.DisplayAllMinistriesList
+<h5>inject the ministries list - model</h5>
 @{
     ViewData["Title"] = "List Of Ministries";
 }
@@ -6,3 +7,11 @@
 <div>
     <h1>What can we do for you? How to help?</h1>
 </div>
+
+@foreach (var ministry in Model.Name)
+{
+
+}
+
+do here the foreach and pagination so all the ministries show up
+media bootstrap maybe + 2 links -> external site and enter 

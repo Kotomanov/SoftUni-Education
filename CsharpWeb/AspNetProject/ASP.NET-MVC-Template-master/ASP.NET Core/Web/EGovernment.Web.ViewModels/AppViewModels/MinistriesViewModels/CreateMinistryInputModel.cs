@@ -1,8 +1,7 @@
 ﻿namespace EGovernment.Web.ViewModels.AppViewModels.MinistriesViewModels
 {
+    using System;
     using System.ComponentModel.DataAnnotations;
-
-    using EGovernment.Data.Models.Enums.Entities;
 
     public class CreateMinistryInputModel
     {
@@ -19,6 +18,6 @@
         [Url]
         public string Url { get; set; }
 
-        public MinistryCode MinistryCode { get; set; }
+        public int MinistryCode { get; set; }
     }
 }
