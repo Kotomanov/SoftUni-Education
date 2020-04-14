@@ -10,6 +10,7 @@
     using EGovernment.Data.Repositories;
     using EGovernment.Data.Seeding;
     using EGovernment.Services.Data;
+    using EGovernment.Services.Data.AddressServices;
     using EGovernment.Services.Mapping;
     using EGovernment.Services.Messaging;
     using EGovernment.Web.ViewModels;
@@ -39,7 +40,8 @@
 
             // removed this one to add the one bellow with the RoleManager!
             services.AddDefaultIdentity<ApplicationUser>(IdentityOptionsProvider.GetIdentityOptions)
-             .AddRoles<ApplicationRole>().AddEntityFrameworkStores<ApplicationDbContext>();
+             .AddRoles<ApplicationRole>()
+             .AddEntityFrameworkStores<ApplicationDbContext>();
 
             //services.AddAuthentication()
             //  .AddFacebook(facebookOptions =>
@@ -90,6 +92,8 @@
 
             // services.AddTransient<IEmailSender, NullMessageSender>();
             services.AddTransient<ISettingsService, SettingsService>();
+            services.AddTransient<IAddressService, AddressService>();
+            services.AddTransient<IAddressService, AddressService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

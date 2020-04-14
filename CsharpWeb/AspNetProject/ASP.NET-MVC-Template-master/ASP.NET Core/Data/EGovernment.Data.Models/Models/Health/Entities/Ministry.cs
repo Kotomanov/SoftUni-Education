@@ -18,6 +18,9 @@
         public Address Address { get; set; }
 
         [Url]
+        public string PictureLink { get; set; }
+
+        [Url]
         public string Url { get; set; }
 
         public MinistryCode MinistryCode { get; set; }

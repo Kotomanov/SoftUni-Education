@@ -13,7 +13,9 @@
         [Required]
         public int AddressId { get; set; }
 
-        // public Address Address { get; set; }
+        [Url]
+        public string PictureLink { get; set; }
+
         [Url]
         public string Url { get; set; }
 
