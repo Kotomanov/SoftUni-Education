@@ -1,6 +1,5 @@
 ﻿namespace EGovernment.Services.Data.MinistryService
 {
-    using System;
     using System.Collections.Generic;
     using System.Linq;
     using System.Threading.Tasks;
@@ -8,6 +7,8 @@
     using EGovernment.Data.Common.Repositories;
     using EGovernment.Data.Models.Enums.Entities;
     using EGovernment.Data.Models.Models.Health.Entities;
+    using EGovernment.Services.Mapping;
+    using EGovernment.Web.ViewModels.AppViewModels.MinistriesViewModels;
 
     public class MinistryService : IMinistryService
     {
@@ -51,9 +52,11 @@
             return true;
         }
 
-        public IEnumerable<T> GetAll<T>(int? count = null)
+        public ICollection<T> GetAll<T>()
         {
-            return default;
+            var listOfMinistries = this.ministriesRepository.All().OrderBy(x => x.Name);
+
+            return listOfMinistries.To<T>().ToList();
         }
 
         public T GetByName<T>(string name)
@@ -63,7 +66,7 @@
 
         public void UpdateAsync(string name)
         {
-
+            return;
         }
     }
 }

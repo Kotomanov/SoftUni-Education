@@ -1,17 +1,23 @@
-﻿@model  EGovernment.Web.ViewModels.AppViewModels.MinistriesViewModels.DisplayAllMinistriesList
-<h5>inject the ministries list - model</h5>
+﻿@model EGovernment.Web.ViewModels.AppViewModels.MinistriesViewModels.MinistriesCollectionViewModel
 @{
-    ViewData["Title"] = "List Of Ministries";
+    ViewData["Title"] = "Bulgarian Ministries List";
 }
 
-<div>
+<div class="products-list">
     <h1>What can we do for you? How to help?</h1>
 </div>
 
-@foreach (var ministry in Model.Name)
+@foreach (var ministry in Model.MinistriesList)
 {
-
+    <div class="products-list">
+        <p>
+            @ministry.Name
+            @ministry.AddressDetails
+            @ministry.PictureLink
+            @ministry.Url
+        </p>>
+        
+    </div>
 }
 
-do here the foreach and pagination so all the ministries show up
-media bootstrap maybe + 2 links -> external site and enter 
+

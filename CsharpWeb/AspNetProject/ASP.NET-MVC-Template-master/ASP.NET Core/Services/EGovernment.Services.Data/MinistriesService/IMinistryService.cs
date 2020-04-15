@@ -7,7 +7,7 @@
     {
         Task<int> CreateAsync(string name, int addressId, string pictureLink, string url, int ministryCode); // CreateMinistryInputModel input
 
-        IEnumerable<T> GetAll<T>(int? count = null);
+        ICollection<T> GetAll<T>(); //int? take = null, int skip = 0
 
         T GetByName<T>(string name);
 

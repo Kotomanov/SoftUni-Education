@@ -27,17 +27,26 @@
 
         public IActionResult AllList()
         {
-            return this.View();
+            var ministries = this.service.GetAll<DisplayAllMinistriesList>();
+            if (ministries.Count == 0)
+            {
+                return this.NoContent();
+            }
+
+            MinistriesCollectionViewModel view = new MinistriesCollectionViewModel();
+            view.MinistriesList = ministries;
+
+            return this.View(view);
         }
 
-        [Authorize(Roles = "Administrator, Moderator, Magician")]
+        // [Authorize(Roles = "Administrator, Moderator, Magician")]
         public IActionResult Create()
         {
             return this.View();
         }
 
         [HttpPost]
-        [Authorize(Roles = "Administrator, Moderator, Magician")]
+        // [Authorize(Roles = "Administrator, Moderator, Magician")]
         public async Task<IActionResult> Create(CreateMinistryInputModel inputModel)
         {
             if (!this.ModelState.IsValid)
@@ -62,7 +71,7 @@
             return this.RedirectToAction("/AllList");
         }
 
-        [Authorize(Roles = "Administrator, Moderator, Magician")]
+       // [Authorize(Roles = "Administrator, Moderator, Magician")]
         public IActionResult Delete(string name)
         {
             return this.View();

@@ -1,5 +1,7 @@
 ﻿namespace EGovernment.Web.ViewModels.AppViewModels.MinistriesViewModels
 {
+    using System.Collections.Generic;
+
     using EGovernment.Data.Models.Models.Geographical;
     using EGovernment.Data.Models.Models.Health.Entities;
     using EGovernment.Services.Mapping;
@@ -8,7 +10,7 @@
     {
         public string Name { get; set; }
 
-        public Address AddressAddressDetails { get; set; } // ?? AddressDetails
+        public Address AddressDetails { get; set; } // ?? AddressDetails
 
         public string PictureLink { get; set; }
 
