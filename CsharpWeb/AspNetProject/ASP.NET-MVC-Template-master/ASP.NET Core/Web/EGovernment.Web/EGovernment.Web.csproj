@@ -65,4 +65,9 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\materialize\css\" />
+    <Folder Include="wwwroot\materialize\js\" />
+  </ItemGroup>
 </Project>

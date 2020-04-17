@@ -3,19 +3,23 @@
     ViewData["Title"] = "Main Portal Page";
 }
 
-
-<div class="container">
-    <h3> <p>We are here for you and to support with a good quality e-service</p></h3>
-    <div class="card">
-        <img class="card-img-top" src="https://res.cloudinary.com/egov/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1586802763/Information_pjf8of.jpg" alt="Card image cap">
-        <div class="card-body">
-            <h4 class="card-title">E-Portal</h4>
-            <p class="card-text">
-                This portal is designed to help people save time and money when working with institutions. Enjoy!
-            </p>
-            <a asp-controller="Ministries" asp-action="AllList" class="btn btn-primary"> <i class="fas fa-clipboard-list"></i> Go to ministries page</a>
+<div class="row">
+    <div class="col s12 m7">
+        <div class="card">
+            <div class="card-image">
+                <img src="https://res.cloudinary.com/egov/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1586802763/Information_pjf8of.jpg">
+                <span class="card-title">E-Portal</span>
+            </div>
+            <div class="card-content">
+                <p> We are here for you and to support with a good quality e-service </p>
+                <p>
+                    This portal is designed to help people save time and money when working with institutions. Enjoy!
+                </p>
+            </div>
+            <div class="card-action">
+                <a asp-controller="Ministries" asp-action="AllList" class="btn btn-primary"> <i class="fas fa-clipboard-list"></i> Go to ministries page</a>
+            </div>
         </div>
     </div>
 </div>
-
-<br />  
+ 
