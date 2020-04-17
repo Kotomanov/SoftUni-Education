@@ -9,5 +9,7 @@
             return this.View();
         }
 
+        // get the profile info 
+        // get names, roles, manager
     }
 }

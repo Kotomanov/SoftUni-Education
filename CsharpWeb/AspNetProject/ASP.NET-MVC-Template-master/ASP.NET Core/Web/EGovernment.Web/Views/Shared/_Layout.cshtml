@@ -29,7 +29,7 @@
     <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
 
     <!--Let browser know website is optimized for mobile-->
-    @*<meta name="viewport" content="width=device-width, initial-scale=1.0" />*@
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
 
 <body>
@@ -74,13 +74,13 @@
 
                         <li class="nav-item">
 
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="About"><i class="fas fa-address-card"></i></i></a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="About"><i class="fas fa-address-card"></i></a>
 
                         </li>
 
                         <li class="nav-item">
 
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy"> <i class="fas fa-sad-cry"></i> We want to hear from you</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy"> <i class="fas fa-sad-cry"></i> Feedback</a>
 
                         </li>
 
@@ -148,11 +148,11 @@
         <script src="~/js/contact.js"></script>
         <script src="~/js/custom.js"></script>
     </environment>
-
-    @this.RenderSection("Scripts", required: false)
-
     <!--JavaScript at end of body for optimized loading-->
     <script type="text/javascript" src="js/materialize.min.js"></script>
+    
+
+    @this.RenderSection("Scripts", required: false)
 
 </body>
 

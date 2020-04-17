@@ -47,8 +47,8 @@
             //services.AddAuthentication()
             //  .AddFacebook(facebookOptions =>
             //{
-            //    facebookOptions.AppId = this.configuration["Authentication:Facebook:AppId"]; // Authentication:
-            //    facebookOptions.AppSecret = this.configuration["Authentication:Facebook:AppSecret"]; // Authentication:
+            //    facebookOptions.AppId = this.configuration["AppId"]; // Authentication:Facebook
+            //    facebookOptions.AppSecret = this.configuration["AppSecret"]; // Authentication:Facebook:
             //})
             //.AddGoogle(options =>
             //{
@@ -58,6 +58,7 @@
             //    options.ClientId = googleAuthNSection["ClientId"];
             //    options.ClientSecret = googleAuthNSection["ClientSecret"];
             //});
+
             services.Configure<CookiePolicyOptions>(
                 options =>
                     {
