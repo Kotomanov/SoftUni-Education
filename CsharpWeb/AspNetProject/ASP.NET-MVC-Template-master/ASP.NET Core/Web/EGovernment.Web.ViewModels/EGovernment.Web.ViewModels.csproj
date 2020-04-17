@@ -31,4 +31,9 @@
     <ProjectReference Include="..\..\Services\EGovernment.Services.Mapping\EGovernment.Services.Mapping.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="AppViewModels\EmployeesViewModels\" />
+    <Folder Include="AppViewModels\ReportsViewModels\" />
+  </ItemGroup>
+
 </Project>
