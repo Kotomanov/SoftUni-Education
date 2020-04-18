@@ -37,8 +37,4 @@
     <ProjectReference Include="..\EGovernment.Services.Mapping\EGovernment.Services.Mapping.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="ReportsService\" />
-  </ItemGroup>
-
 </Project>
