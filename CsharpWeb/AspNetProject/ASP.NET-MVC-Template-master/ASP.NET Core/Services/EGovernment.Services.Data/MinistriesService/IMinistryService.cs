@@ -7,9 +7,9 @@
     {
         Task<int> CreateAsync(string name, int addressId, string pictureLink, string url, int ministryCode); // CreateMinistryInputModel input
 
-        ICollection<T> GetAll<T>(); //int? take = null, int skip = 0
+        ICollection<T> GetAll<T>(); // int? take = null, int skip = 0 for the pagination maybe?
 
-        T GetByName<T>(string name);
+        T GetByName<T>(string name); // ? <T>
 
         void DeleteAsync(string name);
 

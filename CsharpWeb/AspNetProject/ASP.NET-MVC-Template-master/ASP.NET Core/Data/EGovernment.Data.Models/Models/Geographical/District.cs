@@ -11,6 +11,7 @@
         public District()
         {
             this.Cities = new HashSet<City>();
+            this.Addresses = new HashSet<Address>();
         }
 
         [Required]
@@ -26,5 +27,7 @@
         public virtual DistrictCode DistrictCode { get; set; }
 
         public ICollection<City> Cities { get; set; }
+
+        public virtual ICollection<Address> Addresses { get; set; }
     }
 }

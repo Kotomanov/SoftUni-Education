@@ -3,19 +3,23 @@
     using System.ComponentModel.DataAnnotations;
 
     using EGovernment.Data.Common.Models;
-    using EGovernment.Data.Models.Enums;
-    using EGovernment.Data.Models.Enums.Geography;
 
     public class Address : BaseDeletableModel<int>
     {
         [Required]
-        public int CountryId { get; set; }
+        public string CountryName { get; set; }
+
+        public Country Country { get; set; }
 
         [Required]
-        public int DistrictId { get; set; }
+        public string DistrictName { get; set; }
+
+        public District District { get; set; }
 
         [Required]
-        public int CityId { get; set; }
+        public string CityName { get; set; }
+
+        public City City { get; set; }
 
         [Required]
         [DataType(DataType.PostalCode)]
@@ -24,7 +28,5 @@
         [Required]
         [StringLength(200, MinimumLength = 5)]
         public string AddressDetails { get; set; }
-
-        // Geolocation?
     }
 }

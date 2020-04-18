@@ -12,14 +12,14 @@
         {
             Address address = new Address
             {
-                CountryId = 0,
-                DistrictId = 0,
-                CityId = 0,
+                CountryName = "Dummy",
+                DistrictName = "Dummy",
+                CityName = "Dummy",
                 PostalCode = 0000,
                 AddressDetails = "Dummy",
             };
 
-            if (!dbContext.Addresses.Any(x => x.DistrictId == 0))
+            if (!dbContext.Addresses.Any(x => x.DistrictName == null))
             {
                 await dbContext.Addresses.AddAsync(address);
             }

@@ -1,9 +1,9 @@
 ﻿namespace EGovernment.Web.ViewModels.AppViewModels.AddressViewModels
 {
-    using EGovernment.Data.Models.Enums;
-    using EGovernment.Data.Models.Enums.Geography;
+    using EGovernment.Data.Models.Models.Geographical;
+    using EGovernment.Services.Mapping;
 
-    public class DisplayAllAddressesViewModel
+    public class DisplayAllAddressesViewModel : IMapFrom<Address>
     {
         public string Country { get; set; }
 

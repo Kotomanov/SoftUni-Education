@@ -1,18 +1,22 @@
 ﻿namespace EGovernment.Services.Data.AddressServices
 {
     using System.Collections.Generic;
+    using System.Threading.Tasks;
 
     using EGovernment.Web.ViewModels.AppViewModels.AddressViewModels;
 
     public interface IAddressService
     {
-        void CreateAddressAsync(InputAddressViewModel input);
+        Task<int> CreateAddressAsync(string countryName, string districtName, string cityName, int postalCode, string addressDetails);
 
-        ICollection<DisplayAllAddressesViewModel> ListAllAddresses(); // get a collection here with what <>? - in foreach  in the View + table?
+        ICollection<T> GetAll<T>(); // get a collection here with what <>? - in foreach  in the View + table? this for the admin area?
 
-        void UpdateAsync();
+        T GetById<T>(int id);
 
-        void DeleteAsync();
+        void UpdateAsync(int id);
 
+        void DeleteAsync(int id); // for admin
+
+        bool Exists(int id);
     }
 }

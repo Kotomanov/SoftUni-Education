@@ -2,16 +2,19 @@
 {
     using System.ComponentModel.DataAnnotations;
 
-    public class InputAddressViewModel
+    using EGovernment.Data.Models.Models.Geographical;
+    using EGovernment.Services.Mapping;
+
+    public class InputAddressViewModel : IMapTo<Address>
     {
         [Required]
-        public int CountryId { get; set; }
+        public string CountryName { get; set; }
 
         [Required]
-        public int DistrictId { get; set; }
+        public string DistrictName { get; set; }
 
         [Required]
-        public int CityId { get; set; }
+        public string CityName { get; set; }
 
         [Required]
         [DataType(DataType.PostalCode)]

@@ -59,12 +59,12 @@
             return listOfMinistries.To<T>().ToList();
         }
 
-        public T GetByName<T>(string name)
+        public T GetByName<T>(string name) // ?<T>
         {
             return default;
         }
 
-        public void UpdateAsync(string name)
+        public void UpdateAsync(string name) // input model?
         {
             return;
         }

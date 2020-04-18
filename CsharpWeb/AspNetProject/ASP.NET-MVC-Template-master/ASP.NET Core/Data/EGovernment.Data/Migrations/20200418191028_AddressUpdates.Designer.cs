@@ -4,14 +4,16 @@ using EGovernment.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
-namespace EGovernment.Data.Migrations
+namespace AspNetCoreTemplate.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20200418191028_AddressUpdates")]
+    partial class AddressUpdates
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -181,32 +183,11 @@ namespace EGovernment.Data.Migrations
                         .HasColumnType("nvarchar(200)")
                         .HasMaxLength(200);
 
-                    b.Property<int?>("CityId")
-                        .HasColumnType("int");
-
-                    b.Property<string>("CityName")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int?>("CountryId")
-                        .HasColumnType("int");
-
-                    b.Property<string>("CountryName")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<DateTime>("CreatedOn")
                         .HasColumnType("datetime2");
 
                     b.Property<DateTime?>("DeletedOn")
                         .HasColumnType("datetime2");
-
-                    b.Property<int?>("DistrictId")
-                        .HasColumnType("int");
-
-                    b.Property<string>("DistrictName")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
 
                     b.Property<bool>("IsDeleted")
                         .HasColumnType("bit");
@@ -218,12 +199,6 @@ namespace EGovernment.Data.Migrations
                         .HasColumnType("int");
 
                     b.HasKey("Id");
-
-                    b.HasIndex("CityId");
-
-                    b.HasIndex("CountryId");
-
-                    b.HasIndex("DistrictId");
 
                     b.HasIndex("IsDeleted");
 
@@ -1114,21 +1089,6 @@ namespace EGovernment.Data.Migrations
                         .HasForeignKey("AddressId")
                         .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
-                });
-
-            modelBuilder.Entity("EGovernment.Data.Models.Models.Geographical.Address", b =>
-                {
-                    b.HasOne("EGovernment.Data.Models.Models.Geographical.City", "City")
-                        .WithMany("Addresses")
-                        .HasForeignKey("CityId");
-
-                    b.HasOne("EGovernment.Data.Models.Models.Geographical.Country", "Country")
-                        .WithMany("Addresses")
-                        .HasForeignKey("CountryId");
-
-                    b.HasOne("EGovernment.Data.Models.Models.Geographical.District", "District")
-                        .WithMany("Addresses")
-                        .HasForeignKey("DistrictId");
                 });
 
             modelBuilder.Entity("EGovernment.Data.Models.Models.Geographical.City", b =>

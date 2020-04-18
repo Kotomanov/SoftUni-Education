@@ -11,6 +11,7 @@
         public Country()
         {
             this.Districts = new HashSet<District>();
+            this.Addresses = new HashSet<Address>();
         }
 
         [Required]
@@ -21,5 +22,7 @@
         public virtual CountryCode CountryCode { get; set; }
 
         public virtual ICollection<District> Districts { get; set; }
+
+        public virtual ICollection<Address> Addresses { get; set; }
     }
 }

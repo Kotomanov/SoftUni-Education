@@ -1,6 +1,5 @@
 ﻿namespace EGovernment.Web.ViewModels.AppViewModels.MinistriesViewModels
 {
-    using System.Collections.Generic;
 
     using EGovernment.Data.Models.Models.Geographical;
     using EGovernment.Data.Models.Models.Health.Entities;
@@ -10,7 +9,7 @@
     {
         public string Name { get; set; }
 
-        public Address AddressDetails { get; set; } // ?? AddressDetails
+        public Address AddressDetails { get; set; } // ?? AddressDetails does not work not sure why
 
         public string PictureLink { get; set; }
 
