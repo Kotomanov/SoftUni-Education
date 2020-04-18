@@ -37,6 +37,7 @@
                               // new BgDistrictsSeeder(),
                               // new CitySeeder(),
                               // new MinistrySeeder(),
+                              // new DiagnoseSeeder(),
                           };
 
             foreach (var seeder in seeders)

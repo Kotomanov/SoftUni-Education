@@ -39,7 +39,7 @@
 
             <div class="container">
 
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">@GlobalConstants.SystemName - a SoftUni Web Project April 2020</a>
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">@GlobalConstants.SystemName </a>
 
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
@@ -110,7 +110,7 @@
 
     <footer class="border-top footer text-bg-light">
         <div class="container">
-            &copy; @DateTime.Now.Year - @GlobalConstants.SystemName - @if (this.ViewData["Title"].ToString() == "Privacy Policy")
+            &copy; @DateTime.Now.Year - @GlobalConstants.SystemName - a SoftUni Web Project April 2020 - @if (this.ViewData["Title"].ToString() == "Privacy Policy")
             {<a asp-area="" asp-controller="Home" asp-action="Index"><i class="fas fa-home"></i></a>}
             else
             {
