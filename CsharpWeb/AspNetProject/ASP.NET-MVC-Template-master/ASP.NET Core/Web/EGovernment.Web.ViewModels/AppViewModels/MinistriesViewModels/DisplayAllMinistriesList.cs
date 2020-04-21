@@ -9,7 +9,7 @@
     {
         public string Name { get; set; }
 
-        public Address AddressDetails { get; set; } // ?? AddressDetails does not work not sure why
+        public Address AddressDetails { get; set; } // ?? AddressDetails does not work not sure why maybe string ??
 
         public string PictureLink { get; set; }
 

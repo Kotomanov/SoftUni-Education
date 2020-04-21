@@ -49,8 +49,8 @@
             //services.AddAuthentication()
             //  .AddFacebook(facebookOptions =>
             //{
-            //    facebookOptions.AppId = this.configuration["AppId"]; // Authentication:Facebook
-            //    facebookOptions.AppSecret = this.configuration["AppSecret"]; // Authentication:Facebook:
+            //    facebookOptions.AppId = this.configuration["Facebook:AppId"]; // Authentication:Facebook
+            //    facebookOptions.AppSecret = this.configuration["Facebook:AppSecret"]; // Authentication:Facebook:
             //})
             //.AddGoogle(options =>
             //{
@@ -73,8 +73,6 @@
                 configure.Filters.Add(new AutoValidateAntiforgeryTokenAttribute());
             });
 
-            //services.AddMvc(option => option.EnableEndpointRouting = false);
-
             services.AddRazorPages();
 
             Account account = new Account(
@@ -94,9 +92,8 @@
             services.AddScoped<IDbQueryRunner, DbQueryRunner>();
 
             // Application services
-            services.AddTransient<IEmailSender>(a => new SendGridEmailSender("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"));
+            services.AddTransient<IEmailSender>(a => new SendGridEmailSender(this.configuration["SendGrid:SendGridApiKey"]));
 
-            // services.AddTransient<IEmailSender, NullMessageSender>();
             services.AddTransient<ISettingsService, SettingsService>();
             services.AddTransient<IMinistryService, MinistryService>();
             services.AddTransient<IAddressService, AddressService>();

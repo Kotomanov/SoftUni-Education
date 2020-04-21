@@ -9,17 +9,11 @@
         [Required]
         public string CountryName { get; set; }
 
-        public Country Country { get; set; }
-
         [Required]
         public string DistrictName { get; set; }
 
-        public District District { get; set; }
-
         [Required]
         public string CityName { get; set; }
-
-        public City City { get; set; }
 
         [Required]
         [DataType(DataType.PostalCode)]

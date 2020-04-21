@@ -11,12 +11,18 @@
 
         ICollection<T> GetAll<T>(); // get a collection here with what <>? - in foreach  in the View + table? this for the admin area?
 
-        T GetById<T>(int id);
+        T GetAddressById<T>(int id);
 
         void UpdateAsync(int id);
 
         void DeleteAsync(int id); // for admin
 
-        bool Exists(int id);
+        bool AddressExists(int id);
+
+        bool CityExists(string name);
+
+        ICollection<T> GetAllCountries<T>();
+
+        ICollection<T> GetAllCities<T>();
     }
 }

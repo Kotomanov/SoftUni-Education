@@ -59,7 +59,7 @@
             return listOfMinistries.To<T>().ToList();
         }
 
-        public T GetByName<T>(string name) // ?<T>
+        public T GetByName<T>(string name) // ?<T> -> view model 
         {
             return default;
         }

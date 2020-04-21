@@ -1,0 +1,18 @@
+﻿@model EGovernment.Web.ViewModels.AppViewModels.AddressViewModels.AddressListDisplayViewModel
+@{
+    ViewData["Title"] = "GetAll";
+}
+make a table to show all
+pagination won't be a bad idea ?
+<h1>GetAll Addresses</h1>
+@foreach (var address in Model.AddressesList)
+{
+    <div>@address.Country</div>
+    <div>@address.District</div>
+    <div>@address.City</div>
+    <div>@address.PostalCode</div>
+    <div>@address.AddressDetails</div>
+}
+
+
+

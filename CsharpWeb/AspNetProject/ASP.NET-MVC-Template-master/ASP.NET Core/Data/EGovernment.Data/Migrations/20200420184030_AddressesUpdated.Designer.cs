@@ -4,14 +4,16 @@ using EGovernment.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
-namespace EGovernment.Data.Migrations
+namespace AspNetCoreTemplate.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20200420184030_AddressesUpdated")]
+    partial class AddressesUpdated
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -1118,15 +1120,15 @@ namespace EGovernment.Data.Migrations
 
             modelBuilder.Entity("EGovernment.Data.Models.Models.Geographical.Address", b =>
                 {
-                    b.HasOne("EGovernment.Data.Models.Models.Geographical.City", null)
+                    b.HasOne("EGovernment.Data.Models.Models.Geographical.City", "City")
                         .WithMany("Addresses")
                         .HasForeignKey("CityId");
 
-                    b.HasOne("EGovernment.Data.Models.Models.Geographical.Country", null)
+                    b.HasOne("EGovernment.Data.Models.Models.Geographical.Country", "Country")
                         .WithMany("Addresses")
                         .HasForeignKey("CountryId");
 
-                    b.HasOne("EGovernment.Data.Models.Models.Geographical.District", null)
+                    b.HasOne("EGovernment.Data.Models.Models.Geographical.District", "District")
                         .WithMany("Addresses")
                         .HasForeignKey("DistrictId");
                 });

@@ -75,6 +75,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="Areas\Identity\Pages\Internal\" />
     <Folder Include="wwwroot\materialize\css\" />
     <Folder Include="wwwroot\materialize\js\" />
   </ItemGroup>

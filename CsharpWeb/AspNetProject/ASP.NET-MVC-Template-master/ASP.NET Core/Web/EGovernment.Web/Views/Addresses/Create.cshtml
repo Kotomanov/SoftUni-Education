@@ -1,0 +1,53 @@
+﻿@using EGovernment.Web.ViewModels.AppViewModels.AddressViewModels
+@using EGovernment.Data.Models.Enums
+@using EGovernment.Data.Models.Enums.Geography
+@model InputAddressViewModel
+@{
+    ViewData["Title"] = "Add Address";
+}
+@if (TempData["Infomessage"] != null)
+{
+    <div class="alert alert-danger">@TempData["Infomessage"].ToString()</div>
+}
+<div class="row">
+    <div class="col-md-4">
+        @*<form asp-route-returnUrl="@Model.ReturnUrl" method="post">*@
+        <form method="post">
+            <h4>Add your address.</h4>
+            <hr />
+            <div asp-validation-summary="All" class="text-danger"></div>
+
+            <div class="form-group">
+                <label asp-for="CountryId"></label>
+                <select asp-for="CountryId" class="form-control" asp-items="@Html.GetEnumSelectList<CountryCode>()"></select>
+                <span asp-validation-for="CountryId" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="DistrictId"></label>
+                <select asp-for="DistrictId" class="form-control" asp-items="@Html.GetEnumSelectList<DistrictCode>()"></select>
+                <span asp-validation-for="DistrictId" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="CityName"></label>
+                <input asp-for="CityName" placeholder="Въведете населено място на кирилица" class="form-control" />
+                <span asp-validation-for="CityName" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="PostalCode"></label>
+                <input asp-for="PostalCode" placeholder="Enter postal code" class="form-control" />
+                <span asp-validation-for="PostalCode" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="AddressDetails"></label>
+                <input asp-for="AddressDetails" placeholder="5 - 200 chartacters of length" class="form-control" />
+                <span asp-validation-for="AddressDetails" class="text-danger"></span>
+            </div>
+            <hr />
+            <button type="submit" class="btn btn-primary">Add Address</button>
+        </form>
+    </div>
+</div>

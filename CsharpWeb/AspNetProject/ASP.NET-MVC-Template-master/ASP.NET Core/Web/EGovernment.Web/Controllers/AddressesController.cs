@@ -3,6 +3,8 @@
     using System.Threading.Tasks;
 
     using EGovernment.Data.Models;
+    using EGovernment.Data.Models.Enums;
+    using EGovernment.Data.Models.Enums.Geography;
     using EGovernment.Services.Data.AddressServices;
     using EGovernment.Web.ViewModels.AppViewModels.AddressViewModels;
     using Microsoft.AspNetCore.Identity;
@@ -37,12 +39,27 @@
                 return this.View(input);
             }
 
-            await this.service.CreateAddressAsync(input.CountryName, input.DistrictName, input.CityName, input.PostalCode, input.AddressDetails);
 
-            return default; // return this.RedirectToAction(nameof(this.ById), new { id = postId }); ---GetById
+            if (((CountryCode)input.CountryId).ToString() == "Dummy" || ((DistrictCode)input.DistrictId).ToString() == "Dummy" || input.CityName.ToString() == "Dummy")
+            {
+                this.TempData["Infomessage"] = "Dummy is not a valid location";
+                return this.View(input);
+            }
+
+
+            // city exists check from the service
+            if (!this.service.CityExists(input.CityName))
+            {
+                this.TempData["Infomessage"] = "Enter a valid Bulgarian city name";
+                return this.View(input);
+            }
+
+            await this.service.CreateAddressAsync(((CountryCode)input.CountryId).ToString(), ((DistrictCode)input.DistrictId).ToString(), input.CityName, input.PostalCode, input.AddressDetails);
+
+            return this.Redirect("/Addresses/Index");
         }
 
-        public IActionResult GetAll() // maybe not Task async?
+        public async Task<IActionResult> GetAll() // maybe not Task async?
         {
             var collection = this.service.GetAll<DisplayAllAddressesViewModel>();
 
@@ -55,6 +72,30 @@
             list.AddressesList = collection;
 
             return this.View(list);
+        }
+
+        // get all cities(IEnumerable<DisplayCityViewModel> cities) and get all countries(IEnumerable<ListAllCountriesViewModel> countries) can serve
+
+        public async Task<IActionResult> Delete()
+        {
+            return this.View();
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> DeleteAsync()
+        {
+            return this.View();
+        }
+
+        public async Task<IActionResult> Update()
+        {
+            return this.View();
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> UpdateAsync()
+        {
+            return this.View();
         }
     }
 }

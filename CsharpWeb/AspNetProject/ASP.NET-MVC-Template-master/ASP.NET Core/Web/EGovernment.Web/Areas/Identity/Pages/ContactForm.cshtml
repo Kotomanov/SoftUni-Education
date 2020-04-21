@@ -1,0 +1,53 @@
+﻿@page
+@model EGovernment.Web.Areas.Identity.Pages.ContactFormModel
+@{
+    ViewData["Title"] = "Contact Form";
+}
+@if (Model.InfoMessage != null)
+{
+    <div class="alert alert-info">@Model.InfoMessage</div>
+}
+<h1>Contact Form</h1>
+<h3>Share your thoughts with us</h3>
+<hr />
+<form method="post">
+    <div asp-validation-summary="All" class="text-danger"></div>
+
+    <div class="form-group">
+        <label asp-for="Name"></label>
+        <input asp-for="Name" placeholder="Enter your name here" class="form-control" />
+        <span asp-validation-for="Name" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Email"></label>
+        <input asp-for="Email" value="@this.User.Identity.Name" class="form-control" />
+        <span asp-validation-for="Email" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="PhoneNumber"></label>
+        <input asp-for="PhoneNumber" placeholder="Enter your phone number if you like" class="form-control" />
+        <span asp-validation-for="PhoneNumber" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Topic"></label>
+        <input asp-for="Topic" placeholder="What topic we can help with?" class="form-control" />
+        <span asp-validation-for="Topic" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="InputText"></label>
+        <input asp-for="InputText" placeholder="Tell us.." class="form-control" />
+        <span asp-validation-for="InputText" class="text-danger"></span>
+    </div>
+    <hr />
+    <button type="submit" class="btn btn-primary" onformchange="sumbitted()">Send</button>
+</form>
+
+<script>
+    function sumbitted() {
+        alert("Form sent.")
+    }
+</script>
