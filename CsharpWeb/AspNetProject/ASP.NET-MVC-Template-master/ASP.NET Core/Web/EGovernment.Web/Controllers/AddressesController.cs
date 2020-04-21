@@ -56,10 +56,10 @@
 
             await this.service.CreateAddressAsync(((CountryCode)input.CountryId).ToString(), ((DistrictCode)input.DistrictId).ToString(), input.CityName, input.PostalCode, input.AddressDetails);
 
-            return this.Redirect("/Addresses/Index");
+            return this.Redirect("/Addresses/GetAll");
         }
 
-        public async Task<IActionResult> GetAll() // maybe not Task async?
+        public async Task<IActionResult> GetAll()
         {
             var collection = this.service.GetAll<DisplayAllAddressesViewModel>();
 
@@ -91,9 +91,51 @@
         }
 
         [HttpPost]
-        public async Task<IActionResult> UpdateAsync()
+        public async Task<IActionResult> UpdateAsync(int id)
+        {
+            if (this.service.AddressExists(id))
+            {
+                var address = this.service.GetAddressById<DisplayAllAddressesViewModel>(id);
+            }
+
+            return this.View();
+        }
+
+        public async Task<IActionResult> FindById()
         {
             return this.View();
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> FindById(SearchAddressByIdViewModel search)
+        {
+            if (!this.ModelState.IsValid)
+            {
+                return this.View(search);
+            }
+
+            if (!this.service.AddressExists(search.Id))
+            {
+                this.TempData["Infomessage"] = "Invalid Id entered.";
+                return this.View(search);
+            }
+
+            var address = this.service.GetAddressById<DisplayAllAddressesViewModel>(search.Id);
+
+            return this.Redirect($"/Addresses/ShowSingleAddress?id={address.Id}");
+        }
+
+        public async Task<IActionResult> ShowSingleAddress(int id) // or a view model
+        {
+            if (!this.service.AddressExists(id))
+            {
+                this.TempData["Infomessage"] = "Please search for a valid Id";
+                return this.Redirect("/Addresses/FindById");
+            }
+
+            var address = this.service.GetAddressById<DisplayAllAddressesViewModel>(id);
+
+            return this.View(address);
         }
     }
 }

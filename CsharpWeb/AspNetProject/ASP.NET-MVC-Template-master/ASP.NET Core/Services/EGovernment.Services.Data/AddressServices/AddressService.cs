@@ -46,14 +46,14 @@
         {
             if (this.AddressExists(id))
             {
-                var address = this.GetAddressById<Address>(id);
+                var address = this.GetAddressById<Address>(id); // ???????check here 100%
                 this.addressRepository.Delete(address);
             }
         }
 
         public bool AddressExists(int id)
         {
-            var address = this.addressRepository.All().Where(x => x.Id == id);
+            var address = this.addressRepository.All().Where(x => x.Id == id).FirstOrDefault();
             if (address == null)
             {
                 return false;
@@ -74,13 +74,8 @@
 
         public T GetAddressById<T>(int id)
         {
-            if (this.AddressExists(id))
-            {
-                var address = this.addressRepository.All().Where(x => x.Id == id);
-                return address.To<T>().First(); // maybe will not work?!
-            }
-
-            return default;
+            var address = this.addressRepository.All().Where(x => x.Id == id);
+            return address.To<T>().First(); // maybe will not work?!
         }
 
         public void UpdateAsync(int id)
