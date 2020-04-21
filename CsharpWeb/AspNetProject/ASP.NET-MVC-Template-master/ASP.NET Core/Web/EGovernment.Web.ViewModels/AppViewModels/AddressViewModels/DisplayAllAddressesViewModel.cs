@@ -5,11 +5,13 @@
 
     public class DisplayAllAddressesViewModel : IMapFrom<Address>
     {
-        public string Country { get; set; }
+        public int AddessId { get; set; }
 
-        public string District { get; set; }
+        public string CountryName { get; set; }
 
-        public string City { get; set; }
+        public string DistrictName { get; set; }
+
+        public string CityName { get; set; }
 
         public int PostalCode { get; set; }
 

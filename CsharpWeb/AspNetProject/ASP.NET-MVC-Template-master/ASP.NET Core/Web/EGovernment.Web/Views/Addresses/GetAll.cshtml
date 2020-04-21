@@ -1,18 +1,40 @@
 ﻿@model EGovernment.Web.ViewModels.AppViewModels.AddressViewModels.AddressListDisplayViewModel
 @{
-    ViewData["Title"] = "GetAll";
+    ViewData["Title"] = "All Addresses List";
 }
-make a table to show all
-pagination won't be a bad idea ?
-<h1>GetAll Addresses</h1>
-@foreach (var address in Model.AddressesList)
-{
-    <div>@address.Country</div>
-    <div>@address.District</div>
-    <div>@address.City</div>
-    <div>@address.PostalCode</div>
-    <div>@address.AddressDetails</div>
-}
+<h1>List of all Addresses</h1>
+<div style="background-image: url('https://res.cloudinary.com/egov/image/upload/v1587405947/address_vp0x8x.jpg');">
+    <table class="table table-bordered table-striped">
+        <thead class="font-weight-bold text-white" >
+            <tr>
+                <th>Country Name</th>
+                <th>District Name</th>
+                <th>City Name</th>
+                <th>City Postal Code</th>
+                <th>Address Details</th>
+                <th>Address Id</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var address in Model.AddressesList)
+            {
+                <tr>
+                    <td class="font-weight-bold  text-white">@address.CountryName</td>
+                    <td class="font-weight-bold  text-white">@address.DistrictName</td>
+                    <td class="font-weight-bold  text-white">@address.CityName</td>
+                    <td class="font-weight-bold  text-white">@address.PostalCode</td>
+                    <td class="font-weight-bold  text-white">@address.AddressDetails</td>
+                    <td class="font-weight-bold  text-white">@address.AddessId</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
 
+<div>
+    <p class="lead">
+        <a class="btn btn-secondary btn-lg" asp-controller="Addresses" asp-action="Index" role="button">Back</a>
+    </p>
+</div>
 
 

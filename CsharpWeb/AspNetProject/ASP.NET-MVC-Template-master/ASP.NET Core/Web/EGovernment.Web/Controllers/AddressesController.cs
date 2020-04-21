@@ -39,13 +39,13 @@
                 return this.View(input);
             }
 
-
-            if (((CountryCode)input.CountryId).ToString() == "Dummy" || ((DistrictCode)input.DistrictId).ToString() == "Dummy" || input.CityName.ToString() == "Dummy")
+            if (((CountryCode)input.CountryId).ToString() == "Dummy"
+                || ((DistrictCode)input.DistrictId).ToString() == "Dummy"
+                || input.CityName.ToString() == "Dummy")
             {
                 this.TempData["Infomessage"] = "Dummy is not a valid location";
                 return this.View(input);
             }
-
 
             // city exists check from the service
             if (!this.service.CityExists(input.CityName))
@@ -73,8 +73,6 @@
 
             return this.View(list);
         }
-
-        // get all cities(IEnumerable<DisplayCityViewModel> cities) and get all countries(IEnumerable<ListAllCountriesViewModel> countries) can serve
 
         public async Task<IActionResult> Delete()
         {
