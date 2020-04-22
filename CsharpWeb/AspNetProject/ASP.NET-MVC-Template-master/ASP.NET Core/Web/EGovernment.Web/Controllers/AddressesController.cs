@@ -80,9 +80,21 @@
         }
 
         [HttpPost]
-        public async Task<IActionResult> DeleteAsync()
+        public async Task<IActionResult> DeleteAsync(int id)
         {
-            return this.View();
+            if (!this.ModelState.IsValid)
+            {
+                return this.View(id);
+            }
+
+            if (!this.service.AddressExists(id))
+            {
+                this.TempData["Infomessage"] = "Invalid Id entered.";
+                return this.View(id);
+            }
+
+            this.service.DeleteAsync(id);
+            return this.Redirect("/Addresses/Index");
         }
 
         public async Task<IActionResult> Update()

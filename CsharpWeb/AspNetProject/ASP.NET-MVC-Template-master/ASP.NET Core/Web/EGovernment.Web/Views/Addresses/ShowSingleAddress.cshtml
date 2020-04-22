@@ -18,18 +18,25 @@
             </tr>
         </thead>
         <tbody>
-                <tr>
-                    <td class="font-weight-bold  text-white">@Model.CountryName</td>
-                    <td class="font-weight-bold  text-white">@Model.DistrictName</td>
-                    <td class="font-weight-bold  text-white">@Model.CityName</td>
-                    <td class="font-weight-bold  text-white">@Model.PostalCode</td>
-                    <td class="font-weight-bold  text-white">@Model.AddressDetails</td>
-                    <td class="font-weight-bold  text-white">@Model.Id</td>
-                </tr>
+            <tr>
+                <td class="font-weight-bold  text-white">@Model.CountryName</td>
+                <td class="font-weight-bold  text-white">@Model.DistrictName</td>
+                <td class="font-weight-bold  text-white">@Model.CityName</td>
+                <td class="font-weight-bold  text-white">@Model.PostalCode</td>
+                <td class="font-weight-bold  text-white">@Model.AddressDetails</td>
+                <td class="font-weight-bold  text-white">@Model.Id</td>
+            </tr>
         </tbody>
     </table>
 </div>
 
+<div>
+        <form method="post">
+            <button type="submit" class="btn btn-primary btn btn-danger btn-lg">Check it!</button>
+            <a class="btn btn-danger btn-lg" asp-controller="Addresses" asp-action="DeleteAsync" role="button">DELETE!</a>
+        </form>
+</div>
+<br />
 <div>
     <p class="lead">
         <a class="btn btn-secondary btn-lg" asp-controller="Addresses" asp-action="Index" role="button">Back</a>

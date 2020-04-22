@@ -44,11 +44,8 @@
 
         public void DeleteAsync(int id) // for admin only
         {
-            if (this.AddressExists(id))
-            {
                 var address = this.GetAddressById<Address>(id); // ???????check here 100%
                 this.addressRepository.Delete(address);
-            }
         }
 
         public bool AddressExists(int id)
