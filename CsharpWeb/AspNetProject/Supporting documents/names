@@ -5,140 +5,415 @@ Zaio Babaio
 Pod Dygata
 Vyv Kluba
 
+var employee = new Employee
+            {
 FirstName = "Surueya", 
 LastName = "Burak",
+EGN = "1234567890",
+AddressId = 1,
+Salary = 500M,
+ };
 
+var employee2 = new Employee
+            {
 FirstName = "Djehide ",
 LastName ="Karaoglu",
+EGN = "1234567890",
+AddressId = 1,
+Salary = 500M,
+ };
 
+var employee3 = new Employee
+            {
 FirstName = "Mumun ",
 LastName = "Hassan",
+EGN = "1234567890",
+AddressId = 1,
+Salary = 500M,
+ };
 
+var employee4 = new Employee
+            {
 FirstName = "Suhan",
 Lastname = "Alemdarolu",
+EGN = "1234567890",
+AddressId = 1,
+Salary = 500M,
+ };
 
+var employee5 = new Employee
+            {
 FirstName = "Siham",
 Lastname = "Sihamova",
+EGN = "1234567890",
+AddressId = 1,
+Salary = 500M,
+ };
 
+var employee6 = new Employee
+            {
 FirstName = "Farukh",
 Lastname = "Buran",
+EGN = "1234567890",
+AddressId = 1,
+Salary = 500M,
+ };
 
+var employee7 = new Employee
+            {
 FirstName = "Esma",
 Lastname = "Sultan",
+EGN = "1234567890",
+AddressId = 1,
+Salary = 500M,
+ };
 
+var employee8 = new Employee
+            {
 FirstName = "Ali",
 Lastname = "Rezza",
+EGN = "1234567890",
+AddressId = 1,
+Salary = 500M,
+ };
 
+var employee9 = new Employee
+            {
 FirstName = "Gino",
 Lastname = "Dupkorovoff",
+EGN = "1234567890",
+AddressId = 1,
+Salary = 500M,
+ };
 
+var employee10 = new Employee
+            {
 FirstName = "Djesur",
 Lastname = "Karahasanolu",
+EGN = "1234567890",
+AddressId = 1,
+Salary = 500M,
+ };
 
+var employee11 = new Employee
+            {
 FirstName = "Bade",
 Lastname = "Bidem",
+EGN = "1234567890",
+AddressId = 1,
+Salary = 500M,
+ };
 
+var employee12 = new Employee
+            {
 FirstName = "Ohne",
 Lastname = "Boly",
+EGN = "1234567890",
+AddressId = 1,
+Salary = 500M,
+ };
 
+var employee13 = new Employee
+            {
 FirstName = "Adalet",
 Lastname = "Mehmetolu",
+EGN = "1234567890",
+AddressId = 1,
+Salary = 500M,
+ };
 
+var employee14 = new Employee
+            {
 FirstName = "Kumar",
 Lastname = "Vinot",
+EGN = "1234567890",
+AddressId = 1,
+Salary = 500M,
+ };
 
+var employee15 = new Employee
+            {
 FirstName = "Amador",
 Lastname = "Rivas",
+EGN = "1234567890",
+AddressId = 1,
+Salary = 500M,
+ };
 
+var employee16 = new Employee
+            {
 FirstName = "Lola",
 Lastname = "Trujillo",
+EGN = "1234567890",
+AddressId = 1,
+Salary = 500M,
+ };
 
+var employee17 = new Employee
+            {
 FirstName = "Berta",
 Lastname = "Escobar",
+EGN = "1234567890",
+AddressId = 1,
+Salary = 500M,
+ };
 
+var employee18 = new Employee
+            {
 FirstName = "Enrique",
 Lastname = "Pastor",
+EGN = "1234567890",
+AddressId = 1,
+Salary = 500M,
+ };
 
+var employee19 = new Employee
+            {
 FirstName = "Maite",
 Lastname = "Figueroa",
+EGN = "1234567890",
+AddressId = 1,
+Salary = 500M,
+ };
 
+var employee20 = new Employee
+            {
 FirstName = "Coque",
 Lastname = "Calatrava",
+EGN = "1234567890",
+AddressId = 1,
+Salary = 500M,
+ };
 
+var employee21 = new Employee
+            {
 FirstName = "Rizwan",
 Lastname = "Nioka",
+EGN = "1234567890",
+AddressId = 1,
+Salary = 500M,
+ };
 
+var employee22 = new Employee
+            {
 FirstName = "Araceli",
 Lastname = "Madariaga",
+EGN = "1234567890"
+AddressId = 1,
+Salary = 500M,
+ };
 
+var employee23 = new Employee
+            {
 FirstName = "Raquel",
 Lastname = "Villanueva",
+EGN = "1234567890",
+AddressId = 1,
+Salary = 500M,
+ };
 
+var employee24 = new Employee
+            {
 FirstName = "Estela",
 Lastname = "Reynolds",
+EGN = "1234567890",
+AddressId = 1,
+Salary = 500M,
+ };
 
+var employee25 = new Employee
+            {
 FirstName = "Leonardo",
 Lastname = "Romani",
+EGN = "1234567890",
+AddressId = 1,
+Salary = 500M,
+ };
 
+var employee26 = new Employee
+            {
 FirstName = "Vicente",
 Lastname = "Maroto",
+EGN = "1234567890",
+AddressId = 1,
+Salary = 500M,
+ };
 
+var employee27 = new Employee
+            {
 FirstName = "Nines",
 Lastname = "Villanueva",
+EGN = "1234567890",
+AddressId = 1,
+Salary = 500M,
+ };
 
+var employee28 = new Employee
+            {
 FirstName = "Fermín",
 Lastname = "Trujillo",
+EGN = "1234567890",
+AddressId = 1,
+Salary = 500M,
+ };
 
+var employee29 = new Employee
+            {
 FirstName = "Maximo",
 Lastname = "Angulo",
+EGN = "1234567890",
+AddressId = 1,
+Salary = 500M,
+ };
 
+var employee = new Employee
+            {
 FirstName = "La",
 Lastname = "Chusa",
+EGN = "1234567890",
+AddressId = 1,
+Salary = 500M,
+ };
 
+var employee30 = new Employee
+            {
 FirstName = "Antonio",
 Lastname = "Fagaldo",
+EGN = "1234567890",
+AddressId = 1,
+Salary = 500M,
+ };
 
+var employee31 = new Employee
+            {
 FirstName = "Rosario",
 Lastname = "Parrales",
-
+EGN = "1234567890",
+AddressId = 1,
+Salary = 500M,
+ };
+ 
+var employee32 = new Employee
+            {
 FirstName = "Teodoro",
 Lastname = "Rivas",
+EGN = "1234567890",
+AddressId = 1,
+Salary = 500M,
+ };
 
+var employee33 = new Employee
+            {
 FirstName = "Yolanda",
 Lastname = "Morcillo",
-
+EGN = "1234567890",
+AddressId = 1,
+Salary = 500M,
+ };
+ 
+var employee34 = new Employee
+            {
 FirstName = "Dina",
 Lastname = "Stoeva",
+EGN = "1234567890",
+AddressId = 1,
+Salary = 500M,
+ };
 
+var employee35 = new Employee
+            {
 FirstName = "Michael",
 Lastname = "Petrov",
+EGN = "1234567890",
+AddressId = 1,
+Salary = 500M,
+ };
 
+var employee36 = new Employee
+            {
 FirstName = "Mihail",
 Lastname = "Traichev",
+EGN = "1234567890",
+AddressId = 1,
+Salary = 500M,
+ };
 
+var employee37 = new Employee
+            {
 FirstName = "Garderobcho",
 Lastname = "Ivanov",
+EGN = "1234567890",
+AddressId = 1,
+Salary = 500M,
+ };
 
+var employee38 = new Employee
+            {
 FirstName = "Nu",
 Lastname = "Pogodi",
+EGN = "1234567890",
+AddressId = 1,
+Salary = 500M,
+ };
 
+var employee39 = new Employee
+            {
 FirstName = "Tomi",
 Lastname = "Djeri",
+EGN = "1234567890",
+AddressId = 1,
+Salary = 500M,
+ };
+ 
 
+var employee40 = new Employee
+            {
 FirstName = "Kumcho",
 Lastname = "Vulkan",
+EGN = "1234567890",
+AddressId = 1,
+Salary = 500M,
+ };
 
+var employee41 = new Employee
+            {
 FirstName = "Kuma",
 Lastname = "Lisana",
+EGN = "1234567890",
+AddressId = 1,
+Salary = 500M,
+ };
 
+var employee42 = new Employee
+            {
 FirstName = "Lady",
 Lastname = "Gabba",
+EGN = "1234567890",
+AddressId = 1,
+Salary = 500M,
+ };
 
-FirstName = "Shushana",
+FirstName43 = "Shushana",
 Lastname = "Dimitrova",
+EGN = "1234567890",
+AddressId = 1,
+Salary = 500M,
+ };
 
+var employee44 = new Employee
+            {
 FirstName = "Chicho",
 Lastname = "Potyo",
+EGN = "1234567890",
+AddressId = 1,
+Salary = 500M,
+ };
 
+var employee45 = new Employee
+            {
 FirstName = "Profesor",
 Lastname = "Maitapchyiski",
+EGN = "1234567890",
+AddressId = 1,
+Salary = 500M,
+ };

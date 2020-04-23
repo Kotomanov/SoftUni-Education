@@ -5,7 +5,7 @@
     using EGovernment.Data.Models.Models.Geographical;
     using EGovernment.Services.Mapping;
 
-    public class SearchAddressByIdViewModel : IMapFrom<Address>
+    public class DeleteAddressViewModel : IMapFrom<Address>
     {
         [Required]
         [Display(Name = "Address identificator*")]

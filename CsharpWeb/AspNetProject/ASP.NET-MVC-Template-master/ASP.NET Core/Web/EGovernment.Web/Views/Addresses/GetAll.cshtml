@@ -2,10 +2,14 @@
 @{
     ViewData["Title"] = "All Addresses List";
 }
+@if (TempData["Infomessage"] != null)
+{
+    <div class="alert alert-danger">@TempData["Infomessage"].ToString()</div>
+}
 <h1>All Addresses</h1>
 <div style="background-image: url('https://res.cloudinary.com/egov/image/upload/v1587405947/address_vp0x8x.jpg');">
     <table class="table table-bordered table-striped table-hover">
-        <thead class="font-weight-bold text-white" >
+        <thead class="font-weight-bold text-white">
             <tr>
                 <th>Country Name</th>
                 <th>District Name</th>
@@ -18,14 +22,14 @@
         <tbody>
             @foreach (var address in Model.AddressesList)
             {
-            <tr>
-                <td class="font-weight-bold  text-white">@address.CountryName</td>
-                <td class="font-weight-bold  text-white">@address.DistrictName</td>
-                <td class="font-weight-bold  text-white">@address.CityName</td>
-                <td class="font-weight-bold  text-white">@address.PostalCode</td>
-                <td class="font-weight-bold  text-white">@address.AddressDetails</td>
-                <td class="font-weight-bold  text-white">@address.Id</td>
-            </tr>
+                <tr>
+                    <td class="font-weight-bold  text-white">@address.CountryName</td>
+                    <td class="font-weight-bold  text-white">@address.DistrictName</td>
+                    <td class="font-weight-bold  text-white">@address.CityName</td>
+                    <td class="font-weight-bold  text-white">@address.PostalCode</td>
+                    <td class="font-weight-bold  text-white">@address.AddressDetails</td>
+                    <td class="font-weight-bold  text-white">@address.Id</td>
+                </tr>
             }
         </tbody>
     </table>

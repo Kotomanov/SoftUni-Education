@@ -9,6 +9,21 @@
             return this.View();
         }
 
+        public IActionResult Profile()
+        {
+            return this.View();
+        }
+
+        public IActionResult Roles()
+        {
+            return this.View();
+        }
+
+        public IActionResult RequestADocument()
+        {
+            return this.View();
+        }
+
         // get the profile info 
         // get names, roles, manager
     }

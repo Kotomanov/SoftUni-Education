@@ -44,8 +44,10 @@
 
         public void DeleteAsync(int id) // for admin only
         {
-                var address = this.GetAddressById<Address>(id); // ???????check here 100%
-                this.addressRepository.Delete(address);
+            var address = this.addressRepository.All().Where(x => x.Id == id).First();
+
+            this.addressRepository.Delete(address);
+            this.addressRepository.SaveChangesAsync();
         }
 
         public bool AddressExists(int id)
@@ -72,7 +74,7 @@
         public T GetAddressById<T>(int id)
         {
             var address = this.addressRepository.All().Where(x => x.Id == id);
-            return address.To<T>().First(); // maybe will not work?!
+            return address.To<T>().First();
         }
 
         public void UpdateAsync(int id)

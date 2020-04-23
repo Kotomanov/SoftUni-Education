@@ -2,6 +2,8 @@
 {
     using System.Threading.Tasks;
 
+    using AutoMapper;
+    using EGovernment.Data;
     using EGovernment.Data.Models;
     using EGovernment.Data.Models.Enums;
     using EGovernment.Data.Models.Enums.Geography;
@@ -13,12 +15,15 @@
     public class AddressesController : BaseController
     {
         private readonly IAddressService service;
+        private readonly IMapper mapper;
         private readonly UserManager<ApplicationUser> userManager;
+        private readonly ApplicationDbContext db;
 
-        public AddressesController(IAddressService service, UserManager<ApplicationUser> userManager) // maybe usermanager?
+        public AddressesController(IAddressService service, UserManager<ApplicationUser> userManager, ApplicationDbContext db) // maybe usermanager?
         {
             this.service = service;
             this.userManager = userManager;
+            this.db = db;
         }
 
         public IActionResult Index()
@@ -74,7 +79,7 @@
             return this.View(list);
         }
 
-        public async Task<IActionResult> Delete()
+        public IActionResult Delete()
         {
             return this.View();
         }
@@ -82,19 +87,15 @@
         [HttpPost]
         public async Task<IActionResult> DeleteAsync(int id)
         {
-            if (!this.ModelState.IsValid)
-            {
-                return this.View(id);
-            }
-
-            if (!this.service.AddressExists(id))
+            if (!this.ModelState.IsValid! || !this.service.AddressExists(id))
             {
                 this.TempData["Infomessage"] = "Invalid Id entered.";
                 return this.View(id);
             }
 
             this.service.DeleteAsync(id);
-            return this.Redirect("/Addresses/Index");
+            this.TempData["Infomessage"] = "Address deleted.";
+            return this.Redirect("/Addresses/GetAll");
         }
 
         public async Task<IActionResult> Update()
@@ -105,6 +106,17 @@
         [HttpPost]
         public async Task<IActionResult> UpdateAsync(int id)
         {
+            if (!this.ModelState.IsValid)
+            {
+                return this.View(id);
+            }
+
+            if (!this.service.AddressExists(id))
+            {
+                this.TempData["Infomessage"] = "Invalid address.";
+                return this.View(id);
+            }
+
             if (this.service.AddressExists(id))
             {
                 var address = this.service.GetAddressById<DisplayAllAddressesViewModel>(id);
@@ -119,25 +131,25 @@
         }
 
         [HttpPost]
-        public async Task<IActionResult> FindById(SearchAddressByIdViewModel search)
+        public async Task<IActionResult> FindById(int id)
         {
             if (!this.ModelState.IsValid)
             {
-                return this.View(search);
+                return this.View(id);
             }
 
-            if (!this.service.AddressExists(search.Id))
+            if (!this.service.AddressExists(id))
             {
                 this.TempData["Infomessage"] = "Invalid Id entered.";
-                return this.View(search);
+                return this.View(id);
             }
 
-            var address = this.service.GetAddressById<DisplayAllAddressesViewModel>(search.Id);
+            var address = this.service.GetAddressById<DisplayAllAddressesViewModel>(id);
 
             return this.Redirect($"/Addresses/ShowSingleAddress?id={address.Id}");
         }
 
-        public async Task<IActionResult> ShowSingleAddress(int id) // or a view model
+        public async Task<IActionResult> ShowSingleAddress(int id)
         {
             if (!this.service.AddressExists(id))
             {

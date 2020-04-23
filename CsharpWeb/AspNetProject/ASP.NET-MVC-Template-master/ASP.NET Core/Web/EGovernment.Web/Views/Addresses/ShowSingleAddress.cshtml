@@ -1,6 +1,6 @@
 ﻿@model EGovernment.Web.ViewModels.AppViewModels.AddressViewModels.DisplayAllAddressesViewModel
 @{
-    ViewData["Title"] = "ShowSingleAddress";
+    ViewData["Title"] = "Show the address";
 }
 
 <h1>Show address</h1>
@@ -31,10 +31,8 @@
 </div>
 
 <div>
-        <form method="post">
-            <button type="submit" class="btn btn-primary btn btn-danger btn-lg">Check it!</button>
-            <a class="btn btn-danger btn-lg" asp-controller="Addresses" asp-action="DeleteAsync" role="button">DELETE!</a>
-        </form>
+    <a type="button" class="btn btn-warning disabled" asp-controller="Addresses" asp-action="Update" asp-route-id="@Model.Id">Update</a>
+    <a type="button" class="btn btn-danger" asp-controller="Addresses" asp-action="Delete"><i class="fas fa-exclamation-triangle"></i> DELETE</a>
 </div>
 <br />
 <div>
