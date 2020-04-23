@@ -14,7 +14,7 @@
             this.DiagnosesRecords = new HashSet<RecordDiagnose>();
         }
 
-        public int PatientId { get; set; }
+        public int? PatientId { get; set; }
 
         public virtual Patient Patient { get; set; }
 

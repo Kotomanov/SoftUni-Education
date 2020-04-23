@@ -41,6 +41,10 @@
                               // new EmployeeSeeder(),
                               // new DoctorSeeder(),
                               // new MedicineSeeder(),
+                              // new MedicalRecordSeeder(),
+                              // new PatientSeeder(),
+                              // new EntitySeeder(),
+                              // new VehicleSeeder(),
                           };
 
             foreach (var seeder in seeders)

@@ -1,5 +1,6 @@
 ﻿namespace EGovernment.Data.Models.Models.People
 {
+    using System;
     using System.ComponentModel.DataAnnotations;
 
     using EGovernment.Data.Common.Models;
@@ -8,6 +9,11 @@
 
     public class Patient : BaseDeletableModel<string>, IPerson
     {
+        public Patient()
+        {
+            this.Id = Guid.NewGuid().ToString();
+        }
+
         [Required]
         [StringLength(30, MinimumLength = 1)]
         public string FirstName { get; set; }

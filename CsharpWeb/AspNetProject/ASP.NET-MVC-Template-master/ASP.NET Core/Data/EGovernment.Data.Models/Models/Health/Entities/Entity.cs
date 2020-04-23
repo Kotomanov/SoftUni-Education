@@ -22,6 +22,7 @@
         public string Name { get; set; }
 
         [Required]
+        [Range(1, 1000_000)]
         public int AddressId { get; set; }
 
         public Address Address { get; set; }
