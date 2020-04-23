@@ -6,532 +6,438 @@
 
     using EGovernment.Data.Models.Models.People;
 
-    internal class EmployeeSeeder : ISeeder
+    internal class DoctorSeeder : ISeeder
     {
         public async Task SeedAsync(ApplicationDbContext dbContext, IServiceProvider serviceProvider)
         {
-            List<Employee> employeesList = new List<Employee>();
+            List<Doctor> doctorsList = new List<Doctor>();
 
-            var employee = new Employee
+            var doctor = new Doctor
             {
                 FirstName = "Surueya",
                 LastName = "Burak",
                 EGN = "1234567890",
                 AddressId = 1,
-                ManagerId = 2,
-                Salary = 500M,
             };
 
-            var employee1 = new Employee
+            var doctor1 = new Doctor
             {
                 FirstName = "Bat",
                 LastName = "Boiko",
                 EGN = "1234567890",
                 AddressId = 1,
-                ManagerId = 2,
-                Salary = 500M,
             };
 
-            var employee2 = new Employee
+            var doctor2 = new Doctor
             {
                 FirstName = "Djehide ",
                 LastName = "Karaoglu",
                 EGN = "1234567890",
                 AddressId = 1,
-                ManagerId = 2,
-                Salary = 500M,
             };
 
-            var employee3 = new Employee
+            var doctor3 = new Doctor
             {
                 FirstName = "Mumun ",
                 LastName = "Hassan",
                 EGN = "1234567890",
                 AddressId = 1,
-                ManagerId = 2,
-                Salary = 500M,
             };
 
-            var employee4 = new Employee
+            var doctor4 = new Doctor
             {
                 FirstName = "Suhan",
                 LastName = "Alemdarolu",
                 EGN = "1234567890",
                 AddressId = 1,
-                ManagerId = 2,
-                Salary = 500M,
             };
 
-            var employee5 = new Employee
+            var doctor5 = new Doctor
             {
                 FirstName = "Siham",
                 LastName = "Sihamova",
                 EGN = "1234567890",
                 AddressId = 1,
-                ManagerId = 2,
-                Salary = 500M,
             };
 
-            var employee6 = new Employee
+            var doctor6 = new Doctor
             {
                 FirstName = "Farukh",
                 LastName = "Buran",
                 EGN = "1234567890",
                 AddressId = 1,
-                ManagerId = 2,
-                Salary = 500M,
             };
 
-            var employee7 = new Employee
+            var doctor7 = new Doctor
             {
                 FirstName = "Esma",
                 LastName = "Sultan",
                 EGN = "1234567890",
                 AddressId = 1,
-                ManagerId = 2,
-                Salary = 500M,
             };
 
-            var employee8 = new Employee
+            var doctor8 = new Doctor
             {
                 FirstName = "Ali",
                 LastName = "Rezza",
                 EGN = "1234567890",
                 AddressId = 1,
-                ManagerId = 2,
-                Salary = 500M,
             };
 
-            var employee9 = new Employee
+            var doctor9 = new Doctor
             {
                 FirstName = "Gino",
                 LastName = "Dupkorovoff",
                 EGN = "1234567890",
                 AddressId = 1,
-                ManagerId = 2,
-                Salary = 500M,
             };
 
-            var employee10 = new Employee
+            var doctor10 = new Doctor
             {
                 FirstName = "Djesur",
                 LastName = "Karahasanolu",
                 EGN = "1234567890",
                 AddressId = 1,
-                ManagerId = 2,
-                Salary = 500M,
             };
 
-            var employee11 = new Employee
+            var doctor11 = new Doctor
             {
                 FirstName = "Bade",
                 LastName = "Bidem",
                 EGN = "1234567890",
                 AddressId = 1,
-                ManagerId = 2,
-                Salary = 500M,
             };
 
-            var employee12 = new Employee
+            var doctor12 = new Doctor
             {
                 FirstName = "Ohne",
                 LastName = "Boly",
                 EGN = "1234567890",
                 AddressId = 1,
-                ManagerId = 2,
-                Salary = 500M,
             };
 
-            var employee13 = new Employee
+            var doctor13 = new Doctor
             {
                 FirstName = "Adalet",
                 LastName = "Mehmetolu",
                 EGN = "1234567890",
                 AddressId = 1,
-                ManagerId = 2,
-                Salary = 500M,
             };
 
-            var employee14 = new Employee
+            var doctor14 = new Doctor
             {
                 FirstName = "Kumar",
                 LastName = "Vinot",
                 EGN = "1234567890",
                 AddressId = 1,
-                ManagerId = 2,
-                Salary = 500M,
+
             };
 
-            var employee15 = new Employee
+            var doctor15 = new Doctor
             {
                 FirstName = "Amador",
                 LastName = "Rivas",
                 EGN = "1234567890",
                 AddressId = 1,
-                ManagerId = 2,
-                Salary = 500M,
             };
 
-            var employee16 = new Employee
+            var doctor16 = new Doctor
             {
                 FirstName = "Lola",
                 LastName = "Trujillo",
                 EGN = "1234567890",
                 AddressId = 1,
-                ManagerId = 2,
-                Salary = 500M,
             };
 
-            var employee17 = new Employee
+            var doctor17 = new Doctor
             {
                 FirstName = "Berta",
                 LastName = "Escobar",
                 EGN = "1234567890",
                 AddressId = 1,
-                ManagerId = 2,
-                Salary = 500M,
             };
 
-            var employee18 = new Employee
+            var doctor18 = new Doctor
             {
                 FirstName = "Enrique",
                 LastName = "Pastor",
                 EGN = "1234567890",
                 AddressId = 1,
-                ManagerId = 2,
-                Salary = 500M,
             };
 
-            var employee19 = new Employee
+            var doctor19 = new Doctor
             {
                 FirstName = "Maite",
                 LastName = "Figueroa",
                 EGN = "1234567890",
                 AddressId = 1,
-                ManagerId = 2,
-                Salary = 500M,
             };
 
-            var employee20 = new Employee
+            var doctor20 = new Doctor
             {
                 FirstName = "Coque",
                 LastName = "Calatrava",
                 EGN = "1234567890",
                 AddressId = 1,
-                ManagerId = 2,
-                Salary = 500M,
             };
 
-            var employee21 = new Employee
+            var doctor21 = new Doctor
             {
                 FirstName = "Rizwan",
                 LastName = "Nioka",
                 EGN = "1234567890",
                 AddressId = 1,
-                ManagerId = 2,
-                Salary = 500M,
             };
 
-            var employee22 = new Employee
+            var doctor22 = new Doctor
             {
                 FirstName = "Araceli",
                 LastName = "Madariaga",
                 EGN = "1234567890",
                 AddressId = 1,
-                ManagerId = 2,
-                Salary = 500M,
             };
 
-            var employee23 = new Employee
+            var doctor23 = new Doctor
             {
                 FirstName = "Raquel",
                 LastName = "Villanueva",
                 EGN = "1234567890",
                 AddressId = 1,
-                ManagerId = 2,
-                Salary = 500M,
             };
 
-            var employee24 = new Employee
+            var doctor24 = new Doctor
             {
                 FirstName = "Estela",
                 LastName = "Reynolds",
                 EGN = "1234567890",
                 AddressId = 1,
-                ManagerId = 2,
-                Salary = 500M,
             };
 
-            var employee25 = new Employee
+            var doctor25 = new Doctor
             {
                 FirstName = "Leonardo",
                 LastName = "Romani",
                 EGN = "1234567890",
                 AddressId = 1,
-                ManagerId = 2,
-                IsManager = true,
-                Salary = 500M,
             };
 
-            var employee26 = new Employee
+            var doctor26 = new Doctor
             {
                 FirstName = "Vicente",
                 LastName = "Maroto",
                 EGN = "1234567890",
                 AddressId = 1,
-                ManagerId = 2,
-                Salary = 500M,
             };
 
-            var employee27 = new Employee
+            var doctor27 = new Doctor
             {
                 FirstName = "Nines",
                 LastName = "Villanueva",
                 EGN = "1234567890",
                 AddressId = 1,
-                ManagerId = 2,
-                Salary = 500M,
             };
 
-            var employee28 = new Employee
+            var doctor28 = new Doctor
             {
                 FirstName = "Fermín",
                 LastName = "Trujillo",
                 EGN = "1234567890",
                 AddressId = 1,
-                ManagerId = 2,
-                Salary = 500M,
             };
 
-            var employee29 = new Employee
+            var doctor29 = new Doctor
             {
                 FirstName = "Maximo",
                 LastName = "Angulo",
                 EGN = "1234567890",
                 AddressId = 1,
-                ManagerId = 2,
-                Salary = 500M,
             };
 
-            var employee30 = new Employee
+            var doctor30 = new Doctor
             {
                 FirstName = "Antonio",
                 LastName = "Fagaldo",
                 EGN = "1234567890",
                 AddressId = 1,
-                ManagerId = 2,
-                Salary = 500M,
             };
 
-            var employee31 = new Employee
+            var doctor31 = new Doctor
             {
                 FirstName = "Rosario",
                 LastName = "Parrales",
                 EGN = "1234567890",
                 AddressId = 1,
-                ManagerId = 2,
-                Salary = 500M,
             };
 
-            var employee32 = new Employee
+            var doctor32 = new Doctor
             {
                 FirstName = "Teodoro",
                 LastName = "Rivas",
                 EGN = "1234567890",
                 AddressId = 1,
-                ManagerId = 2,
-                Salary = 500M,
             };
 
-            var employee33 = new Employee
+            var doctor33 = new Doctor
             {
                 FirstName = "Yolanda",
                 LastName = "Morcillo",
                 EGN = "1234567890",
                 AddressId = 1,
-                ManagerId = 2,
-                Salary = 500M,
             };
 
-            var employee34 = new Employee
+            var doctor34 = new Doctor
             {
                 FirstName = "Dina",
                 LastName = "Stoeva",
                 EGN = "1234567890",
                 AddressId = 1,
-                ManagerId = 2,
-                Salary = 500M,
             };
 
-            var employee35 = new Employee
+            var doctor35 = new Doctor
             {
                 FirstName = "Michael",
                 LastName = "Petrov",
                 EGN = "1234567890",
                 AddressId = 1,
-                ManagerId = 2,
-                Salary = 500M,
             };
 
-            var employee36 = new Employee
+            var doctor36 = new Doctor
             {
                 FirstName = "Mihail",
                 LastName = "Traichev",
                 EGN = "1234567890",
                 AddressId = 1,
-                ManagerId = 2,
-                Salary = 500M,
             };
 
-            var employee37 = new Employee
+            var doctor37 = new Doctor
             {
                 FirstName = "Garderobcho",
                 LastName = "Ivanov",
                 EGN = "1234567890",
                 AddressId = 1,
-                ManagerId = 2,
-                Salary = 500M,
             };
 
-            var employee38 = new Employee
+            var doctor38 = new Doctor
             {
                 FirstName = "Nu",
                 LastName = "Pogodi",
                 EGN = "1234567890",
                 AddressId = 1,
-                ManagerId = 2,
-                Salary = 500M,
             };
 
-            var employee39 = new Employee
+            var doctor39 = new Doctor
             {
                 FirstName = "Tomi",
                 LastName = "Djeri",
                 EGN = "1234567890",
                 AddressId = 1,
-                ManagerId = 2,
-                Salary = 500M,
             };
 
-            var employee40 = new Employee
+            var doctor40 = new Doctor
             {
                 FirstName = "Kumcho",
                 LastName = "Vulkan",
                 EGN = "1234567890",
                 AddressId = 1,
-                ManagerId = 2,
-                Salary = 500M,
             };
 
-            var employee41 = new Employee
+            var doctor41 = new Doctor
             {
                 FirstName = "Kuma",
                 LastName = "Lisana",
                 EGN = "1234567890",
                 AddressId = 1,
-                ManagerId = 2,
-                Salary = 500M,
             };
 
-            var employee42 = new Employee
+            var doctor42 = new Doctor
             {
                 FirstName = "Lady",
                 LastName = "Gabba",
                 EGN = "1234567890",
                 AddressId = 1,
-                ManagerId = 2,
-                Salary = 500M,
             };
 
-            var employee43 = new Employee
+            var doctor43 = new Doctor
             {
                 FirstName = "Shushana",
                 LastName = "Dimitrova",
                 EGN = "1234567890",
                 AddressId = 1,
-                ManagerId = 2,
-                Salary = 500M,
             };
 
-            var employee44 = new Employee
+            var doctor44 = new Doctor
             {
                 FirstName = "Chicho",
                 LastName = "Potyo",
                 EGN = "1234567890",
                 AddressId = 1,
-                ManagerId = 2,
-                Salary = 500M,
             };
 
-            var employee45 = new Employee
+            var doctor45 = new Doctor
             {
                 FirstName = "Profesor",
                 LastName = "Maitapchyiski",
                 EGN = "1234567890",
                 AddressId = 1,
-                ManagerId = 2,
-                Salary = 500M,
             };
 
-            var employee46 = new Employee
+            var doctor46 = new Doctor
             {
                 FirstName = "La",
                 LastName = "Chusa",
                 EGN = "1234567890",
                 AddressId = 1,
-                ManagerId = 2,
-                Salary = 500M,
             };
 
-            employeesList.Add(employee);
-            employeesList.Add(employee1);
-            employeesList.Add(employee2);
-            employeesList.Add(employee3);
-            employeesList.Add(employee4);
-            employeesList.Add(employee5);
-            employeesList.Add(employee6);
-            employeesList.Add(employee7);
-            employeesList.Add(employee8);
-            employeesList.Add(employee9);
-            employeesList.Add(employee10);
-            employeesList.Add(employee11);
-            employeesList.Add(employee12);
-            employeesList.Add(employee13);
-            employeesList.Add(employee14);
-            employeesList.Add(employee15);
-            employeesList.Add(employee16);
-            employeesList.Add(employee17);
-            employeesList.Add(employee18);
-            employeesList.Add(employee19);
-            employeesList.Add(employee20);
-            employeesList.Add(employee21);
-            employeesList.Add(employee22);
-            employeesList.Add(employee23);
-            employeesList.Add(employee24);
-            employeesList.Add(employee25);
-            employeesList.Add(employee26);
-            employeesList.Add(employee27);
-            employeesList.Add(employee28);
-            employeesList.Add(employee29);
-            employeesList.Add(employee30);
-            employeesList.Add(employee31);
-            employeesList.Add(employee32);
-            employeesList.Add(employee33);
-            employeesList.Add(employee34);
-            employeesList.Add(employee35);
-            employeesList.Add(employee36);
-            employeesList.Add(employee37);
-            employeesList.Add(employee38);
-            employeesList.Add(employee39);
-            employeesList.Add(employee40);
-            employeesList.Add(employee41);
-            employeesList.Add(employee42);
-            employeesList.Add(employee43);
-            employeesList.Add(employee44);
-            employeesList.Add(employee45);
-            employeesList.Add(employee46);
+            doctorsList.Add(doctor);
+            doctorsList.Add(doctor1);
+            doctorsList.Add(doctor2);
+            doctorsList.Add(doctor3);
+            doctorsList.Add(doctor4);
+            doctorsList.Add(doctor5);
+            doctorsList.Add(doctor6);
+            doctorsList.Add(doctor7);
+            doctorsList.Add(doctor8);
+            doctorsList.Add(doctor9);
+            doctorsList.Add(doctor10);
+            doctorsList.Add(doctor11);
+            doctorsList.Add(doctor12);
+            doctorsList.Add(doctor13);
+            doctorsList.Add(doctor14);
+            doctorsList.Add(doctor15);
+            doctorsList.Add(doctor16);
+            doctorsList.Add(doctor17);
+            doctorsList.Add(doctor18);
+            doctorsList.Add(doctor19);
+            doctorsList.Add(doctor20);
+            doctorsList.Add(doctor21);
+            doctorsList.Add(doctor22);
+            doctorsList.Add(doctor23);
+            doctorsList.Add(doctor24);
+            doctorsList.Add(doctor25);
+            doctorsList.Add(doctor26);
+            doctorsList.Add(doctor27);
+            doctorsList.Add(doctor28);
+            doctorsList.Add(doctor29);
+            doctorsList.Add(doctor30);
+            doctorsList.Add(doctor31);
+            doctorsList.Add(doctor32);
+            doctorsList.Add(doctor33);
+            doctorsList.Add(doctor34);
+            doctorsList.Add(doctor35);
+            doctorsList.Add(doctor36);
+            doctorsList.Add(doctor37);
+            doctorsList.Add(doctor38);
+            doctorsList.Add(doctor39);
+            doctorsList.Add(doctor40);
+            doctorsList.Add(doctor41);
+            doctorsList.Add(doctor42);
+            doctorsList.Add(doctor43);
+            doctorsList.Add(doctor44);
+            doctorsList.Add(doctor45);
+            doctorsList.Add(doctor46);
 
-            await dbContext.AddRangeAsync(employeesList);
+            await dbContext.AddRangeAsync(doctorsList);
             await dbContext.SaveChangesAsync();
         }
     }

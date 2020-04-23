@@ -38,6 +38,9 @@
                               // new CitySeeder(),
                               // new MinistrySeeder(),
                               // new DiagnoseSeeder(),
+                              // new EmployeeSeeder(),
+                              // new DoctorSeeder(),
+                              // new MedicineSeeder(),
                           };
 
             foreach (var seeder in seeders)
