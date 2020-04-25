@@ -1,0 +1,89 @@
+﻿@using EGovernment.Data.Models
+@using Microsoft.AspNetCore.Identity
+@using EGovernment.Web.ViewModels.AppViewModels.PatientsViewModels
+@inject SignInManager<ApplicationUser> SignInManager
+@inject UserManager<ApplicationUser> UserManager
+@model CombinedPatientViewModel
+
+    @*<form>
+        <div class="form-group">
+            <label for="formGroupExampleInput">First Name</label>
+            <input type="text" class="form-control" id="formGroupExampleInput" value="@Model.Input.FirstName">
+        </div>
+
+        <div class="form-group">
+            <label for="formGroupExampleInput2">Last Name</label>
+            <input type="text" class="form-control" id="formGroupExampleInput2" value="@Model.Input.LastName">
+        </div>
+
+        <div class="form-group">
+            <label for="formGroupExampleInput2">EGN</label>
+            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Enter your ЕГН">
+        </div>
+
+        <div class="form-group">
+            <label for="formGroupExampleInput2">Address</label>
+            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="@Model.Input.AddressAddressDetails">
+        </div>
+
+        <div class="form-group">
+            <label for="formGroupExampleInput2">GP Name</label>
+            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="GP name">
+        </div>
+
+        <div class="form-group">
+            <label for="formGroupExampleInput2">Medical Record</label>
+            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Medical record id">
+        </div>
+
+    </form>*@
+//////
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <h4>Complete your profile</h4>
+            <hr />
+            <div asp-validation-summary="All" class="text-danger"></div>
+
+            <div class="form-group">
+                <label asp-for="Output.FirstName"></label>
+                <input asp-for="Output.FirstName" value="@Model.Input.FirstName" class="form-control" />
+                <span asp-validation-for="Output.FirstName" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Output.LastName"></label>
+                <input asp-for="Output.LastName" value="@Model.Input.LastName" class="form-control" />
+                <span asp-validation-for="Output.LastName" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Output.EGN"></label>
+                <input asp-for="Output.EGN" placeholder="Enter your ЕГeНe here" class="form-control" />
+                <span asp-validation-for="Output.EGN" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Output.AddressId"></label>
+                <input asp-for="Output.AddressId" value="1" class="form-control disabled" />
+                <span asp-validation-for="Output.AddressId" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Output.DoctorId"></label>
+                <input asp-for="Output.AddressId" value="1" class="form-control disabled" />
+                <span asp-validation-for="Output.DoctorId" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Output.MedicalRecordId"></label>
+                <input asp-for="Output.AddressId" value="1" class="form-control disabled" />
+                <span asp-validation-for="Output.MedicalRecordId" class="text-danger"></span>
+            </div>
+            <hr />
+            <button type="submit" class="btn btn-primary">Next</button>
+        </form>
+    </div>
+</div>
+
+//// submit has to redirect to address create or update ?  if user addressId  = dummy -> create address , if not dummy - update? maybe not now

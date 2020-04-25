@@ -33,6 +33,7 @@
 
   <ItemGroup>
     <Folder Include="AppViewModels\EmployeesViewModels\" />
+    <Folder Include="AppViewModels\HealthViewModels\" />
     <Folder Include="AppViewModels\ReportsViewModels\" />
   </ItemGroup>
 

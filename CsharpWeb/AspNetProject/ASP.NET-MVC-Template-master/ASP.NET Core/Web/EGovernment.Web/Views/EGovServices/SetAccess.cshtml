@@ -1,0 +1,49 @@
+﻿@using EGovernment.Data.Models
+@using Microsoft.AspNetCore.Identity
+@model EGovernment.Web.ViewModels.AppViewModels.PatientsViewModels.CombinedPatientViewModel
+@inject SignInManager<ApplicationUser> SignInManager
+@inject UserManager<ApplicationUser> UserManager
+@{
+    ViewData["Title"] = "View";
+}
+@{var name = this.User.Identity.Name.Split("@")[0]; }
+
+@if (TempData["Infomessage"] != null)
+{
+    <div class="alert alert-danger">@TempData["Infomessage"].ToString()</div>
+}
+
+<h1>Complete your patient profile</h1>
+<div class="alert alert-warning alert-dismissible fade show" role="alert">
+    <button class="close" aria-label="Close" type="button" data-dismiss="alert">
+        <span aria-hidden="true">×</span>
+    </button>
+    <strong>Hello, @name!</strong>
+</div>
+
+<partial name="_PersonalInformationPartialView" for="@this.Model">
+
+
+    <div>
+        <p class="lead">
+            <a class="btn btn-secondary btn-lg" asp-controller="EGovServices" asp-action="Index" role="button">Back</a>
+        </p>
+    </div>
+
+    this.UserManager.GetUserName()
+
+    maybe here show the personal profile page to save code writing
+
+    my roles - show roles - get model to show the roles ...
+
+    show what roles has the user - has roles - does not have any role
+
+    names - First Name , Last Name
+
+    drop down with roles to select - how to do that ... add user to role slides - in the service .. after the controller validates the action addusertorole
+
+
+
+
+
+

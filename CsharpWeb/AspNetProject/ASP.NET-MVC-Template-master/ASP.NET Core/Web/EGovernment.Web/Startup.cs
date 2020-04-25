@@ -11,9 +11,11 @@
     using EGovernment.Data.Seeding;
     using EGovernment.Services.Data;
     using EGovernment.Services.Data.AddressServices;
+    using EGovernment.Services.Data.EGovServicesServices;
     using EGovernment.Services.Data.EmployeesService;
     using EGovernment.Services.Data.Heath;
     using EGovernment.Services.Data.MinistryService;
+    using EGovernment.Services.Data.PatientsServices;
     using EGovernment.Services.Mapping;
     using EGovernment.Services.Messaging;
     using EGovernment.Web.ViewModels;
@@ -99,6 +101,8 @@
             services.AddTransient<IAddressService, AddressService>();
             services.AddTransient<IHealthService, HealthService>();
             services.AddTransient<IEmployeeService, EmployeeService>();
+            services.AddTransient<IEgovService, EgovService>();
+            services.AddTransient<IPatientService, PatientService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

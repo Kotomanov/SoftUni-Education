@@ -58,7 +58,7 @@
             if (this.ModelState.IsValid)
             {
                 this.InfoMessage = "You have successfully submitted your feedback";
-                await this.sender.SendEmailAsync("mirobg84@yahoo.com", "user", "miroslav.kotomanov@gmail.com", "hello", "<h3>Share your thoughts with us</h3>");
+                await this.sender.SendEmailAsync("miroslav.kotomanov@gmail.com", "user", "mirobg84@yahoo.com", "hello", "<h3>Share your thoughts with us</h3>");
                 return this.Redirect("/");
 
                 // send mail  does not yet work
