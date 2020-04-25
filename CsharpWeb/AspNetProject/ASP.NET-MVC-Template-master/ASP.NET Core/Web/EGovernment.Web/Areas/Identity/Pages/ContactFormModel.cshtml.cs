@@ -57,8 +57,9 @@
         {
             if (this.ModelState.IsValid)
             {
+                // var mail = "mirobg84@yahoo.com";
                 this.InfoMessage = "You have successfully submitted your feedback";
-                await this.sender.SendEmailAsync("miroslav.kotomanov@gmail.com", "user", "mirobg84@yahoo.com", "hello", "<h3>Share your thoughts with us</h3>");
+                await this.sender.SendEmailAsync("mirobg84@yahoo.com", "Potyo", "mirobg84@yahoo.com", "<h3>Share your thoughts with us</h3>", string.Empty); // $"{this.Email.ToString()}, {this.Name.ToString()}, {mail.ToString()}, {this.Topic.ToString()}, {this.InputText.ToString()}, {string.Empty}" //("mirobg84@yahoo.com", "Potyo", "g.b.minkova@gmail.com", "testmessage", string.Empty);
                 return this.Redirect("/");
 
                 // send mail  does not yet work

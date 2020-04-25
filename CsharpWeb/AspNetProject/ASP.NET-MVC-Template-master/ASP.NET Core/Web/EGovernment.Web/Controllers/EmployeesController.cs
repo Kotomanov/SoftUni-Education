@@ -9,7 +9,7 @@
             return this.View();
         }
 
-        public IActionResult Profile()
+        public IActionResult ProfilePage()
         {
             return this.View();
         }

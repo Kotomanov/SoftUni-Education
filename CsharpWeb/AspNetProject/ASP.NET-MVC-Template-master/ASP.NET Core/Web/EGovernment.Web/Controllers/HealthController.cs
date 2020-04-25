@@ -15,6 +15,11 @@
             return this.View();
         }
 
+        public IActionResult Profile()
+        {
+            return this.View();
+        }
+
         //httppost 
 
         //Edit Health Recoird - Doctor only , 

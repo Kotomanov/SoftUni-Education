@@ -9,9 +9,11 @@
     using EGovernment.Data.Models.Enums.Geography;
     using EGovernment.Services.Data.AddressServices;
     using EGovernment.Web.ViewModels.AppViewModels.AddressViewModels;
+    using Microsoft.AspNetCore.Authorization;
     using Microsoft.AspNetCore.Identity;
     using Microsoft.AspNetCore.Mvc;
 
+    [Authorize]
     public class AddressesController : BaseController
     {
         private readonly IAddressService service;
@@ -64,6 +66,7 @@
             return this.Redirect("/Addresses/GetAll");
         }
 
+        // [Authorize(Roles = "Administrator")]
         public async Task<IActionResult> GetAll()
         {
             var collection = this.service.GetAll<DisplayAllAddressesViewModel>();
@@ -85,6 +88,7 @@
         }
 
         [HttpPost]
+        // [Authorize(Roles = "Administrator")]
         public async Task<IActionResult> DeleteAsync(int id)
         {
             if (!this.ModelState.IsValid! || !this.service.AddressExists(id))

@@ -11,9 +11,9 @@
 
         public string EGN { get; set; }
 
-        public string AddressAddressDetails { get; set; } // ?? if there will be null ref exc?!!!
+        public int AddressId { get; set; } // ?? if there will be null ref exc?!!!
 
-        public string DoctorLastName { get; set; } // ?? if there will be null ref exc?!!!
+        public int DoctorId { get; set; } // ?? if there will be null ref exc?!!!
 
         public int MedicalRecordId { get; set; }
     }
