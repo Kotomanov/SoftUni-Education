@@ -1,0 +1,42 @@
+﻿@model EGovernment.Web.ViewModels.AppViewModels.AddressViewModels.DisplayAllAddressesViewModel
+@{
+    ViewData["Title"] = "Show the address";
+}
+
+<h1>Show address</h1>
+
+<div style="background-image: url('https://res.cloudinary.com/egov/image/upload/v1587405947/address_vp0x8x.jpg');">
+    <table class="table table-bordered table-striped table-hover">
+        <thead class="font-weight-bold text-white">
+            <tr>
+                <th>Country Name</th>
+                <th>District Name</th>
+                <th>City Name</th>
+                <th>City Postal Code</th>
+                <th>Address Details</th>
+                <th>Address Id</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="font-weight-bold  text-white">@Model.CountryName</td>
+                <td class="font-weight-bold  text-white">@Model.DistrictName</td>
+                <td class="font-weight-bold  text-white">@Model.CityName</td>
+                <td class="font-weight-bold  text-white">@Model.PostalCode</td>
+                <td class="font-weight-bold  text-white">@Model.AddressDetails</td>
+                <td class="font-weight-bold  text-white">@Model.Id</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<div>
+    <a type="button" class="btn btn-warning disabled" asp-area="Administration" asp-controller="Addresses" asp-action="Update" asp-route-id="@Model.Id">Update</a>
+    <a type="button" class="btn btn-danger" asp-area="Administration" asp-controller="Addresses" asp-action="Delete"><i class="fas fa-exclamation-triangle"></i> DELETE</a>
+</div>
+<br />
+<div>
+    <p class="lead">
+        <a class="btn btn-secondary btn-lg" asp-area="Administration" asp-controller="Addresses" asp-action="Index" role="button">Back</a>
+    </p>
+</div>

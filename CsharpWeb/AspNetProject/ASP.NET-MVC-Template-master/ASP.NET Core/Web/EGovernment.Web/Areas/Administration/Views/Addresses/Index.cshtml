@@ -1,0 +1,17 @@
+﻿@{
+    ViewData["Title"] = "Address Index Page";
+}
+@if (TempData["Infomessage"] != null)
+{
+    <div class="alert alert-danger">@TempData["Infomessage"].ToString()</div>
+}
+<h1>Admin Address Index Page</h1>
+
+<div style="background-image: url('https://res.cloudinary.com/egov/image/upload/v1587405947/address_vp0x8x.jpg');">
+    <div>
+        <a class="waves-effect waves-light btn-large" href="/Administration/Addresses/FindById"><i class="material-icons left">find_replace</i>Find address</a>
+    </div>
+    <br />
+</div>
+
+

@@ -44,10 +44,13 @@
 
         public void DeleteAsync(int id) // for admin only
         {
-            var address = this.addressRepository.All().Where(x => x.Id == id).First();
-
-            this.addressRepository.Delete(address);
-            this.addressRepository.SaveChangesAsync();
+            var address = this.addressRepository.All().Where(x => x.Id == id).FirstOrDefault();
+            if (address != null)
+            {
+                this.addressRepository.HardDelete(address);
+                this.addressRepository.Delete(address);
+                this.addressRepository.SaveChangesAsync();
+            }
         }
 
         public bool AddressExists(int id)
