@@ -1,13 +1,15 @@
-﻿@using EGovernment.Web.ViewModels.AppViewModels.PatientsViewModels
-@model PatientPersonalInfoViewModel
+﻿
 @{
     ViewData["Title"] = "My record(Health/PatientRecord)";
 }
-
+@if (TempData["Infomessage"] != null)
+{
+    <div class="alert alert-danger">@TempData["Infomessage"].ToString()</div>
+}
 <h1>Patient Record</h1>
 
-My profile : 
-Create such profile 
+My profile :
+Create such profile
 Names
 EGN
 Address
@@ -15,6 +17,6 @@ my patientID ?
 
 GP(Patient - > doctor.names),
 
- Medicalrecord(PatientId, Visits, Diagnoses), 
+ Medicalrecord(PatientId, Visits, Diagnoses),
 Names ,
- EGN 
+ EGN

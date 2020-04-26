@@ -3,8 +3,6 @@
     using System.Collections.Generic;
     using System.Threading.Tasks;
 
-    using EGovernment.Web.ViewModels.AppViewModels.AddressViewModels;
-
     public interface IAddressService
     {
         Task<int> CreateAddressAsync(string countryName, string districtName, string cityName, int postalCode, string addressDetails);

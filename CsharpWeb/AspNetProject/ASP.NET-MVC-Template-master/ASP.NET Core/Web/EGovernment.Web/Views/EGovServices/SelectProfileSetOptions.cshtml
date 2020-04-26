@@ -1,10 +1,10 @@
 ﻿@{
-    ViewData["Title"] = "Select Profile Set Options";
+    ViewData["Title"] = "Select Profile SetUp Options";
 }
-Go To patients page - /Health/Profile
-I do not have a patient profile and want to create one - add role patient to the person here
-Select GP
-I want to add/change my address so the profile is completed - partial views? - Address/Create - get the addressid and add it to the user/patient profile
+@if (TempData["Infomessage"] != null)
+{
+    <div class="alert alert-danger">@TempData["Infomessage"].ToString()</div>
+}
 <nav class="navbar sticky-top navbar-dark bg-secondary">
     <a class="navbar-brand text-center font-weight-bold" href="/EGovServices/SelectProfileSetOptions">Select from the options bellow</a>
 </nav>
@@ -12,9 +12,9 @@ I want to add/change my address so the profile is completed - partial views? - A
 <div class="list-group">
     <a class="list-group-item active text-black-50 font-weight-bold text-center" href="/Health/Profile">Go To Patient Profile Page</a>
     <hr />
-    <a class="list-group-item active text-black-50 font-weight-bold text-center" href="/Addresses/Index">Add/Change address to complete profile</a>
+    <a class="list-group-item active text-black-50 font-weight-bold text-center" href="/Addresses">Add/Change address to complete profile</a>
     <hr />
-    <a class="list-group-item active text-black-50 font-weight-bold text-center" href="/Employee/Index">Go to Employee Profile Page</a>
+    <a class="list-group-item active text-black-50 font-weight-bold text-center" href="/Employees/Index">Go to Employee Profile Page</a>
     <hr />
     <a class="list-group-item active text-black-50 font-weight-bold text-center" href="/Administration/Administration/Index">Administration</a>
     <hr />

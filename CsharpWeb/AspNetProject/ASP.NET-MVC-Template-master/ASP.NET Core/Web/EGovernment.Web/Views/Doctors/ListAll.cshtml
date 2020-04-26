@@ -1,0 +1,38 @@
+﻿@using EGovernment.Web.ViewModels.AppViewModels.DoctorsViewModels
+@model AllDoctorsDisplayViewModel
+@{
+    ViewData["Title"] = "All Doctors List";
+}
+@if (TempData["Infomessage"] != null)
+{
+    <div class="alert alert-danger">@TempData["Infomessage"].ToString()</div>
+}
+<h1>Doctors List</h1>
+
+<div style="background-image: url('https://res.cloudinary.com/egov/image/upload/v1587835750/generala_jk6elo.jpg');">
+    <table class="table table-bordered table-striped table-hover">
+        <thead class="font-weight-bold text-white">
+            <tr>
+                <th>Id</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var doctor in Model.DoctorsList)
+            {
+                <tr>
+                    <td class="font-weight-bold  text-white">@doctor.Id</td>
+                    <td class="font-weight-bold  text-white">@doctor.FirstName</td>
+                    <td class="font-weight-bold  text-white">@doctor.LastName</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+<div>
+    <p class="lead">
+        <a class="btn btn-secondary btn-lg" asp-controller="Doctors" asp-action="Index" role="button">Back</a>
+    </p>
+</div>

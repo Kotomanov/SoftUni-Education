@@ -1,16 +1,53 @@
-﻿
+﻿@using EGovernment.Web.ViewModels.AppViewModels.PatientsViewModels
+@model CheckPatientStatusViewModel
 @{
     ViewData["Title"] = "Profile";
 }
+@if (TempData["Infomessage"] != null)
+{
+    <div class="alert alert-danger">@TempData["Infomessage"].ToString()</div>
+}
 
-<h1>Health Profile</h1>
+<h3><i class="fas fa-search-location"></i>Check your patient status by entering your first and last names and EGN</h3>
+
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="All" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="FirstName"></label>
+                <input asp-for="FirstName" placeholder="Your first name please" class="form-control" />
+                <span asp-validation-for="FirstName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="LastName"></label>
+                <input asp-for="LastName" placeholder="Your last name please" class="form-control" />
+                <span asp-validation-for="LastName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="EGN"></label>
+                <input asp-for="EGN" placeholder="Enter your ЕГН " class="form-control" />
+                <span asp-validation-for="EGN" class="text-danger"></span>
+            </div>
+            <button type="submit" class="btn btn-primary">Check it!</button>
+        </form>
+    </div>
+</div>
+
+Check your patient status by Firstname last name egn 
 
 write names and egn : check if there is a profile or not via the service and controller
+if found patient record -> "/Patients/PatientRecord"
 
 you have then can change or complete/ proceed
 
 you do not have a medical profile : create your profile now with all the information
 
-add user to role patient 
+add user to role patient
 
 redirect tothe right page
+
+Go To patients page - /Health/Profile
+I do not have a patient profile and want to create one - add role patient to the person here
+Select GP
+I want to add/change my address so the profile is completed - partial views? - Address/Create - get the addressid and add it to the user/patient profile

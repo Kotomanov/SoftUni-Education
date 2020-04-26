@@ -1,0 +1,28 @@
+﻿
+@{
+    ViewData["Title"] = "Doctors Index Page";
+}
+
+@if (TempData["Infomessage"] != null)
+{
+    <div class="alert alert-danger">@TempData["Infomessage"].ToString()</div>
+}
+
+<h1>Index</h1>
+
+<div style="background-image: url('https://res.cloudinary.com/egov/image/upload/v1587835750/generala_jk6elo.jpg');">
+
+    <div>
+        <a class="waves-effect waves-light btn-large" href="/Doctors/Create"><i class="material-icons left">add_box</i>Add doctor</a>
+    </div>
+    <br />
+    <div>
+        <a class="waves-effect waves-light btn-large" href="/Doctors/Search"><i class="material-icons left">find_replace</i>Search</a>
+    </div>
+    <br />
+    <div>
+        <a class="waves-effect waves-light btn-large" href="/Doctors/ListAll"><i class="material-icons left">apps</i>List all</a>
+    </div>
+    <br />
+
+</div>
