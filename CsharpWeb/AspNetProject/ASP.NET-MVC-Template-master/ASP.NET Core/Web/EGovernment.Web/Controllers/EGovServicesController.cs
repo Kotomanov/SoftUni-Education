@@ -84,6 +84,7 @@
 
             if (this.service.PatientExists(combined.Output.FirstName, combined.Output.LastName, combined.Output.EGN))
             {
+                this.TempData["Infomessage"] = "Patient is already registered";
                 // service to update the details of the patient
                 return this.Redirect("/"); // to update the patient edit page - UpdatepatientProfile or move to next page?
             }

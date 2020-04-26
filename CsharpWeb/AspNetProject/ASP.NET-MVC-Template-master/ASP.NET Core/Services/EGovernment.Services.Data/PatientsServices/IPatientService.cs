@@ -1,8 +1,9 @@
-﻿using EGovernment.Web.ViewModels.AppViewModels.PatientsViewModels;
-using System.Threading.Tasks;
-
-namespace EGovernment.Services.Data.PatientsServices
+﻿namespace EGovernment.Services.Data.PatientsServices
 {
+    using System.Threading.Tasks;
+
+    using EGovernment.Web.ViewModels.AppViewModels.PatientsViewModels;
+
     public interface IPatientService
     {
         // create and return string id 
@@ -16,5 +17,7 @@ namespace EGovernment.Services.Data.PatientsServices
         // set a profile to isdeleted true?
         // etc
         // add user to patient role
+
+        // assign user to role patient
     }
 }

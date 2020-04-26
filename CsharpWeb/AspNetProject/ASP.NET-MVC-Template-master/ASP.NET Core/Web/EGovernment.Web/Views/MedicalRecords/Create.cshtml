@@ -1,0 +1,26 @@
+﻿
+@{
+    ViewData["Title"] = "Create";
+}
+@if (TempData["Infomessage"] != null)
+{
+    <div class="alert alert-danger">@TempData["Infomessage"].ToString()</div>
+}
+<h3>You are about to create your medical record!</h3>
+
+
+<nav class="navbar sticky-top navbar-dark bg-danger">
+    <a class="navbar-brand" href="/Patients/Create">Abort this operation <i class="fas fa-exclamation-circle"></i></a>
+</nav>
+<hr />
+<br />
+<form method="post">
+    <button type="submit" class="btn btn-primary">Create</button>
+</form>
+<hr />
+<br />
+<div>
+    <p class="lead">
+        <a class="btn btn-secondary btn-lg" asp-controller="Patients" asp-action="PatientRecord" role="button">Back to your patient record</a>
+    </p>
+</div>

@@ -88,8 +88,11 @@
                 return this.View(input);
             }
 
-            // return this.RedirectToAction("/Patients/Create", input.Id);
-            return this.View(input);
+            // service?
+
+            var doctor = this.doctorService.GetDoctorByNames<SingleDoctorDisplayViewModel>(input.FirstName, input.LastName);
+
+            return this.View(doctor);
         }
     }
 }

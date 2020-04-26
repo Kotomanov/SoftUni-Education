@@ -1,7 +1,5 @@
 ﻿@using EGovernment.Web.ViewModels.AppViewModels.PatientsViewModels
-@using EGovernment.Web.ViewModels.AppViewModels.DoctorsViewModels
 @model PatientUpdateInfoViewModel
-@*usings?*@
 @{
     ViewData["Title"] = "Create";
 }
@@ -17,12 +15,11 @@
         <form method="post">
             <h4>Add your address.add gp first medical record</h4>
 
-            <div>
-                <p class="lead">
-                    <a class="btn btn-secondary btn-lg" asp-controller="Doctors" asp-action="Search" role="button">Find your doctor</a>
-                </p>
-            </div>
-            <hr />
+            @*<div>
+                    <p class="lead">
+                        <a class="btn btn-secondary btn-lg" asp-controller="Doctors" asp-action="Search" role="button">Find your doctor</a>
+                    </p>
+                </div>*@
             <div asp-validation-summary="All" class="text-danger"></div>
 
             <div class="form-group">
@@ -57,7 +54,7 @@
 
             <div class="invisible">
                 <label asp-for="MedicalRecordId"></label>
-                <input asp-for="MedicalRecordId" value="1" class="form-control disabled" />
+                <input asp-for="MedicalRecordId" value="125" class="form-control disabled" />
                 <span asp-validation-for="MedicalRecordId" class="text-danger disabled"></span>
             </div>
             <hr />

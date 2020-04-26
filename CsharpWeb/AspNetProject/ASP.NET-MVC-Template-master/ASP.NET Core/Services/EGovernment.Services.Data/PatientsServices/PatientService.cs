@@ -2,17 +2,27 @@
 {
     using System.Linq;
     using System.Threading.Tasks;
+
     using EGovernment.Data.Common.Repositories;
+    using EGovernment.Data.Models;
     using EGovernment.Data.Models.Models.People;
     using EGovernment.Web.ViewModels.AppViewModels.PatientsViewModels;
+    using Microsoft.AspNetCore.Identity;
 
     public class PatientService : IPatientService
     {
         private readonly IDeletableEntityRepository<Patient> patientRepository;
+        private readonly UserManager<ApplicationUser> userManager;
+        private readonly RoleManager<ApplicationRole> roleManager;
 
-        public PatientService(IDeletableEntityRepository<Patient> patientRepository)
+        public PatientService(
+            IDeletableEntityRepository<Patient> patientRepository,
+            UserManager<ApplicationUser> userManager,
+            RoleManager<ApplicationRole> roleManager)
         {
             this.patientRepository = patientRepository;
+            this.userManager = userManager;
+            this.roleManager = roleManager;
         }
 
         public async Task<string> CreatePatientAsync(PatientUpdateInfoViewModel input)
