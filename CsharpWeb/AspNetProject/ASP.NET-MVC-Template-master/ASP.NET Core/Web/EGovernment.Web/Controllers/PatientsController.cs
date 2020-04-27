@@ -52,7 +52,6 @@
             await this.patientService.CreatePatientAsync(patientInput);
 
             var user = await this.userManager.GetUserAsync(this.User);
-            var roles = this.roleManager.Roles.ToList();
             await this.userManager.AddToRoleAsync(user, "Patient");
 
             return this.Redirect("/EGovServices/SelectProfileSetOptions");

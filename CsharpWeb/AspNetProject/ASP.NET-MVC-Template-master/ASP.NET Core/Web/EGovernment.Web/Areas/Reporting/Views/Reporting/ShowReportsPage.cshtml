@@ -1,0 +1,41 @@
+﻿@using Microsoft.AspNetCore.Identity;
+@{
+    ViewData["Title"] = "ShowReportsPage";
+}
+
+@if (TempData["Infomessage"] != null)
+{
+    <div class="alert alert-danger">@TempData["Infomessage"].ToString()</div>
+}
+
+<h1>All Reports</h1>
+
+@{if (this.User.IsInRole("Administrator"))
+    {
+        <h4>You have Administrator role</h4>
+        // ShowReportsPage here
+
+    }
+    else
+    {
+        <h4>You need Administrator role in order to access the reports </h4>
+    }
+}
+
+    buttons or see the results directly shown automatically in boxes?
+
+    count, new users, see the document for the asp net project
+
+
+   check my status
+
+if user has Admin role: show the reports button
+
+if not
+<hr />
+<br />
+<div>
+    <p class="lead">
+        <a class="btn btn-secondary btn-lg" asp-area="" asp-controller="EGovServices" asp-action="SelectProfileSetOptions" role="button">Back to EGov Services Index </a>
+    </p>
+</div>

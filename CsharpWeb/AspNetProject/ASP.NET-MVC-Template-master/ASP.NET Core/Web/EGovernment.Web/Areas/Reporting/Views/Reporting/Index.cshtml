@@ -1,9 +1,38 @@
-﻿
+﻿@using Microsoft.AspNetCore.Identity;
+@using EGovernment.Data.Models
+@inject SignInManager<ApplicationUser> SignInManager
+@inject UserManager<ApplicationUser> UserManager
 @{
     ViewData["Title"] = "Index";
 }
 
-<h1>Reporting Index</h1>
+@if (TempData["Infomessage"] != null)
+{
+    <div class="alert alert-danger">@TempData["Infomessage"].ToString()</div>
+}
+<hr />
+<br />
+<h3>Reporting Page</h3>
+<hr />
+@{if (this.SignInManager.IsSignedIn(this.User) && this.User.IsInRole("Administrator"))
+{
+<h4>You have Administrator role</h4>
+<p class="lead">
+    <a class="btn btn-success btn-lg" asp-area="Reporting" asp-controller="Reporting" asp-action="ShowReportsPage" role="button">Go reports page</a>
+</p>
+}
+else
+{
+<nav class="navbar fixed-top navbar-dark bg-info">
+    <a class="navbar-brand" asp-area="Reporting" asp-controller="Reporting" asp-action="AssignAdminRoleToUser">You need Administrator access so reports show up. Click here to Authenticate as Administrator</a>
+</nav>
+}}
+<br />
 
- count, new users, see the document for the asp net project
+<div>
+    <p class="lead">
+        <a class="btn btn-secondary btn-lg" asp-area="" asp-controller="EGovServices" asp-action="SelectProfileSetOptions" role="button">Back to Services page </a>
+    </p>
+</div>
 
+<hr />
