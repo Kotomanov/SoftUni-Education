@@ -1,0 +1,45 @@
+﻿@model EGovernment.Web.ViewModels.AppViewModels.AddressViewModels.AddressListDisplayViewModel
+@{
+    ViewData["Title"] = "Display Results By Country";
+}
+@if (TempData["Infomessage"] != null)
+{
+    <div class="alert alert-danger">@TempData["Infomessage"].ToString()</div>
+}
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="/Reporting/Reporting/ShowReportsPage">Back to Main Reports Page</a></li>
+        <li class="breadcrumb-item"><a href="/Reporting/Reporting/ShowAddressReports">Show Address Reports Page</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Show Address By Country </li>
+    </ol>
+</nav>
+<hr />
+<h1>Display Results By Country</h1>
+
+<div style="background-image: url('https://res.cloudinary.com/egov/image/upload/v1587405947/address_vp0x8x.jpg');">
+    <table class="table table-bordered table-striped table-hover">
+        <thead class="font-weight-bold text-white">
+            <tr>
+                <th>Country Name</th>
+                <th>District Name</th>
+                <th>City Name</th>
+                <th>City Postal Code</th>
+                <th>Address Details</th>
+                <th>Address Id</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var address in Model.AddressesList)
+            {
+                <tr>
+                    <td class="font-weight-bold  text-white">@address.CountryName</td>
+                    <td class="font-weight-bold  text-white">@address.DistrictName</td>
+                    <td class="font-weight-bold  text-white">@address.CityName</td>
+                    <td class="font-weight-bold  text-white">@address.PostalCode</td>
+                    <td class="font-weight-bold  text-white">@address.AddressDetails</td>
+                    <td class="font-weight-bold  text-white">@address.Id</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

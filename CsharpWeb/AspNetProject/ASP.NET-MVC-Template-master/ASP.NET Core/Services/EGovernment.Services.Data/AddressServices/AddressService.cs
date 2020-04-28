@@ -7,7 +7,6 @@
     using EGovernment.Data.Common.Repositories;
     using EGovernment.Data.Models.Models.Geographical;
     using EGovernment.Services.Mapping;
-    using EGovernment.Web.ViewModels.AppViewModels.AddressViewModels;
 
     public class AddressService : IAddressService
     {
@@ -97,16 +96,5 @@
             return true;
         }
 
-        public ICollection<T> GetAllCountries<T>()
-        {
-            var countries = this.countriesRepository.All().Where(x => x.Name != "Dummy").OrderBy(x => x.Name);
-            return countries.To<T>().ToList();
-        }
-
-        public ICollection<T> GetAllCities<T>()
-        {
-            var cities = this.citiesRepository.All().Where(x => x.Name != "Dummy").OrderBy(x => x.Name);
-            return cities.To<T>().ToList();
-        }
     }
 }

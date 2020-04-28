@@ -7,20 +7,16 @@
     {
         Task<int> CreateAddressAsync(string countryName, string districtName, string cityName, int postalCode, string addressDetails);
 
-        ICollection<T> GetAll<T>(); // get a collection here with what <>? - in foreach  in the View + table? this for the admin area?
+        ICollection<T> GetAll<T>();
 
         T GetAddressById<T>(int id);
 
-        void UpdateAsync(int id); // for admin if it works there
+        void UpdateAsync(int id);
 
-        void DeleteAsync(int id); // for admin
+        void DeleteAsync(int id);
 
         bool AddressExists(int id);
 
         bool CityExists(string name);
-
-        ICollection<T> GetAllCountries<T>();
-
-        ICollection<T> GetAllCities<T>();
     }
 }

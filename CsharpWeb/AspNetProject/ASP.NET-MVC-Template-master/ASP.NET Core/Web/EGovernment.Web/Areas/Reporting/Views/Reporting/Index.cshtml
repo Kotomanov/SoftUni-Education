@@ -14,6 +14,12 @@
 <br />
 <h3>Reporting Page</h3>
 <hr />
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item active" aria-current="page">Main Reporting Page</li>
+    </ol>
+</nav>
+<hr />
 @{if (this.SignInManager.IsSignedIn(this.User) && this.User.IsInRole("Administrator"))
 {
 <h4>You have Administrator role</h4>

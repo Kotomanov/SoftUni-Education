@@ -20,6 +20,7 @@
     using EGovernment.Services.Data.PatientsServices;
     using EGovernment.Services.Mapping;
     using EGovernment.Services.Messaging;
+    using EGovernment.Web.Areas.Reporting.Services;
     using EGovernment.Web.ViewModels;
     using Microsoft.AspNetCore.Builder;
     using Microsoft.AspNetCore.Hosting;
@@ -107,6 +108,7 @@
             services.AddTransient<IPatientService, PatientService>();
             services.AddTransient<IDoctorService, DoctorService>();
             services.AddTransient<IMedicalRecordService, MedicalRecordService>();
+            services.AddTransient<IReportService, ReportService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

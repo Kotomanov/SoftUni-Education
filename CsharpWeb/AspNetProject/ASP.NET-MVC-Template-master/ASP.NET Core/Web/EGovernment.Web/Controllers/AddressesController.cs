@@ -25,7 +25,7 @@
         public AddressesController(
             IAddressService service,
             UserManager<ApplicationUser> userManager,
-            ApplicationDbContext db) // maybe usermanager?
+            ApplicationDbContext db)
         {
             this.service = service;
             this.userManager = userManager;
@@ -70,7 +70,6 @@
             return this.Redirect("/Addresses/GetAll");
         }
 
-        // [Authorize(Roles = "Administrator")] or move to admin part?
         public async Task<IActionResult> GetAll()
         {
             var collection = this.service.GetAll<DisplayAllAddressesViewModel>();
@@ -92,7 +91,6 @@
         }
 
         [HttpPost]
-        // [Authorize(Roles = "Administrator")] or move to admin part?
         public async Task<IActionResult> DeleteAsync(int id)
         {
             if (!this.ModelState.IsValid! || !this.service.AddressExists(id) || !this.db.Addresses.Any(x => x.Id == id))

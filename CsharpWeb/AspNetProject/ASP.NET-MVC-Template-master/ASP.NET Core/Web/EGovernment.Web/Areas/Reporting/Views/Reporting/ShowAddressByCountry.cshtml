@@ -1,0 +1,62 @@
+﻿@model EGovernment.Web.Areas.Reporting.ViewModels.SearchByCountryViewModel
+@using EGovernment.Data.Models.Enums.Geography
+@{
+    ViewData["Title"] = "Show Addresses By Country";
+}
+@if (TempData["Infomessage"] != null)
+{
+    <div class="alert alert-danger">@TempData["Infomessage"].ToString()</div>
+}
+@if (TempData["Infomessage"] != null)
+{
+    <div class="alert alert-danger">@TempData["Infomessage"].ToString()</div>
+}
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="/Reporting/Reporting/ShowReportsPage">Back to Main Reports Page</a></li>
+        <li class="breadcrumb-item"><a href="/Reporting/Reporting/ShowAddressReports">Show Address Reports Page</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Show Address By Country Input</li>
+    </ol>
+</nav>
+
+<h4>ShowAddressByCountry</h4>
+
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="All" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="CountryName"></label>
+                <select asp-for="CountryName" class="form-control" asp-items="@Html.GetEnumSelectList<CountryCode>()"></select>
+                @*<input asp-for="CountryName" placeholder="Enter country name here .. " class="form-control" />*@
+                <span asp-validation-for="CountryName" class="text-danger"></span>
+            </div>
+            <button type="submit" class="btn btn-primary">Show report for the selected country</button>
+        </form>
+    </div>
+</div>
+<hr />
+<br />
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    

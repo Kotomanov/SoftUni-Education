@@ -16,7 +16,6 @@
     public class AddressesController : BaseController
     {
         private readonly IAddressService service;
-        private readonly IMapper mapper;
         private readonly UserManager<ApplicationUser> userManager;
         private readonly ApplicationDbContext db;
 
