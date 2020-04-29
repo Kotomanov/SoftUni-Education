@@ -1,4 +1,4 @@
-﻿
+﻿@model EGovernment.Web.ViewModels.AppViewModels.PatientsViewModels.DisplayPatientBasicInfoViewModel
 @{
     ViewData["Title"] = "My record(Health/PatientRecord)";
 }
@@ -7,6 +7,15 @@
     <div class="alert alert-danger">@TempData["Infomessage"].ToString()</div>
 }
 <h1>Patient Record</h1>
+
+<h4>Your basic information:</h4>
+<ul class="list-group">
+    <li class="list-group-item">First name: @Model.FirstName</li>
+    
+    <li class="list-group-item">Last name: @Model.LastName</li>
+     
+    <li class="list-group-item">EGN: @Model.EGN</li>
+</ul>
 
 My profile :
 Create such profile

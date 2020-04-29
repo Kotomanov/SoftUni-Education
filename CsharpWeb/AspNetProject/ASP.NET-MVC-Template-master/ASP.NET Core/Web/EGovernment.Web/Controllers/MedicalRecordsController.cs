@@ -35,8 +35,8 @@
                 return this.Redirect("/Patients/PatientRecord");
             }
 
-            await this.service.CreateRecordAsync();
-            return this.Redirect("/MedicalRecords"); // add the id so it is set
+            int record = await this.service.CreateRecordAsync(); // see if in the view to add it ?!
+            return this.Redirect("/MedicalRecords"); // add the id so it is set ?id-
         }
     }
 }

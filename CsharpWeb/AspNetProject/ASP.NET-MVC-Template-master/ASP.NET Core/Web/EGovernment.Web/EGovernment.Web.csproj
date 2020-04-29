@@ -79,4 +79,8 @@
     <Folder Include="wwwroot\materialize\css\" />
     <Folder Include="wwwroot\materialize\js\" />
   </ItemGroup>
+
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services" />
+  </ItemGroup>
 </Project>

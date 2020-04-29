@@ -57,9 +57,11 @@
             return this.Redirect("/EGovServices/SelectProfileSetOptions");
         }
 
-        public IActionResult PatientRecord()
+        public IActionResult PatientRecord() // string patientId
         {
-            return this.View();
+            string id = this.TempData["PatientId"].ToString();
+            DisplayPatientBasicInfoViewModel result = this.patientService.GetPatientById<DisplayPatientBasicInfoViewModel>(id);
+            return this.View(result);
         }
 
         public IActionResult UpdatePatientRecord() // viewmodel to display the details

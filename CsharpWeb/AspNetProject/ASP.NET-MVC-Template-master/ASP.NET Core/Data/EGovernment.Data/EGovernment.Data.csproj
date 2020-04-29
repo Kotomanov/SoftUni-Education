@@ -59,4 +59,8 @@
     <ProjectReference Include="..\EGovernment.Data.Models\EGovernment.Data.Models.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="AspNetCoreTemplate\Data\Migrations\" />
+  </ItemGroup>
+
 </Project>

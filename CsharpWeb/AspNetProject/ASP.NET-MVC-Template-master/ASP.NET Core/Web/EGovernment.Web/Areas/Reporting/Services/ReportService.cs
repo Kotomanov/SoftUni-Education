@@ -31,6 +31,16 @@
             return addresses.To<T>().ToList();
         }
 
+        public ICollection<T> GetAllAddressesForZamunda<T>()
+        {
+            var addresses = this.addressRepository.All()
+                .Where(x => x.CountryName == "Zamunda")
+                .OrderBy(a => a.CountryName)
+                .ThenBy(a => a.DistrictName)
+                .ThenBy(a => a.CityName);
+
+            return addresses.To<T>().ToList();
+        }
         public ICollection<T> GetAllDoctors<T>()
         {
             throw new System.NotImplementedException();

@@ -63,7 +63,6 @@
             return this.Redirect("/Reporting/Reporting/ShowReportsPage");
         }
 
-        // see what and how to have access
         public IActionResult ShowReportsPage()
         {
             return this.View();
@@ -86,34 +85,32 @@
         }
 
         [HttpPost]
-        public async Task<IActionResult> ShowAddressByCountry(SearchByCountryViewModel name)
+        public async Task<IActionResult> ShowAddressByCountry(SearchAndDisplayViewModel input)
         {
-            // if empty - nothing to show
-            var collection = this.service.GetAllAddresses<DisplayAllAddressesViewModel>(name.CountryName);
+            var collection = this.service.GetAllAddresses<SearchAndDisplayViewModel>(input.Search.CountryName);
 
-            if (collection.Count == 0)
+            if (collection.Count == 0 || collection == null)
             {
-                this.TempData["Infomessage"] = "No data available for this criteria";
+                this.TempData["Infomessage"] = "Nothing here";
                 return this.Redirect("/Reporting/Reporting/ShowReportsPage");
             }
 
-            AddressListDisplayViewModel list = new AddressListDisplayViewModel();
-            list.AddressesList = collection;
-
-            //feeding the data?
+            service.GetAllAddresses<SearchAndDisplayViewModel>(input.Search.CountryName);
+            //SearchAndDisplayViewModel list = new SearchAndDisplayViewModel();
+            //list.Display.AddressesList = collection;
 
             return this.Redirect("/Reporting/Reporting/DisplayResultsByCountry");
         }
 
-        public IActionResult DisplayResultsByCountry(AddressListDisplayViewModel model)
+        public IActionResult DisplayResultsByCountry(SearchAndDisplayViewModel output)
         {
-            if (model.AddressesList == null)
+            if (output.AddressesList == null || output.AddressesList == null || output.AddressesList.Count == 0)
             {
-                this.TempData["Infomessage"] = "No data available for this criteria";
+                this.TempData["Infomessage"] = "Empty report";
                 return this.Redirect("/Reporting/Reporting/ShowReportsPage");
             }
 
-            return this.View(model);
+            return this.View(output);
         }
     }
 }

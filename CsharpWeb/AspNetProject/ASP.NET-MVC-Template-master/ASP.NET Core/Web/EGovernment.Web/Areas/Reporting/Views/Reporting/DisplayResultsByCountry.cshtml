@@ -1,4 +1,4 @@
-﻿@model EGovernment.Web.ViewModels.AppViewModels.AddressViewModels.AddressListDisplayViewModel
+﻿@model EGovernment.Web.Areas.Reporting.ViewModels.SearchAndDisplayViewModel
 @{
     ViewData["Title"] = "Display Results By Country";
 }
@@ -6,6 +6,7 @@
 {
     <div class="alert alert-danger">@TempData["Infomessage"].ToString()</div>
 }
+@{ var result = ViewData["AddressModel"] as EGovernment.Web.ViewModels.AppViewModels.AddressViewModels.AddressListDisplayViewModel; }
 <nav aria-label="breadcrumb">
     <ol class="breadcrumb">
         <li class="breadcrumb-item"><a href="/Reporting/Reporting/ShowReportsPage">Back to Main Reports Page</a></li>

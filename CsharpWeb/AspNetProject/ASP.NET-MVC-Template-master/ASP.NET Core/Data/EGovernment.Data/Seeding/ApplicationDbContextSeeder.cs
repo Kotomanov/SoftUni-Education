@@ -26,8 +26,8 @@
             // Add here refernce to every seeder class
             var seeders = new List<ISeeder>
                           {
-                              new RolesSeeder(),
-                              new SettingsSeeder(),
+                             /// new RolesSeeder(),
+                              // new SettingsSeeder(),
 
                               // new RoleSeeder(),
                               // new DepartmentSeeder(),

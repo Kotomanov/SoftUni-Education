@@ -6,6 +6,7 @@
     using EGovernment.Data.Common.Repositories;
     using EGovernment.Data.Models;
     using EGovernment.Data.Models.Models.People;
+    using EGovernment.Services.Mapping;
     using EGovernment.Web.ViewModels.AppViewModels.PatientsViewModels;
     using Microsoft.AspNetCore.Identity;
 
@@ -41,6 +42,22 @@
             await this.patientRepository.SaveChangesAsync();
 
             return patient.Id;
+        }
+
+        public T GetPatientById<T>(string id)
+        {
+            var patient = this.patientRepository.All().Where(x => x.Id == id);
+
+            return patient.To<T>().First();
+        }
+
+        public async Task<string> GetPatientsIdAsync(string firstName, string lastName, string egn)
+        {
+            var patientId = this.patientRepository.All()
+                .Where(x => x.FirstName == firstName && x.LastName == lastName && x.EGN == egn)
+                .First().Id;
+
+            return patientId;
         }
 
         public bool PatientExists(string firstName, string lastName, string egn)

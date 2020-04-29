@@ -54,8 +54,11 @@
             // TODO add a check on the input vs user names and egn, so does not register and checks for other people
             if (this.patientService.PatientExists(input.FirstName, input.LastName, input.EGN))
             {
+                string patientId = await this.patientService.GetPatientsIdAsync(input.FirstName, input.LastName, input.EGN);
+
                 this.TempData["Infomessage"] = "Your medical profile exists";
-                return this.Redirect("/Patients/PatientRecord");
+                this.TempData["PatientId"] = patientId;
+                return this.Redirect("/Patients/PatientRecord"); // check here id = {patientId}
             }
 
             return this.View(input);

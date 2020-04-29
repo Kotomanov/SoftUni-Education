@@ -1,11 +1,6 @@
-﻿@model EGovernment.Web.Areas.Reporting.ViewModels.SearchByCountryViewModel
-@using EGovernment.Data.Models.Enums.Geography
+﻿@model EGovernment.Web.Areas.Reporting.ViewModels.SearchAndDisplayViewModel
 @{
     ViewData["Title"] = "Show Addresses By Country";
-}
-@if (TempData["Infomessage"] != null)
-{
-    <div class="alert alert-danger">@TempData["Infomessage"].ToString()</div>
 }
 @if (TempData["Infomessage"] != null)
 {
@@ -26,10 +21,9 @@
         <form method="post">
             <div asp-validation-summary="All" class="text-danger"></div>
             <div class="form-group">
-                <label asp-for="CountryName"></label>
-                <select asp-for="CountryName" class="form-control" asp-items="@Html.GetEnumSelectList<CountryCode>()"></select>
-                @*<input asp-for="CountryName" placeholder="Enter country name here .. " class="form-control" />*@
-                <span asp-validation-for="CountryName" class="text-danger"></span>
+                <label asp-for="@Model.Search.CountryName"></label>
+                <input asp-for="@Model.Search.CountryName" placeholder="Enter country name here .. " class="form-control" />
+                <span asp-validation-for="@Model.Search.CountryName" class="text-danger"></span>
             </div>
             <button type="submit" class="btn btn-primary">Show report for the selected country</button>
         </form>
@@ -59,4 +53,3 @@
 
 
 
-    

@@ -11,6 +11,10 @@
 
         Task<string> CreatePatientAsync(PatientUpdateInfoViewModel input);
 
+        Task<string> GetPatientsIdAsync(string firstName, string lastName, string egn);
+
+        T GetPatientById<T>(string id);
+
         // get by string id
         // update names for example
         // change gp 

@@ -56,13 +56,13 @@
 
                         <li class="nav-item">
 
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index"><i class="fas fa-home"></i></a>
+                            <a class="nav-link text-dark" data-toggle="tooltip" data-placement="top" title="Go to Home Page" asp-area="" asp-controller="Home" asp-action="Index"><i class="fas fa-home"></i></a>
 
                         </li>
 
                         <li class="nav-item">
 
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Settings" asp-action="Index"><i class="fas fa-tools"></i></a>
+                            <a class="nav-link text-dark" data-toggle="tooltip" data-placement="top" title="Settings" asp-area="" asp-controller="Settings" asp-action="Index"><i class="fas fa-tools"></i></a>
 
                         </li>
 
@@ -74,7 +74,7 @@
 
                         <li class="nav-item">
 
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="About"><i class="fas fa-address-card"></i></a>
+                            <a class="nav-link text-dark" data-toggle="tooltip" data-placement="top" title="Mission Vission Goals" asp-area="" asp-controller="Home" asp-action="About"><i class="fas fa-address-card"></i></a>
 
                         </li>
 
@@ -151,7 +151,7 @@
     </environment>
     <!--JavaScript at end of body for optimized loading-->
     <script type="text/javascript" src="js/materialize.min.js"></script>
-    
+
 
     @this.RenderSection("Scripts", required: false)
 
