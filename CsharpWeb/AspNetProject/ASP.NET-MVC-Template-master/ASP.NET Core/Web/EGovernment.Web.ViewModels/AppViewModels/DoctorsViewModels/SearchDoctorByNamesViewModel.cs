@@ -3,7 +3,7 @@
     using EGovernment.Data.Models.Models.People;
     using EGovernment.Services.Mapping;
 
-    public class SearchDoctorByNamesViewModel : IMapTo<Doctor>
+    public class SearchDoctorByNamesViewModel : IMapFrom<Doctor>
     {
         public string FirstName { get; set; }
 

@@ -1,15 +1,15 @@
-﻿using System.Collections.Generic;
-using System.Threading.Tasks;
-
-namespace EGovernment.Services.Data.MedicalRecordsService
+﻿namespace EGovernment.Services.Data.MedicalRecordsService
 {
+    using System.Collections.Generic;
+    using System.Threading.Tasks;
+
     public interface IMedicalRecordService
     {
         Task<int> CreateRecordAsync();
 
         bool RecordExists(int id);
 
-        void DeleteAsync(int id);
+        void Delete(int id);
 
         void UpdateAsync(int id);
 

@@ -6,7 +6,6 @@
 
     public interface IPatientService
     {
-        // create and return string id 
         bool PatientExists(string firstName, string lastName, string egn);
 
         Task<string> CreatePatientAsync(PatientUpdateInfoViewModel input);
@@ -14,6 +13,8 @@
         Task<string> GetPatientsIdAsync(string firstName, string lastName, string egn);
 
         T GetPatientById<T>(string id);
+
+        bool PatientHasMedicalRecord(string patientId);
 
         // get by string id
         // update names for example

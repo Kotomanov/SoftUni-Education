@@ -46,7 +46,6 @@
             var address = this.addressRepository.All().Where(x => x.Id == id).FirstOrDefault();
             if (address != null)
             {
-                this.addressRepository.HardDelete(address);
                 this.addressRepository.Delete(address);
                 this.addressRepository.SaveChangesAsync();
             }

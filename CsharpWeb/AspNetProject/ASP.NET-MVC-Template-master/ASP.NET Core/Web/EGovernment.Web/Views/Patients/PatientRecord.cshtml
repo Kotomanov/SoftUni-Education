@@ -11,16 +11,16 @@
 <h4>Your basic information:</h4>
 <ul class="list-group">
     <li class="list-group-item">First name: @Model.FirstName</li>
-    
+
     <li class="list-group-item">Last name: @Model.LastName</li>
-     
+
     <li class="list-group-item">EGN: @Model.EGN</li>
 </ul>
-
-My profile :
-Create such profile
-Names
-EGN
+<br />
+<p class="lead">
+    <a class="btn btn-primary btn-lg" asp-controller="Health" asp-action="Index" role="button" data-toggle="tooltip" title="Дай заден"><i class="fas fa-backward"></i> Back to Health Main Page</a>
+    <a class="btn btn-primary btn-lg" asp-controller="Patient" asp-action="PatientRecord" role="button" data-toggle="tooltip" title="Дай заден"><i class="fas fa-forward"></i> Continue viewing profile</a>
+</p>
 Address
 my patientID ?
 

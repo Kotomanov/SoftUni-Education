@@ -4,6 +4,7 @@
 
     using EGovernment.Services.Data.DoctorsService;
     using EGovernment.Web.ViewModels.AppViewModels.DoctorsViewModels;
+    using Microsoft.AspNetCore.Authorization;
     using Microsoft.AspNetCore.Mvc;
 
     public class DoctorsController : BaseController
@@ -20,7 +21,7 @@
             return this.View();
         }
 
-        // [Authorize(Roles = "Administrator")] or move to admin part?
+        [Authorize(Roles = "Administrator")]
         public IActionResult ListAll()
         {
             var collection = this.doctorService.GetAllDoctors<SingleDoctorDisplayViewModel>();
@@ -41,9 +42,14 @@
             return this.View();
         }
 
-        // [Authorize(Roles = "Administrator")] or move to admin part?
-        // Task httppost
-        public IActionResult Search() // find by id? and display
+        [Authorize(Roles = "Administrator")]
+        [HttpPost]
+        public async Task<IActionResult> CreateAsync()
+        {
+            return this.View();
+        }
+
+        public IActionResult Search()
         {
             return this.View();
         }
@@ -70,27 +76,29 @@
             }
 
             var doctor = this.doctorService.GetDoctorByNames<SingleDoctorDisplayViewModel>(inputModel.FirstName, inputModel.LastName);
-
-            return this.RedirectToAction("DisplayDoctor", doctor);
+            return this.Redirect($"/Doctors/DisplayDoctor?id={doctor.Id}");
         }
 
-        public IActionResult DisplayDoctor(SingleDoctorDisplayViewModel input)
+        public IActionResult DisplayDoctor(int id)
         {
             if (!this.ModelState.IsValid)
             {
                 this.TempData["Infomessage"] = "Nothing to show";
-                return this.View(input);
+                return this.View();
             }
 
-            if (input.Id == 0 || input.FirstName == null || input.LastName == null )
+            if (id == 0)
             {
                 this.TempData["Infomessage"] = "Nothing to show";
-                return this.View(input);
+                return this.View();
             }
 
-            // service?
-
-            var doctor = this.doctorService.GetDoctorByNames<SingleDoctorDisplayViewModel>(input.FirstName, input.LastName);
+            SingleDoctorDisplayViewModel doctor = this.doctorService.GetDoctorById<SingleDoctorDisplayViewModel>(id);
+            if (doctor == null)
+            {
+                this.TempData["Infomessage"] = "Nothing to show";
+                return this.View();
+            }
 
             return this.View(doctor);
         }

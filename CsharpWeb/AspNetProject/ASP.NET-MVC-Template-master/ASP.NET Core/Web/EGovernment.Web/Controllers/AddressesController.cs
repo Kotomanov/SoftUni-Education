@@ -90,6 +90,7 @@
             return this.View();
         }
 
+        [Authorize(Roles = "Administrator")]
         [HttpPost]
         public async Task<IActionResult> DeleteAsync(int id)
         {
@@ -112,6 +113,7 @@
             return this.View();
         }
 
+        [Authorize(Roles = "Administrator")]
         [HttpPost]
         public async Task<IActionResult> UpdateAsync(int id)
         {
