@@ -4,24 +4,41 @@ function newHouse(params) {
     let budget = Number(params[2]);
     let moneyAmount = 0;
 
-    if (flowerType = "Roses") {
+    if (flowerType == "Roses") {
         moneyAmount = flowersCount * 5;
-    } else if (flowerType = "Dahlias") {
+        if (flowersCount > 80) {
+            moneyAmount *= 0.9;
+        }
+    } else if (flowerType == "Dahlias") {
         moneyAmount = flowersCount * 3.80;
-    } else if (flowerType = "Tulips") {
+        if (flowersCount > 90) {
+            moneyAmount *= 0.85;
+        }
+    } else if (flowerType == "Tulips") {
         moneyAmount = flowersCount * 2.80;
-    } else if (flowerType = "Narcissus") {
+        if (flowersCount > 80) {
+            moneyAmount *= 0.85;
+        }
+    } else if (flowerType == "Narcissus") {
         moneyAmount = flowersCount * 3;
-    } else if (flowerType = "Gladiolus") {
+        if (flowersCount < 120) {
+            moneyAmount *= 1.15;
+        }
+    } else if (flowerType == "Gladiolus") {
         moneyAmount = flowersCount * 2.50;
+        if (flowersCount < 80) {
+            moneyAmount *= 1.2;
+        }
     }
 
 
-
-
-    console.log(`Hey, you have a great garden with ${flowersCount} ${flowerType} and ${budget.toFixed(2)} leva left.`);
-
-    console.log(`Not enough money, you need ${budget.toFixed(2)} leva more.`);
+    if (moneyAmount <= budget) {
+        budget -= moneyAmount;
+        console.log(`Hey, you have a great garden with ${flowersCount} ${flowerType} and ${budget.toFixed(2)} leva left.`);
+    } else {
+        moneyAmount -= budget;
+        console.log(`Not enough money, you need ${moneyAmount.toFixed(2)} leva more.`);
+    }
 
 }
 
