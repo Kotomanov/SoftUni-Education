@@ -2,7 +2,7 @@ function timePlus15Minutes(input) {
     let hours = Number(input[0]);
     let minutes = Number(input[1]);
     minutes += 15;
-    //let minutesPlus15 = minutes + 15;
+    
     if (minutes > 59) {
         minutes -= 60;
         hours += 1;
