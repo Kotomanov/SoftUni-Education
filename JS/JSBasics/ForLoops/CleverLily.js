@@ -4,7 +4,7 @@ function cleverLily(params) {
     let toyPrice = Number(params[2]);
     let birthdayMoney = 0;
     let counter = 1;
-    let toycount = 0;
+
     let hasManagedToGetWashingMachine;
 
     for (let i = 1; i <= age; i++) {
@@ -13,22 +13,21 @@ function cleverLily(params) {
             counter++;
             birthdayMoney--;
         } else {
-            toycount++;
+            birthdayMoney += toyPrice
         }
     }
 
-    birthdayMoney += toyPrice * toycount;
+    let delta = birthdayMoney - washingmachinePrice;
 
-    if (washingmachinePrice <= birthdayMoney) {
+    if (delta >= 0) {
         hasManagedToGetWashingMachine = "Yes";
-        birthdayMoney -= washingmachinePrice;
 
     } else {
         hasManagedToGetWashingMachine = "No";
-        birthdayMoney = washingmachinePrice - birthdayMoney;
+        delta*=-1;
     }
 
-    console.log(`${hasManagedToGetWashingMachine}! ${birthdayMoney.toFixed(2)}`);
+    console.log(`${hasManagedToGetWashingMachine}! ${delta.toFixed(2)}`);
 }
 
 cleverLily(["10", "170", "6"]);
