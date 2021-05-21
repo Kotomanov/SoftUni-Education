@@ -1,18 +1,30 @@
 function traveling(params) {
     let destination;
     let excursionPrice = 0;
+    let moneySaved = 0;
     for (let i = 0; i < params.length; i++) {
+
+        if (params[i] === "End") {
+            break;
+        }
+
         if (isNaN(params[i])) {
-            if (params[i] === "End") {
-                break;
-            }
+
             destination = params[i];
             i++;
-            excursionPrice = params[i];
+            excursionPrice = Number(params[i]);
             i++;
-            
+
+            while (!isNaN(params[i])) {
+                moneySaved += Number(params[i]);
+                if (moneySaved >= excursionPrice) {
+                    console.log(`Going to ${destination}!`);
+                    break;
+                }
+            }
+
         }
-        excursionPrice -= params[i];
+
     }
 }
 
