@@ -2,15 +2,23 @@ function building(params) {
     let floorsCount = Number(params[0]);
     let roomsCount = Number(params[1]);
 
-    for (let floor = floorsCount; floor > 0 ; floor--) {
+    for (let floor = floorsCount; floor > 0; floor--) {
+        let output = "";
         for (let room = 0; room < roomsCount; room++) {
-            console.log(floor);
-            console.log(room);
-            
-        }
-        
-    }
+            if (floor == floorsCount) {
+                output+= "L" + floor + room + " "; 
+                //console.log(`L${floor}${room} `);
+            } else if (floor % 2 == 0) {
+                output+= "O" + floor + room + " ";
+                //console.log(`O${floor}${room} `);
+            } else {
+                output+= "A" + floor + room + " ";
+                //console.log(`A${floor}${room} `);
+            }
 
+        }
+        console.log(output)
+    }
 }
 
 building(["6", "4"]);
