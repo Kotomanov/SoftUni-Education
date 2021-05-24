@@ -6,16 +6,12 @@ function building(params) {
         let output = "";
         for (let room = 0; room < roomsCount; room++) {
             if (floor == floorsCount) {
-                output+= "L" + floor + room + " "; 
-                //console.log(`L${floor}${room} `);
+                output += "L" + floor + room + " ";
             } else if (floor % 2 == 0) {
-                output+= "O" + floor + room + " ";
-                //console.log(`O${floor}${room} `);
+                output += "O" + floor + room + " ";
             } else {
-                output+= "A" + floor + room + " ";
-                //console.log(`A${floor}${room} `);
+                output += "A" + floor + room + " ";
             }
-
         }
         console.log(output)
     }
