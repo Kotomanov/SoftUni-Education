@@ -7,7 +7,7 @@ function numberPyramid(params) {
         outcome = "";
         for (let j = 1; j <= i; j++) {
             if (counter <= number) {
-                outcome += i + " ";
+                outcome += counter + " ";
                 counter++;
             }
         }
