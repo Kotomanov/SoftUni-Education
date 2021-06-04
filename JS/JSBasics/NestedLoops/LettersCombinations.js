@@ -1,24 +1,30 @@
 function lettersCombinations(params) {
-    let firstLetter = params[0];
-    let secondLetter = params[1];
-    let thirdLetter = params[2];
-    let counter = 0; 
+    let firstLetter = params.charCodeAt(0);
+    let secondLetter = '\n'.charCodeAt(params[1]);
+    let thirdLetter = '\n'.charCodeAt(params[2]);;
+    let result = "";
+    let counter = 0;
 
-    for (let f = a; f <= z; f++) {
-        for (let s = f; s <= z; s++) {
-            for (let t = a; t <= z; t++) {
-                
+    for (let f = firstLetter; f <= secondLetter; f++) {
+        for (let s = firstLetter; s <= secondLetter; s++) {
+            for (let t = firstLetter; t <= secondLetter; t++) {
+                if (f !== thirdLetter && s !== thirdLetter && t !== thirdLetter) {
+                    result += f + " " + s + " " + t + " ";
+                    counter++;
+                }
 
             }
 
         }
 
     }
+    result+= counter;
+    console.log(result);
 
 }
 
 lettersCombinations(["a", "c", "b"]);
 
-lettersCombinations(["f", "k", "h"]);
+//lettersCombinations(["f", "k", "h"]);
 
-lettersCombinations(["a", "c", "z"]);
+//lettersCombinations(["a", "c", "z"]);
