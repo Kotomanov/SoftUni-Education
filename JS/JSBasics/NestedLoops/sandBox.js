@@ -6,6 +6,6 @@ function A2Z() {
 
     let letter = 'a';
 
-    '\n'.charCodeAt()
+    // let firstLetter = params[0].charCodeAt(0); // from char to number 
 }
 A2Z()
