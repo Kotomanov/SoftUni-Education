@@ -3,39 +3,39 @@ function safePasswordsGenerator(params) {
     let secondNumber = Number(params[1]); //64-96
     let maxCount = Number(params[2]);
     let outcome = "";
-    //ABxyBA x=1 to a , y = 1 to b 
-    for (let a = 35; a <= 55; a++) {
-            
 
-        for (let b = 64; b <= 96; b++) {
-            
-
-                for (let i = 1; i <= firstNumber; i++) {
-                    for (let j = 1; j < secondNumber; j++) {
-                       outcome += String.fromCharCode(a) +  String.fromCharCode(b) + i + j +  String.fromCharCode(b) + String.fromCharCode(a) + "|"; 
-                       maxCount--;
+    for (let a = 1; a <= firstNumber; a++) {
+        for (let b = 1; b <= secondNumber; b++) {
+            for (let i = 35; i <= 55; i++) {
+                for (let j = 64; j <= 96; j++) {
+                    outcome += String.fromCharCode(i) + String.fromCharCode(j) + a + b + String.fromCharCode(j) + String.fromCharCode(i) + "|";
+                    maxCount--;
+                    if (maxCount <= 0) {
+                        return;
                     }
-                    
-                }
-            
-                if (b == 96) {
-                b = 64;}
-            }
-        
-        if (maxCount <= 0) {
-            return;
-        }
-        if (a == 55) {
-            a = 35;
-            //break;
-        }  
-        
-    }
 
-   
+                    if (j == 96) {
+                        j = 64;
+                        break;
+                    }
+                   
+                    break;
+                }
+
+                if (i == 55) {
+                    i = 35;
+                    break;
+                }
+                
+                break;
+            }
+
+        }
+
+    }
 
     console.log(outcome)
 }
 
 safePasswordsGenerator(["2", "3", "10"]);
-//safePasswordsGenerator(["20", "50", "10"]);
+safePasswordsGenerator(["20", "50", "10"]);
