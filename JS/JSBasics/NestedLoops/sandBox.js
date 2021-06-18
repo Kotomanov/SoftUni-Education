@@ -16,9 +16,9 @@ function A2Z() {
                     console.log(outcome);
                     count++;
 
-                    break;
+                    //break;
                 }
-               break;
+               //break;
             }
             //break;
         }

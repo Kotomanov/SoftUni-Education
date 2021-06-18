@@ -9,8 +9,13 @@ function safePasswordsGenerator(params) {
             for (let i = 35; i <= 55; i++) {
                 for (let j = 64; j <= 96; j++) {
                     outcome += String.fromCharCode(i) + String.fromCharCode(j) + a + b + String.fromCharCode(j) + String.fromCharCode(i) + "|";
+                   a++;
+                   b++;
+                   i++;
+                   j++;
                     maxCount--;
                     if (maxCount <= 0) {
+                        console.log(outcome)
                         return;
                     }
 
@@ -18,16 +23,16 @@ function safePasswordsGenerator(params) {
                         j = 64;
                         break;
                     }
-                   
-                    break;
+
+                    //break;
                 }
 
                 if (i == 55) {
                     i = 35;
                     break;
                 }
-                
-                break;
+
+                //break;
             }
 
         }
@@ -38,4 +43,4 @@ function safePasswordsGenerator(params) {
 }
 
 safePasswordsGenerator(["2", "3", "10"]);
-safePasswordsGenerator(["20", "50", "10"]);
+//safePasswordsGenerator(["20", "50", "10"]);
