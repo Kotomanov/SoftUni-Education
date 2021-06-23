@@ -17,7 +17,7 @@ function happyCatParking(params) {
             }
 
         }
-        console.log(`Day: ${day} – ${dailyAmount.toFixed(2)} leva`);
+        console.log(`Day: ${day} - ${dailyAmount.toFixed(2)} leva`);
         finalAmount += dailyAmount;
         dailyAmount = 0;
     }
