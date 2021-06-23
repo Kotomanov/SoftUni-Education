@@ -9,7 +9,7 @@ function profit(params) {
         for (let t = 0; t <= twoLevCointCount; t++) {
             for (let f = 0; f <= fiveLevCointCount; f++) {
                 if (o * 1 + t * 2 + f * 5 === sum) {
-                    console.log(`${o} * 1 lv. + ${t} * 2 lv. + ${f} * 5 lv. = ${sum} lv."`);
+                    console.log(`${o} * 1 lv. + ${t} * 2 lv. + ${f} * 5 lv. = ${sum} lv.`);
                 }
 
             }
