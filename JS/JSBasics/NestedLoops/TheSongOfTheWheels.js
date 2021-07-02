@@ -17,24 +17,19 @@ function theSongOfTheWheels(params) {
                                 password = a.toString() + b.toString() + c.toString() + d.toString();
                                 isNumberFound = true;
                             }
-
                         }
                     }
-
                 }
-
             }
-
         }
-
     }
 
+    console.log(outcome);
+
     if (isNumberFound == false) {
-        console.log(outcome);
         console.log("No!");
     }
     else {
-        console.log(outcome);
         console.log(`Password: ${password}`);
     }
 }
