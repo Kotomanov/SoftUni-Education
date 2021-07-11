@@ -33,7 +33,7 @@ bestPlayer(["Neymar", "2", "Ronaldo", "1", "Messi", "3", "END"]);
 
 bestPlayer(["Neymar", "2", "Ronaldo", "1", "Messi", "10"]);
 
-bestPlayer(["Silva", "5", "Kane", "10"]); //?
+bestPlayer(["Silva", "5", "Kane", "10"]);
 
 bestPlayer(["Neymar", "1", "Ronaldo", "2", "Messi", "2", "END"]);
 
