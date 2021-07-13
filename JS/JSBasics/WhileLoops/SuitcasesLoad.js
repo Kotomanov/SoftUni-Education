@@ -1,17 +1,11 @@
 function suitcasesLoad(params) {
     let capacity = Number(params[0]);
     let index = 1;
-    //let command = params[index];
     let outcome = "";
     let counter = 0;
-
-
-
     while (params[index] !== "End") {
-
         capacity -= Number(params[index]);
         index++;
-
         if (capacity < 0) {
             break;
         }
