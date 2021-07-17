@@ -34,12 +34,11 @@ function theMostPowerfulWord(params) {
             sumOfChars = Math.floor(sumOfChars);
         }
 
-        if (sumOfChars > wordPower) {
+        if (sumOfChars >= wordPower) {
             wordPower = sumOfChars;
             outcome = params[index];
-            sumOfChars = 0;
         }
-
+        sumOfChars = 0;
         index++;
 
     }
