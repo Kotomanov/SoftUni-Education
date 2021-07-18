@@ -1,7 +1,7 @@
 function theMostPowerfulWord(params) {
     let index = 0;
     let outcome = "";
-    let wordPower = 0;
+    let wordPower = -1;
     let sumOfChars = 0;
     let isVowel = false;
 
