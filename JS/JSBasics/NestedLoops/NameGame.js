@@ -5,15 +5,15 @@ function nameGame(params) {
     let bestPlayerPoints = 0;
     let playerName = "";
     let bestPlayerName = "";
-    //let counter = 0;
+    let counter = 0;
 
     while (params[index] !== "Stop") {
-        if (isNaN(params[index])) { // is name
+        if (isNaN(params[index])) {
             name = params[index];
-            for (let i = 0; i < name.length; i++) { //Ivan
+            for (let i = 0; i < name.length; i++) {
                 index++;
                 if (name[i].charCodeAt(0) == Number(params[index])) {
-                    playerPoints += 10
+                    playerPoints += 10;
                 }
                 else {
                     playerPoints += 2;
@@ -24,10 +24,14 @@ function nameGame(params) {
 
             if (bestPlayerPoints <= playerPoints) {
 
-                bestPlayerPoints = playerPoints;
-                bestPlayerName = playerName;
-                playerPoints = 0;
-                
+                if (counter <= 2) {
+                    bestPlayerPoints = playerPoints;
+                    bestPlayerName = playerName;
+                    playerPoints = 0;
+                    
+                }
+                counter++;
+
             }
             index++;
         }
