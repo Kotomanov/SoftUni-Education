@@ -12,7 +12,6 @@ function FootballTournament(params) {
         return;
     }
 
-    let totalPoints = 0;
     for (let i = 2; i < gamesPlayed + 2; i++) {
 
         if (params[i] == "W") {
