@@ -16,10 +16,10 @@ function PCGameShop(params) {
         }
 
     }
-    console.log(`Hearthstone - ${((hearthstoneCount/gamesNumber)*100).toFixed(2)}%`);
-    console.log(`Fornite - ${((forniteCount/gamesNumber)*100).toFixed(2)}%`);
-    console.log(`Overwatch - ${((overwatchCount/gamesNumber)*100).toFixed(2)}%`);
-    console.log(`Others - ${((othersCount/gamesNumber)*100).toFixed(2)}%`);
+    console.log(`Hearthstone - ${((hearthstoneCount / gamesNumber) * 100).toFixed(2)}%`);
+    console.log(`Fornite - ${((forniteCount / gamesNumber) * 100).toFixed(2)}%`);
+    console.log(`Overwatch - ${((overwatchCount / gamesNumber) * 100).toFixed(2)}%`);
+    console.log(`Others - ${((othersCount / gamesNumber) * 100).toFixed(2)}%`);
 }
 
 PCGameShop(["4", "Hearthstone", "Fornite", "Overwatch", "Counter-Strike"]);
