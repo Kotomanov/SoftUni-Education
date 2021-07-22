@@ -3,7 +3,7 @@ function movieTickets(params) {
     let secondNumber = Number(params[1]);
     let thirdNumber = Number(params[2]);
 
-    for (let i = firstNumber; i < secondNumber; i++) { // maybe FirstNumber+1..
+    for (let i = firstNumber; i < secondNumber-1; i++) { // maybe FirstNumber+1..
         for (let j = 1; j < thirdNumber; j++) {
             for (let k = 1; k < thirdNumber / 2; k++) {
                 if (i % 2 !== 0 && (i + j + k) % 2 !== 0) {
