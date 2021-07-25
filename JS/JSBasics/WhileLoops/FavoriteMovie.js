@@ -3,7 +3,7 @@ function favoriteMovie(params) {
     let sumOfLetters = 0;
     let counter = 0;
     let bestMovie = "";
-    let highestRating = 0; 
+    let highestRating = 0;
     while (params[index] !== "STOP") {
         if (counter == 7) {
             console.log("The limit is reached.");
@@ -11,13 +11,16 @@ function favoriteMovie(params) {
         }
 
         for (let i = 0; i < params[index].length; i++) {
-            if (params[index][i] >= 97 && params[index][i] <= 122) { //97 - 122 lower case 
-                sumOfLetters+= params[index][i].toCharCode(0);
+            let letter = params[index][i].charCodeAt(0);
+            sumOfLetters += letter;
+            if (params[index][i].charCodeAt(0) >= 97 && params[index][i] <= 122) { //97 - 122 lower case 
+                sumOfLetters -= 2 * (params[index].length);
+                //make the sum of letters
             }
-            else if (params[index][i] >= 65 && params[index][i] <= 90) { //65 - 90 upper case 
-                sumOfLetters
+            else if (params[index][i].charCodeAt(0) >= 65 && params[index][i] <= 90) { //65 - 90 upper case 
+                sumOfLetters -= params[index].length;
             }
-            if (sumOfLetters>highestRating) {
+            if (sumOfLetters > highestRating) {
                 highestRating = sumOfLetters;
                 bestMovie = params[index];
             }
