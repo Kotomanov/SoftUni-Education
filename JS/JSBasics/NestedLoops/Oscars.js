@@ -4,31 +4,19 @@ function oscars(params) {
     let number = Number(params[2]);
 
 
-    for (let i = 3; i < number + 3; i++) {
-        if (i % 2 !== 0) { // name
-            for (let l = 0; l < params[i].length; l++) {
-                let sandBox = params[i][l];
-                academyPoints += sandBox.charCodeAt(0);//not ok
-
-            }
-
-            if (academyPoints >= 1250.5) { // in the forloopitself??
-                console.log(`Congratulations, ${actorsName} got a nominee for leading role with ${academyPoints.toFixed(2)}!`);
+    for (let i = 3; i < params.length; i++) {
+        if (i % 2 !== 0) {
+            academyPoints += (Number(params[i + 1]) * params[i].length) / 2;
+            if (academyPoints > 1250.5) { 
+                console.log(`Congratulations, ${actorsName} got a nominee for leading role with ${academyPoints.toFixed(1)}!`);
                 return;
             }
-
-        } else { // grade
-
         }
-
-
     }
 
-
-
-    if (academyPoints < 1250.5) {
+    if (academyPoints <= 1250.5) {
         let pointsNeeded = 1250.5 - academyPoints;
-        console.log(`Sorry, ${actorsName} you need ${pointsNeeded.toFixed(2)} more!`);
+        console.log(`Sorry, ${actorsName} you need ${pointsNeeded.toFixed(1)} more!`);
     }
 }
 
