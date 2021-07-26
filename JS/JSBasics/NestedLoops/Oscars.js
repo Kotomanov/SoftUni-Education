@@ -1,13 +1,11 @@
 function oscars(params) {
     let actorsName = params[0];
     let academyPoints = Number(params[1]);
-    let number = Number(params[2]);
-
 
     for (let i = 3; i < params.length; i++) {
         if (i % 2 !== 0) {
             academyPoints += (Number(params[i + 1]) * params[i].length) / 2;
-            if (academyPoints > 1250.5) { 
+            if (academyPoints > 1250.5) {
                 console.log(`Congratulations, ${actorsName} got a nominee for leading role with ${academyPoints.toFixed(1)}!`);
                 return;
             }
