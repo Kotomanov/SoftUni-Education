@@ -25,7 +25,6 @@ function tennisRanklist(params) {
     console.log(`Final points: ${playerPoints}`);
     console.log(`Average points: ${Math.floor(pointsSum / gamesCount)}`);
     console.log(`${((winsCount / gamesCount) * 100).toFixed(2)}%`);
-
 }
 
 tennisRanklist(["5", "1400", "F", "SF", "W", "W", "SF"]);
