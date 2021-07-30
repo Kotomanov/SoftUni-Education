@@ -11,7 +11,7 @@ function highJump(params) {
             failHeigth = Number(params[i]);
             failsCount++;
             if (failsCount >= 3) {
-                i = array.length;
+                break;//i = array.length;
             }
 
         }
@@ -26,7 +26,7 @@ function highJump(params) {
     if (condition) { // success 
         console.log(`Tihomir succeeded, he jumped over ${successHeigth} cm after ${jumpsCount} jumps.`);
     } else { // fails
-        console.log(`Tihomir failed at ${failHeigth}cm after ${jumpsCount} jumps."`);
+        console.log(`Tihomir failed at ${failHeigth}cm after ${jumpsCount} jumps.`);
     }
 }
 
