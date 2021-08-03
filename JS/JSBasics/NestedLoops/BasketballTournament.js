@@ -18,7 +18,9 @@ function basketballTournament(params) {
         index++;
 
     }
-    let counter = 0;
+    let counter = 1;
+    let gameDeltaPoints = 0;
+    let gameName = "";
 
     for (let i = 0; i < params.length; i++) {
         if (isNaN(params[i])) {
@@ -38,10 +40,19 @@ function basketballTournament(params) {
 
     while (params[index] !== "End of tournaments") {
         if (isNan(params[index])) { // name of a game
-            index++; //t o get to the count of games
+            gameName = params[index];
+            index++; //to get to the count of games
             let gamesCount = Number(params[index]); // how many games follow
             for (let g = index; g < index + gamesCount * 2; g++) {
-                if (counter % 2 == 0) {
+                if (counter % 2 !== 0) { // our team 
+                    gameDeltaPoints = Number(params[index] - Number(params[index + 1])); // get the game outcome 
+                    if (gameDeltaPoints > 0) { //we win
+                        console.log(`Game ${counter} of tournament ${gameName}: win with ${gameDeltaPoints} points.`);
+                        winCount++;
+                    } else { // we loose
+                        lossCount++;
+                    }
+                    totalGamesCount++;
 
                 }
 
