@@ -20,10 +20,13 @@ function basketballTournament(params) {
                         winCount++;
                     } else { // we loose
                         lossCount++;
+                        console.log(`Game ${counter} of tournament ${gameName}: lost with ${gameDeltaPoints * -1} points.`)
                     }
-                    totalGamesCount++;
-                    index++;
+
                 }
+                totalGamesCount++;
+                index++;
+                counter++;
 
             }
 
