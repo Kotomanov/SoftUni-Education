@@ -22,12 +22,11 @@ function basketballTournament(params) {
                         lossCount++;
                         console.log(`Game ${counter} of tournament ${gameName}: lost with ${gameDeltaPoints * -1} points.`)
                     }
-
+                   
+                    counter++;
+                    totalGamesCount++;
                 }
-                totalGamesCount++;
-                index++;
-                counter++;
-
+                
             }
 
         }
