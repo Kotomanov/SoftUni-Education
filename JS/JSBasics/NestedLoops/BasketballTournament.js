@@ -12,25 +12,27 @@ function basketballTournament(params) {
             index++; //to get to the count of games
             let gamesCount = Number(params[index]); // how many games follow
             index++;
-            for (let g = index; g < index + gamesCount * 2; g++) {
-                if (index % 2 !== 0) { // our team 
-                    gameDeltaPoints = Number(params[index] - Number(params[index + 1])); // get the game outcome 
+            for (let g = 0; g <= gamesCount * 2; g++) { // index and g ?????
+                if (g % 2 !== 0) { // our team 
+                    gameDeltaPoints = Number(params[index + g] - Number(params[index + 1 + g])); // get the game outcome 
                     if (gameDeltaPoints > 0) { //we win
                         console.log(`Game ${counter} of tournament ${gameName}: win with ${gameDeltaPoints} points.`);
                         winCount++;
-                        index+=2;
-                        //break;
+                        //index+=2;
+                        
                     } else { // we loose
                         lossCount++;
                         console.log(`Game ${counter} of tournament ${gameName}: lost with ${gameDeltaPoints * -1} points.`)
-                        index+=2;
-                        //break;
+                        //index+=2;
+                        
                         
                     }
                     
+                    //index++;
                     counter++;
                     totalGamesCount++;
                 }
+                
                 
             }
 
