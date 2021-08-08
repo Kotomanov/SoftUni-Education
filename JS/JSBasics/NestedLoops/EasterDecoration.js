@@ -8,25 +8,32 @@ function easterDecoration(params) {
     let totalSum = 0;
 
     for (let i = 1; i <= params.length; i++) {
-        while (params[i] != "Finish") {
-            if (params[i] == "basket") {
-                basketCount++;
-            } else if (params[i] == "wreath") {
-                wreathCount++;
-            }
-            else if (params[i] == "chocolate bunny") {
-                chocolateBunniesCount++;
-            }
 
-            itemsCount++;
+        if (params[i] == "basket") {
+            basketCount++;
+        } else if (params[i] == "wreath") {
+            wreathCount++;
+        }
+        else if (params[i] == "chocolate bunny") {
+            chocolateBunniesCount++;
+        }
+        else if (params[i] == "Finish") {
+            customerTotalAmount = basketCount * 1.50 + chocolateBunniesCount * 7 + wreathCount * 3.90;
+            totalSum += customerTotalAmount;
+            if (itemsCount % 2 == 0) {
+                totalSum *= 0.80;
+            }
+            console.log(`You purchased ${itemsCount} items for ${customerTotalAmount} leva.`);
+            customerTotalAmount = 0;
         }
 
-        customerTotalAmount = basketCount * 1.50 + chocolateBunniesCount * 7 + wreathCount * 3.90;
-        totalSum += customerTotalAmount;
-        console.log(`You purchased ${itemsCount} items for ${customerTotalAmount} leva.`);
-        customerTotalAmount = 0;
+        itemsCount++;
+
+
+
     }
 
+    console.log(`Average bill per client is: ${(totalSum / customersCount).toFixed(2)} leva.`)
 
 }
 
