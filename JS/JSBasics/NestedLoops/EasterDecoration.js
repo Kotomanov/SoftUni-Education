@@ -11,13 +11,10 @@ function easterDecoration(params) {
         } else if (params[i] == "wreath") {
             customerTotalAmount += 3.80;
             itemsCount++;
-        }
-        else if (params[i] == "chocolate bunny") {
+        } else if (params[i] == "chocolate bunny") {
             customerTotalAmount += 7;;
             itemsCount++;
-        }
-
-        else if (params[i] == "Finish") {
+        } else if (params[i] == "Finish") {
             if (itemsCount % 2 == 0) {
                 customerTotalAmount *= 0.80;
             }
