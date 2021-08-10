@@ -11,26 +11,28 @@ function easterDecoration(params) {
 
         if (params[i] == "basket") {
             basketCount++;
+            itemsCount++;
         } else if (params[i] == "wreath") {
             wreathCount++;
+            itemsCount++;
         }
         else if (params[i] == "chocolate bunny") {
             chocolateBunniesCount++;
+            itemsCount++;
         }
-        else if (params[i] == "Finish") {
-            customerTotalAmount = basketCount * 1.50 + chocolateBunniesCount * 7 + wreathCount * 3.90;
+       
+        customerTotalAmount = basketCount * 1.50 + chocolateBunniesCount * 7 + wreathCount * 3.90;
             totalSum += customerTotalAmount;
             if (itemsCount % 2 == 0) {
                 totalSum *= 0.80;
             }
+         if (params[i] == "Finish") {
+            
             console.log(`You purchased ${itemsCount} items for ${customerTotalAmount} leva.`);
             customerTotalAmount = 0;
         }
 
-        itemsCount++;
-
-
-
+        
     }
 
     console.log(`Average bill per client is: ${(totalSum / customersCount).toFixed(2)} leva.`)
