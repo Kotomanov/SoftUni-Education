@@ -18,13 +18,16 @@ function easterDecoration(params) {
             itemsCount++;
         }
 
-        totalSum += customerTotalAmount;
-        if (itemsCount % 2 == 0) {
-            totalSum *= 0.80;
-        }
+        
+        
         if (params[i] == "Finish") {
-
-            console.log(`You purchased ${itemsCount} items for ${customerTotalAmount} leva.`);
+            totalSum += customerTotalAmount;
+            if (itemsCount % 2 == 0) {
+                //totalSum *= 0.80
+                customerTotalAmount*=0.80;
+            }
+           
+            console.log(`You purchased ${itemsCount} items for ${customerTotalAmount.toFixed(2)} leva.`);
             customerTotalAmount = 0;
             itemsCount = 0;
         }
@@ -32,11 +35,15 @@ function easterDecoration(params) {
 
     }
 
+    if (itemsCount % 2 == 0) {
+        totalSum *= 0.80
+        //customerTotalAmount*=0.80;
+    }
     console.log(`Average bill per client is: ${(totalSum / customersCount).toFixed(2)} leva.`)
 
 }
 
-easterDecoration(["1", "basket", "wreath", "chocolate bunny", "wreath", "basket", "chocolate bunny", "Finish"]);
+//easterDecoration(["1", "basket", "wreath", "chocolate bunny", "wreath", "basket", "chocolate bunny", "Finish"]);
 
 easterDecoration(["2", "basket", "wreath", "chocolate bunny", "Finish", "wreath", "chocolate bunny", "Finish"])
 
