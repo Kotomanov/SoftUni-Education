@@ -1,8 +1,8 @@
 function easterCompetition(params) {
-    let sweetBreadCount = Number(params[0]);
     let chefPoints = 0;
     let maxPoints = 0;
     let chefName = "";
+    let bestChefName = "";
 
     for (let i = 1; i < params.length; i++) {
         if (isNaN(params[i])) {
@@ -10,17 +10,19 @@ function easterCompetition(params) {
                 console.log(`${chefName} has ${chefPoints} points.`);
                 if (chefPoints > maxPoints) {
                     maxPoints = chefPoints;
+                    bestChefName = chefName;
                     console.log(`${chefName} is the new number 1!`);
                 }
                 chefPoints = 0;
-            } else { //name
+            } else {
                 chefName = params[i];
             }
-
-            // where to make 0 ???
+        } else {
+            chefPoints += Number(params[i]);
         }
-
     }
+
+    console.log(`${bestChefName} won competition with ${maxPoints} points!`);
 }
 
 easterCompetition(["3", "Chef Manchev", "10", "10", "10", "10", "Stop", "Natalie", "8", "2", "9", "Stop", "George", "9", "2", "4", "2", "Stop"]);
