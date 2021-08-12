@@ -1,5 +1,4 @@
 function easterBake(params) {
-    let sweetBreadCount = Number(params[0]);
     let maxQtySugar = -1;
     let maxQtyFlour = -1;
     let sugarPackQty = 0;
@@ -8,12 +7,12 @@ function easterBake(params) {
     let totalFlourQty = 0;
 
     for (let b = 1; b < params.length; b++) {
-        if (b % 2 !== 0) { // sugar
+        if (b % 2 !== 0) {
             totalSugarQty += Number(params[b]);
             if (maxQtySugar < Number(params[b])) {
                 maxQtySugar = Number(params[b]);
             }
-        } else { // flour
+        } else {
             totalFlourQty += Number(params[b]);
             if (maxQtyFlour < Number(params[b])) {
                 maxQtyFlour = Number(params[b]);
