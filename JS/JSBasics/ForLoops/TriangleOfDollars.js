@@ -4,8 +4,7 @@ function triangleOfDollars(params) {
 
     for (let row = 1; row <= number; row++) {
         for (let col = 1; col <= row; col++) {
-            outcome+="$ "
-            
+            outcome += "$ "
         }
         console.log(outcome);
         outcome = "";
