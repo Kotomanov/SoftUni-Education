@@ -4,8 +4,20 @@ function squareFrame(params) {
 
     for (let row = 0; row < number; row++) {
         for (let col = 0; col < number; col++) {
-            outcome+="+"
-            
+            if (row == 0 || row == number - 1) {
+                if (col == 0 || col == number - 1) {
+                    outcome += "+ "
+                } else {
+                    outcome += "- "
+                }
+
+            } else {
+                if (col == 0 || col == number - 1) {
+                    outcome += "| "
+                } else {
+                    outcome += "- "
+                }
+            }
         }
         console.log(outcome);
         outcome = "";
