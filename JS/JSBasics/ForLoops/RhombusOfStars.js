@@ -4,18 +4,27 @@ function rhombusOfStars(params) {
 
     for (let row = 0; row < number; row++) {
         for (let col = 0; col <= row; col++) {
-            outcome += "*"
+            outcome += "* ";
         }
         console.log(outcome);
         outcome = ""
     }
 
+    for (let row = number - 1; row > 0; row--) {
+        for (let col = 0; col < row; col++) {
+            outcome += "* ";
+        }
+        console.log(outcome);
+        outcome = ""
+
+    }
+
 }
 
-rhombusOfStars(["1"]);
+//rhombusOfStars(["1"]);
 
-rhombusOfStars(["2"]);
+//rhombusOfStars(["2"]);
 
-rhombusOfStars(["3"]);
+//rhombusOfStars(["3"]);
 
 rhombusOfStars(["4"]);
